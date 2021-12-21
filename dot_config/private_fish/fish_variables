@@ -1,0 +1,45 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export LANG:en_US
+SETUVAR --export LC_CTYPE:en_US\x2eUTF\x2d8
+SETUVAR --export PROJECT_HOME:/home/jrn23/Devel
+SETUVAR --export VIRTUALENVWRAPPER_PYTHON:\x28command\x20\x5cwhich\x20python\x29
+SETUVAR --export WORKON_HOME:/home/jrn23/\x2evirtualenvs
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/jrn23/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/jrn23/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/jrn23\x24
+SETUVAR __fish_initialized:3100
+SETUVAR _fisher_jethrokuan_2F_z_files:/home/jrn23/\x2econfig/fish/functions/__z\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/jrn23/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/jrn23/\x2econfig/fish/functions/fisher\x2efish\x1e/home/jrn23/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z
+SETUVAR fish_color_autosuggestion:ffffff
+SETUVAR fish_color_cancel:normal
+SETUVAR fish_color_command:005fd7
+SETUVAR fish_color_comment:990000
+SETUVAR fish_color_cwd:008000
+SETUVAR fish_color_cwd_root:800000
+SETUVAR fish_color_end:009900
+SETUVAR fish_color_error:ffff00
+SETUVAR fish_color_escape:00a6b2
+SETUVAR fish_color_history_current:normal
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_match:normal
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:00a6b2
+SETUVAR fish_color_param:00afff
+SETUVAR fish_color_quote:999900
+SETUVAR fish_color_redirection:00afff
+SETUVAR fish_color_search_match:ffff00
+SETUVAR fish_color_selection:c0c0c0
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:00ff00
+SETUVAR fish_color_valid_path:normal
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:B3A06D\x1eyellow
+SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/home/jrn23/\x2econfig/tmux/bin\x1e/home/jrn23/lua\x2dlanguage\x2dserver/bin/Linux\x1e/home/jrn23/bin\x1e/home/jrn23/\x2ecargo/bin\x1e/home/jrn23/\x2enix\x2dprofile/bin\x1e/home/jrn23/Desktop/lazygit\x1e/home/jrn23/\x2efzf/bin
