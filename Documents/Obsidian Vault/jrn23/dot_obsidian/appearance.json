@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 18,
+  "cssTheme": "Obsidian Nord",
+  "baseFontSizeAction": true,
+  "translucency": false,
+  "enabledCssSnippets": [
+    "obsidian",
+    "notation-colour-blocks"
+  ],
+  "theme": "obsidian"
+}

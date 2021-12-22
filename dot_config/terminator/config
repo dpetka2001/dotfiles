@@ -1,0 +1,30 @@
+[global_config]
+  borderless = True
+  extra_styling = False
+  title_use_system_font = False
+  title_font = SauceCodePro Nerd Font Mono 11
+[keybindings]
+[profiles]
+  [[default]]
+    icon_bell = False
+    #background_color = "#323f4e"
+    cursor_blink = False
+    cursor_shape = underline
+    cursor_color = "#aaaaaa"
+    font = SauceCodePro Nerd Font Mono 11
+    #foreground_color = "#f8f8f2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    #palette = "#3D4C5F:#F48FB1:#A1EFD3:#F1FA8C:#92B6F4:#BD99FF:#87DFEB:#F8F8F2:#56687E:#EE4F84:#53E2AE:#F1FF52:#6498EF:#985EFF:#24D1E7:#E5E5E5"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
+

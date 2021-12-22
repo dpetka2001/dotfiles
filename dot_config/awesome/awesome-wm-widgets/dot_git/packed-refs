@@ -1,0 +1,10 @@
+# pack-refs with: peeled fully-peeled sorted 
+5dc3cb7c1ea76159fbb33eb0a101eddd86a5d7d9 refs/remotes/origin/4.2-human-after-all
+bcd001e487d4d1a9c0ec5335b662d67496e10a4e refs/remotes/origin/74-externalize-config
+ed2b256407291d8edadfcea9380029633cc7d9d8 refs/remotes/origin/comply-with-luacheck
+83b698f916b3dbe500cf194e3828fd14d7d723e2 refs/remotes/origin/gh-pages
+11acce45064fc3917d65bc9ed0aedd1a6c1cda46 refs/remotes/origin/master
+de14c1325fc2bed47dcc46a8c316a96d43205392 refs/remotes/origin/pr-213
+96592eb4885c0062de6ee1f948f2ad980464d585 refs/remotes/origin/rocks
+f38996923479001eb34eaef13f21616f19b41aa7 refs/remotes/origin/ubuntu-updates-widget
+54924ef0645c8b7b212066670e00a164c280ed2f refs/tags/v1.0

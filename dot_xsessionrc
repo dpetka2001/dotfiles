@@ -1,0 +1,12 @@
+export MOZ_USE_XINPUT2=1
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/snapd/desktop/"
+
+xrandr -s 1366x768
+xrandr --dpi 102
+xset s off
+xset -dpms
+xset s noblank
+setxkbmap -layout "us,gr" -option "grp:alt_shift_toggle"
+export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
+#nm-applet&
+. ~/Scripts/wifi_enabled.sh

@@ -1,2 +1,4 @@
 .config/nvim/plugged
 .config/nvim/plugged/**
+.local/share/fish/generated_completions
+.local/share/fish/generated_completions/**

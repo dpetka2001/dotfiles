@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel dbusName="okular" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+ <folder href="file:///home/jrn23/Desktop/C_Programming_A_Modern_Approach_2nd_Ed.pdf">
+  <title>/home/jrn23/Desktop/C_Programming_A_Modern_Approach_2nd_Ed.pdf</title>
+  <bookmark href="file:///home/jrn23/Desktop/C_Programming_A_Modern_Approach_2nd_Ed.pdf#34;C2:0.499599:0.677006:1">
+   <title>#35</title>
+   <info>
+    <metadata owner="http://freedesktop.org">
+     <bookmark:icon name=""/>
+    </metadata>
+   </info>
+  </bookmark>
+ </folder>
+</xbel>

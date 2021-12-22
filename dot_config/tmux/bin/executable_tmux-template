@@ -1,0 +1,31 @@
+#! /usr/bin/env sh
+if [ -z $1 ]
+then
+		dirpath=$(find ~/ -mindepth 1 -maxdepth 2 -type d | fzf)
+else
+		dirpath=$(realpath $1 -s )
+fi
+
+if [ -z $dirpath ]
+then
+		exit 1
+fi
+
+session_name=$(basename "$dirpath" | tr . _)
+
+cd $dirpath
+tmux new-session -d -s $session_name -c $dirpath
+# tmux new-window -n "nvim" -t $session_name
+# tmux new-window -n "shell" -t $session_name -c $dirpath
+# tmux send-keys -t $session_name:"shell" "git status" Enter
+# tmux send-keys -t $session_name:"nvim" "nvim" Enter
+
+
+# $TMUX is set if we are inside a tmux session, otherwise if it's not set we're
+# not inside a session
+if [ -z $TMUX ]
+then
+		tmux attach-session -t $session_name
+else
+		tmux switch-client -t $session_name
+fi

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "rofi tab switcher",
+  "version": "1.0",
+
+  "description": "Switch between tabs using rofi.",
+
+  "commands": {
+    "switch-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Comma",
+        "linux": "Ctrl+Comma"
+      },
+      "description": "Switch tab"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },  
+  "permissions": ["nativeMessaging", "tabs", "activeTab"],
+
+  "applications": {
+    "gecko": {
+      "id": "@rofi.tab.switcher"
+    }
+  }
+
+}
