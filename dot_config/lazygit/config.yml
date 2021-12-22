@@ -1,0 +1,3 @@
+os:
+  editcommand: 'nvim'
+  opencommand: 'nvim {{filename}} > /dev/null'

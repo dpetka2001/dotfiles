@@ -1,0 +1,22 @@
+# pack-refs with: peeled fully-peeled sorted 
+aeb196db5c13161defbac64314d47ca346b34826 refs/remotes/origin/fix-automatic-tpm-install
+bfc7a2c2cbbbb0c448b23396bdb7bf088b8c6dc3 refs/remotes/origin/fix_emacs_continue_key
+108f76b628a0df927df142036f1fdec829a5ff00 refs/remotes/origin/master
+e1bbcd6f8b7db9df823632d4140fb4bbd65798d3 refs/remotes/origin/travis_install_tmux_from_source
+aee1fbc949e1f68db3d8da7ac1b9bee5b4ac1595 refs/tags/v0.0.1
+e29045e1db9ad6e1e9cf72ab59b78f0ec72cafb8 refs/tags/v0.0.2
+^e68e4d52e4d0acb0691fb99d07de922142cc6759
+d520c6a47a40dc1ab0e7799d95514c5aab000a8f refs/tags/v1.0.0
+^f44ae34d112beceead7f09994cb057fe5b136b57
+0794614b55ea7c9b7c07306e64a09b8ac1207a2e refs/tags/v1.1.0
+^604cca0e8ae0479b850bf62e8030a8f421513598
+1e65a591ab5972ff9072f2c07608ee1dd0b88eb7 refs/tags/v1.2.0
+^7c10afc0612f1d1c69837cbc65b20f22c864141d
+92ba10978b6e9a7a767ed2ddb9c7190f9956789a refs/tags/v1.2.1
+^db8b06c509e44a60c4ec3132fc9839ebe1bbf08a
+5957fe6b4644e75ba0740a94faf97307eb31046d refs/tags/v1.2.2
+^330176355013884fa04caf7fbac0df8be2349273
+79c45e42bf525de25a12689f3770ff1f1d30a1aa refs/tags/v2.0.0
+^35161668d986d83c46cdcf870cfc549431db9f8f
+234002ad1c58e04b4e74853c7f1698874f69da60 refs/tags/v3.0.0
+^1ff32085b2b30956fbab58b1520d84d95f18d48d

@@ -1,0 +1,17 @@
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+Height 768=511
+State=AAAA/wAAAAD9AAAAAAAABVQAAAKsAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1366=640
+Window-Maximized 768x1366=true
+
+[Recent Files]
+File1[$e]=$HOME/Desktop/lazygit/README.md
+File2[$e]=$HOME/Desktop/C_Programming_A_Modern_Approach_2nd_Ed.pdf
+File3[$e]=$HOME/Desktop/Programming_in_Lua,_4th_ed._(2017)_.pdf
+Name1[$e]=README.md
+Name2[$e]=C_Programming_A_Modern_Approach_2nd_Ed.pdf
+Name3[$e]=Programming_in_Lua,_4th_ed._(2017)_.pdf

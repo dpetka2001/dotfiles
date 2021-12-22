@@ -1,0 +1,124 @@
+{
+  "main": {
+    "id": "5b347158a300a71d",
+    "type": "split",
+    "children": [
+      {
+        "id": "0237cde97bc895aa",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "C notes/ToC.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8e6f7b646b36b6c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "18bde50a72079569",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef87525c6d8ab004",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "729f6062ffb08b3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f86c538c11c06748",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f232a91e10c3c68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c2d0f04ba834a07",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "C notes/ToC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "dcda748ca7355ed4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "40e6eee68b80d350",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "C notes/ToC.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0237cde97bc895aa",
+  "lastOpenFiles": [
+    "C notes/ToC.md",
+    "C notes/Expressions.md",
+    "C notes/General.md",
+    "Lua Notes/ToC.md",
+    "Python Notes/ToC.md",
+    "Python Notes/Untitled.md",
+    "Untitled.md",
+    "Python/ToC.md",
+    "My C notes/Data Types.md",
+    "My C notes/ToC.md"
+  ]
+}
