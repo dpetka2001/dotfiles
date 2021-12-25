@@ -190,6 +190,9 @@ cnoremap <C-k> <Up>
 " List tags to search for
 nnoremap <leader>t :ts /<CR>
 
+" Change cwd to match the file's cwd
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
