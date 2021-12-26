@@ -223,6 +223,9 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
+		-- Require volume widget
+		local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -241,6 +244,9 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.textbox('  '),
             awful.widget.watch('bash -c "apt-get --just-print upgrade|awk \'/[0-9] upgraded/ {print $1}\'"',600),
             wibox.widget.textbox('   '),
+						volume_widget {
+								widget_type = 'icon_and_text'
+						},
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
