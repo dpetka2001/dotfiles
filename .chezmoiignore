@@ -2,3 +2,4 @@
 .config/nvim/plugged/**
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**
+.config/gh/hosts.yml
