@@ -97,7 +97,7 @@ set number relativenumber
 " Tab related settings
 set tabstop=4       " Set number of spaces occupied by TAB
 set shiftwidth=4    " Set number of spaces for each autoindent (<<, >>)
-"set expandtab       " Use appropriate number of spaces to insert a TAB char
+set expandtab       " Use appropriate number of spaces to insert a TAB char
 set textwidth=80    " Set max length of line before wrapping into new line
 set autoindent      " Copy indent from current line when starting a new line
                     " (typing <CR> in Insert mode or when using the "o" or "O"
