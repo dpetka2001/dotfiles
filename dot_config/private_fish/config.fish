@@ -9,8 +9,8 @@ set -gx FZF_CTRL_T_COMMAND "rg --files"
 bind \cs 'fzf'
 
 set -gx RANGER_LOAD_DEFAULT_RC FALSE
-# set -Ux LANG en_US
-# set -Ux LC_CTYPE en_US.UTF-8
+set -Ux LANG en_US
+set -Ux LC_CTYPE en_US.UTF-8
 
 set -Ux WORKON_HOME $HOME/.virtualenvs
 set -Ux PROJECT_HOME $HOME/Devel
