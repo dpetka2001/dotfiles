@@ -11,6 +11,7 @@ SETUVAR Z_DATA:/home/jrn23/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/home/jrn23/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/home/jrn23\x24
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_ga:git\x20add\x20\x2e
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gp:git\x20push\x20\x2du\x20origin\x20main
 SETUVAR _fish_abbr_gs:git\x20status
