@@ -54,7 +54,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'nvim-treesitter/playground'
 
 " Git integration
-Plug 'kdheepak/lazygit.nvim'
+" Plug 'kdheepak/lazygit.nvim'
 
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
@@ -175,7 +175,7 @@ nnoremap <F4> :lua package.loaded.telescope.telescope=nil<CR>:source ~/.config/n
 tnoremap <leader><ESC> <C-\><C-n>
 
 "LazyGit
-nnoremap <leader>gs :LazyGit<CR>
+"nnoremap <leader>gs :LazyGit<CR>
 
 " Quickfix mappings
 nnoremap <leader>co :copen<CR>
