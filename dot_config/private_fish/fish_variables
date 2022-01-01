@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export LANG:en_US\x2eUTF\x2d8
 SETUVAR --export LC_CTYPE:en_US\x2eUTF\x2d8
+SETUVAR --export LC_NUMERIC:en_US\x2eUTF\x2d8
 SETUVAR --export PROJECT_HOME:/home/jrn23/Devel
 SETUVAR --export VIRTUALENVWRAPPER_PYTHON:\x28command\x20\x5cwhich\x20python\x29
 SETUVAR --export WORKON_HOME:/home/jrn23/\x2evirtualenvs

@@ -11,6 +11,7 @@ bind \cs 'fzf'
 set -gx RANGER_LOAD_DEFAULT_RC FALSE
 set -Ux LANG en_US.UTF-8
 set -gx LC_CTYPE en_US.UTF-8
+set -gx LC_NUMERIC en_US.UTF-8
 
 set -Ux WORKON_HOME $HOME/.virtualenvs
 set -Ux PROJECT_HOME $HOME/Devel
