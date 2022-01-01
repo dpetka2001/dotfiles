@@ -1,4 +1,4 @@
-#Python_notes #Notes  #TOC
+#Python_notes #Notes  #ToC
 
 # Table of Contents
 ## 1. 
