@@ -1,0 +1,84 @@
+Function names use lowercase letters and words are seperated with underscores.
+```rust
+fn another_function() {
+    println!("Another function.");
+}
+```
+
+### Function Parameters
+```rust
+fn main() {
+    another_function(5);
+}
+
+fn another_function(x: i32) {
+    println!("The value of x is: {}", x);
+}
+```
+
+The type of the parameter is specified in the declaration. You must always do that when you define a function.
+Example with multiple parameters:
+```rust
+fn main() {
+    print_labeled_measurement(5, 'h');
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {}{}", value, unit_label);
+}
+```
+
+Function bodies are made up of a series of statements optionally ending in an expression.
+*Statements* are instructions that perform some action and don't return a value. 
+*Expressions* evaluate to a resulting value.
+As statements do not return any value, you can't assign them to variables. You'll get an error:
+```rust
+fn main() {
+    let x = (let y = 6);
+}
+```
+
+In C for example an assignment returns the value of the assignment. You can't do the same in Rust.
+```rust
+fn main() {
+    let y = {
+        let x = 3;
+        x + 1
+    };
+
+    println!("The value of y is: {}", y);
+}
+```
+
+#important 
+Note that the expression `x+1` does not end with semicolon. Expressions do not include ending semicolons. If you add a semicolon to the end of an expression, you turn it into a statement, which will then not return a value. Keep this in mind. ^5bb9f0
+
+### Functions with return values
+Functions can return values. We don't name return values, but we do declare their type after an arrow ( -> ). In Rust, the return value of the function is synonymous with the value of the final expression in the block of the body of the function. You can return early from a function by using the `return` keyword and specifying a value, but most functions return the last expression implicitly.
+```rust
+fn five() -> i32 {
+    5
+}
+
+fn main() {
+    let x = five();
+
+    println!("The value of x is: {}", x);
+}
+```
+
+The number *5* itself is an expression and as there are no other expressions, it is the value of the final expression that the function will return. The function's return type is also specified.
+Another example:
+```rust
+fn main() {
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+Notice again the lack of semicolon in the `plus_one`'s expression, so that its value can be returned. [[Functions#^5bb9f0|See above.]]
