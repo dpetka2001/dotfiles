@@ -18,5 +18,6 @@
   "lineWrap": true,
   "smartIndentList": true,
   "useTab": true,
-  "legacyEditor": true
+  "legacyEditor": true,
+  "spellcheck": true
 }

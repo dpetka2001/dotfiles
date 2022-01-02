@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rust Notes/ToC.md",
+            "file": "Rust Notes/Control Flow.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#ToC",
+                "query": "parameter",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust Notes/ToC.md",
+                "file": "Rust Notes/Control Flow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust Notes/ToC.md"
+                "file": "Rust Notes/Control Flow.md"
               }
             }
           },
@@ -107,25 +107,34 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "1fd43d682ddeb57a",
+            "type": "leaf",
+            "state": {
+              "type": "dictionary-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "active": "7a1c455764d80cdd",
   "lastOpenFiles": [
+    "Rust Notes/Control Flow.md",
     "Rust Notes/ToC.md",
-    "Rust Notes/Data Types.md",
     "Rust Notes/Functions.md",
+    "Rust Notes/Data Types.md",
     "Rust Notes/General.md",
     "C notes/ToC.md",
     "Python Notes/ToC.md",
     "Lua Notes/ToC.md",
     "C notes/Expressions.md",
-    "C notes/General.md",
-    "Rust Notes/data^^.md"
+    "C notes/General.md"
   ]
 }
