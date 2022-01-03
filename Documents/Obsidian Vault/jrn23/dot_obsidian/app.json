@@ -19,5 +19,8 @@
   "smartIndentList": true,
   "useTab": true,
   "legacyEditor": true,
-  "spellcheck": true
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "whitespace"
+  ]
 }

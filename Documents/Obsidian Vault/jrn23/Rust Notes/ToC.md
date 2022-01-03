@@ -1,9 +1,9 @@
 #Rust_Notes    #Notes    #ToC
 
 # Table of Contents
-## 1. [[Rust Notes/General]]
-### 1.1 [[Rust Notes/General#Naming Conventions]]
-### 1.2 [[Rust Notes/General#Concepts]]
+## 1. [[General]]
+### 1.1 [[General#Naming Conventions]]
+### 1.2 [[General#Concepts]]
 
 ## 2. [[Data Types]]
 ### 2.1 [[Data Types#Scalar Types]]
@@ -18,3 +18,9 @@
 ### 3.1 [[Functions#Function Parameters]]
 ### 3.2 [[Functions#Functions with return values]]
 ## 4. [[Control Flow]]
+### 4.1 [[Control Flow#If expressions]]
+### 4.2 [[Control Flow#Repetitions with Loops]]
+#### 4.2.1 [[Control Flow#Repeating code with loop]]
+#### 4.2.2 [[Control Flow#Returning values from Loops]]
+#### 4.2.3 [[Control Flow#Conditionals Loops with while]]
+#### 4.2.4 [[Control Flow#Looping through a Collection with for]]
