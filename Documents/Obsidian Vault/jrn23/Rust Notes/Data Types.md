@@ -42,8 +42,8 @@ let f: bool = false; // with explicit type annotation
 ```
 
 ### Character Type
-	- Char literals are specified with single quotes, as opposed to string literals, which use double quotes.
-	- Rust's char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. 
+- Char literals are specified with single quotes, as opposed to string literals, which use double quotes.
+- Rust's char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII. 
 
 ## Compound Types
 Compound types can group multiple values into one type. Rust has 2 primitive compound types: tuples and arrays.

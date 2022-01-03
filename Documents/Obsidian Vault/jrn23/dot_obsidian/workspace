@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rust Notes/Control Flow.md",
+            "file": "Rust Notes/General.md",
             "mode": "source"
           }
         }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "parameter",
+                "query": "match",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust Notes/Control Flow.md",
+                "file": "Rust Notes/General.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust Notes/Control Flow.md"
+                "file": "Rust Notes/General.md"
               }
             }
           },
@@ -126,11 +126,11 @@
   },
   "active": "7a1c455764d80cdd",
   "lastOpenFiles": [
-    "Rust Notes/Control Flow.md",
-    "Rust Notes/ToC.md",
-    "Rust Notes/Functions.md",
-    "Rust Notes/Data Types.md",
     "Rust Notes/General.md",
+    "Rust Notes/Control Flow.md",
+    "Rust Notes/Functions.md",
+    "Rust Notes/ToC.md",
+    "Rust Notes/Data Types.md",
     "C notes/ToC.md",
     "Python Notes/ToC.md",
     "Lua Notes/ToC.md",
