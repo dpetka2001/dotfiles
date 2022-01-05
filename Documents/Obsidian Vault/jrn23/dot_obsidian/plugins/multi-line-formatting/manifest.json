@@ -1,0 +1,9 @@
+{
+  "id": "multi-line-formatting",
+  "name": "Multi-line Formatting",
+  "description": "Apply formatting to selected text, dealing with the paragraph breaks.",
+  "isDesktopOnly": false,
+  "js": "main.js",
+  "version": "0.4.1",
+  "minAppVersion": "0.12.0"
+}

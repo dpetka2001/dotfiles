@@ -21,6 +21,7 @@
   "legacyEditor": true,
   "spellcheck": true,
   "spellcheckDictionary": [
-    "whitespace"
+    "whitespace",
+    "allocator"
   ]
 }
