@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -127,9 +127,9 @@
   "active": "7a1c455764d80cdd",
   "lastOpenFiles": [
     "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md",
-    "Rust Notes/ToC.md",
     "Rust Notes/2. Understanding Ownership/2.2 References and Borrowing.md",
     "Rust Notes/2. Understanding Ownership/2.1 What is Ownership.md",
+    "Rust Notes/ToC.md",
     "Rust Notes/1. Common Concepts/1.1 General.md",
     "Rust Notes/1. Common Concepts/1.2 Data Types.md",
     "Rust Notes/1. Common Concepts/Common Concepts.md",
