@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Rust Notes/General.md",
+            "file": "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust Notes/General.md",
+                "file": "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust Notes/General.md"
+                "file": "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md"
               }
             }
           },
@@ -117,7 +117,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -126,15 +126,15 @@
   },
   "active": "7a1c455764d80cdd",
   "lastOpenFiles": [
-    "Rust Notes/General.md",
-    "Rust Notes/Control Flow.md",
-    "Rust Notes/Functions.md",
+    "Rust Notes/2. Understanding Ownership/2.3 The Slice Type.md",
     "Rust Notes/ToC.md",
-    "Rust Notes/Data Types.md",
-    "C notes/ToC.md",
-    "Python Notes/ToC.md",
-    "Lua Notes/ToC.md",
-    "C notes/Expressions.md",
-    "C notes/General.md"
+    "Rust Notes/2. Understanding Ownership/2.2 References and Borrowing.md",
+    "Rust Notes/2. Understanding Ownership/2.1 What is Ownership.md",
+    "Rust Notes/1. Common Concepts/1.1 General.md",
+    "Rust Notes/1. Common Concepts/1.2 Data Types.md",
+    "Rust Notes/1. Common Concepts/Common Concepts.md",
+    "Rust Notes/2. Understanding Ownership/Understanding Ownership.md",
+    "Rust Notes/1. Common Concepts/1.4 Control Flow.md",
+    "Rust Notes/1. Common Concepts/1.3 Functions.md"
   ]
 }

@@ -26,3 +26,11 @@
 .tag[href^="#inprogress"] {
   background-color: orange;
 }
+
+img {
+  float: left;
+}
+
+p.clear {
+  clear: both;
+}

@@ -1,0 +1,1 @@
+Here we take a look at concepts that appear in almost every programming language and how they work in Rust.

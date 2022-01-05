@@ -24,10 +24,10 @@ cmp.setup {
 
   -- You should specify your *installed* sources.
   sources = {
+    { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'nvim-lua' },
     { name = 'buffer' },
-    { name = 'nvim_lsp' },
   },
 
   -- Make it auto-complete like nvim-compe
@@ -43,8 +43,8 @@ cmp.setup {
 
       -- set a name for each source
       vim_item.menu = ({
-        buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
+        buffer = "[Buffer]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
         latex_symbols = "[Latex]",
