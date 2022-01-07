@@ -22,6 +22,8 @@
   "spellcheck": true,
   "spellcheckDictionary": [
     "whitespace",
-    "allocator"
+    "allocator",
+    "deallocated",
+    "Rustacean"
   ]
 }
