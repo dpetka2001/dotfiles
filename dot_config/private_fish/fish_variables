@@ -15,7 +15,9 @@ SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_ga:git\x20add\x20\x2e
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gp:git\x20push\x20\x2du\x20origin\x20main
+SETUVAR _fish_abbr_gr:git\x20reflog
 SETUVAR _fish_abbr_gs:git\x20status
+SETUVAR _fish_abbr_gsh:git\x20show\x20HEAD\x40\x7b\x7d
 SETUVAR _fisher_jethrokuan_2F_z_files:/home/jrn23/\x2econfig/fish/functions/__z\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_add\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_clean\x2efish\x1e/home/jrn23/\x2econfig/fish/functions/__z_complete\x2efish\x1e/home/jrn23/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/home/jrn23/\x2econfig/fish/functions/fisher\x2efish\x1e/home/jrn23/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejethrokuan/z
