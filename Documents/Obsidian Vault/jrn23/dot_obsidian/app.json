@@ -24,6 +24,8 @@
     "whitespace",
     "allocator",
     "deallocated",
-    "Rustacean"
+    "Rustacean",
+    "struct",
+    "Structs"
   ]
 }
