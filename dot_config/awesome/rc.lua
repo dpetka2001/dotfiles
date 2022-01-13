@@ -134,6 +134,22 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
+-- Set up calendar widget
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local cw = calendar_widget({
+    theme = 'nord',
+    placement = 'top_right',
+    start_sunday = false,
+    radius = 8,
+  }
+)
+mytextclock:connect_signal("button::press",
+    function(_, _, _, button)
+      if button == 1
+        then cw.toggle()
+      end
+    end)
+
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -223,8 +239,8 @@ awful.screen.connect_for_each_screen(function(s)
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
 
-		-- Require volume widget
-		local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+    -- Require volume widget
+    local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -244,9 +260,9 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.textbox('  '),
             awful.widget.watch('bash -c "apt-get --just-print upgrade|awk \'/[0-9] upgraded/ {print $1}\'"',600),
             wibox.widget.textbox('   '),
-						volume_widget {
-								widget_type = 'icon_and_text'
-						},
+            volume_widget {
+                widget_type = 'icon_and_text'
+            },
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
