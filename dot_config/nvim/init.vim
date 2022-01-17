@@ -52,6 +52,7 @@ Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc
 " TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " Git integration
 " Plug 'kdheepak/lazygit.nvim'
@@ -70,6 +71,17 @@ Plug 'kevinhwang91/rnvimr'
 
 " Cyclist for some extra chars (eol, tab, etc)
 Plug 'tjdevries/cyclist.vim'
+
+" Comment plugin
+Plug 'numToStr/Comment.nvim'
+
+" Plugin to make vim motions easier
+"Plug 'phaazon/hop.nvim'
+Plug 'ggandor/lightspeed.nvim'
+Plug 'tpope/vim-repeat'
+
+" Colorscheme plugin
+Plug 'tjdevries/colorbuddy.nvim'
 
 " Initialize plugin system
 call plug#end()
