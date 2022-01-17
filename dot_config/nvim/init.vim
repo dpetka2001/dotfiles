@@ -77,8 +77,8 @@ Plug 'numToStr/Comment.nvim'
 
 " Plugin to make vim motions easier
 "Plug 'phaazon/hop.nvim'
-Plug 'ggandor/lightspeed.nvim'
-Plug 'tpope/vim-repeat'
+"Plug 'ggandor/lightspeed.nvim'
+"Plug 'tpope/vim-repeat'
 
 " Colorscheme plugin
 Plug 'tjdevries/colorbuddy.nvim'
