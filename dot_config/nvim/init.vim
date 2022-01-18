@@ -40,7 +40,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " Web-dev Icons
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
+"Plug 'kyazdani42/nvim-tree.lua'
 
 " Fzf related (WIP)
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -53,9 +53,6 @@ Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-
-" Git integration
-" Plug 'kdheepak/lazygit.nvim'
 
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
@@ -82,6 +79,10 @@ Plug 'numToStr/Comment.nvim'
 
 " Colorscheme plugin
 Plug 'tjdevries/colorbuddy.nvim'
+
+" Git related
+Plug 'TimUntersberger/neogit'
+Plug 'lewis6991/gitsigns.nvim'
 
 " Initialize plugin system
 call plug#end()
