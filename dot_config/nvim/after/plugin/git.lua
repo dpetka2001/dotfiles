@@ -14,7 +14,8 @@ neogit.setup {
 
 nmap { "<space>vv", ":DiffviewOpen " }
 
-nmap { "<leader>gs", ":Neogit kind=replace<CR>" }
+--nmap { "<leader>gs", ":Neogit kind=replace<CR>" }
+nmap { "<leader>gs", neogit.open }
 nmap {
   "<leader>gc",
   function()
