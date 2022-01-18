@@ -27,17 +27,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'ds', '<cmd>lua vim.diagnostic.show()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  buf_set_keymap('n', '<space>lr', '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
-
-  if client.resolved_capabilities.code_lens then
-    vim.cmd [[
-      augroup lsp_document_codelens
-        au! * <buffer>
-        autocmd BufEnter ++once         <buffer> lua require"vim.lsp.codelens".refresh()
-        autocmd BufWritePost,CursorHold <buffer> lua require"vim.lsp.codelens".refresh()
-      augroup END
-    ]]
-  end
 
 end
 
