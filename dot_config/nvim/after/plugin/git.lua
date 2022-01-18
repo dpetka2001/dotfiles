@@ -6,6 +6,7 @@ end
 local nmap = require("jrn23.keymap").nmap
 
 neogit.setup {
+  kind = "replace",
   integrations = {
     diffview = true,
   },
@@ -13,7 +14,7 @@ neogit.setup {
 
 nmap { "<space>vv", ":DiffviewOpen " }
 
-nmap { "<leader>gs", neogit.open }
+nmap { "<leader>gs", ":Neogit kind=replace<CR>" }
 nmap {
   "<leader>gc",
   function()
