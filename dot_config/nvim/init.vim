@@ -122,7 +122,7 @@ set smarttab        " When on, a <Tab> in front of a line inserts blanks
 set mouse=a
 
 " Enable highlight of current line
-set cursorline
+" set cursorline
 
 " Highlight column after textwidth
 " set cc=+1
