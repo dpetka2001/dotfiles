@@ -48,7 +48,6 @@ Plug 'junegunn/fzf.vim'
 
 " LSP config and debug related (possibly add DAP later)
 Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc7965e'}
-Plug 'nvim-lua/lsp_extensions.nvim'
 
 " TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
