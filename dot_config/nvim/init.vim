@@ -49,6 +49,7 @@ Plug 'junegunn/fzf.vim'
 " LSP config and debug related (possibly add DAP later)
 Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc7965e'}
 Plug 'folke/lsp-trouble.nvim'
+" Provides support for runSingle command for rust-analyzer
 Plug 'ericpubu/lsp_codelens_extensions.nvim'
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
@@ -87,6 +88,7 @@ Plug 'tjdevries/colorbuddy.nvim'
 " Git related
 Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
+"Plug 'kdheepak/lazygit.nvim'
 
 " Initialize plugin system
 call plug#end()
