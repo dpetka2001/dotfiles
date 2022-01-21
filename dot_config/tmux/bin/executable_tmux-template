@@ -1,20 +1,41 @@
-#! /usr/bin/env sh
+#! /usr/bin/env bash
 if [ -z $1 ]
 then
-		dirpath=$(find ~/ -mindepth 1 -maxdepth 2 -type d | fzf)
+        dirpath=$(find ~/ -mindepth 1 -maxdepth 3 -iname '*' -o -iname '.*' -type d | fzf)
 else
-		dirpath=$(realpath $1 -s )
+        dirpath=$(realpath $1 -s )
 fi
 
 if [ -z $dirpath ]
 then
-		exit 1
+        exit 1
 fi
 
-session_name=$(basename "$dirpath" | tr . _)
+# Function to shorten full path to 1 char except the last field
+# (i.e /home/jrn23/.config -> /h/j/.config)
+shortpath()
+{
+    dir=${1%/*} && last=${1##*/}
+
+    res=$(for i in ${dir//\// }
+          do
+              if [ "${i:0:1}" != '.' ]
+              then
+                  echo -n "${i:0:1}/"
+              else
+                  echo -n "${i:0:2}/"
+              fi
+          done)
+    echo "/$res$last"
+}
+
+# Convert $HOME to ~ in path
+session_name=$(shortpath "${dirpath/$HOME/\~}"| tr . _ )
+# Remove leading / from path
+session_name2="${session_name#/*}"
 
 cd $dirpath
-tmux new-session -d -s $session_name -c $dirpath
+tmux new-session -d -s "$session_name2" -c $dirpath
 # tmux new-window -n "nvim" -t $session_name
 # tmux new-window -n "shell" -t $session_name -c $dirpath
 # tmux send-keys -t $session_name:"shell" "git status" Enter
@@ -25,7 +46,7 @@ tmux new-session -d -s $session_name -c $dirpath
 # not inside a session
 if [ -z $TMUX ]
 then
-		tmux attach-session -t $session_name
+        tmux attach-session -t $session_name2
 else
-		tmux switch-client -t $session_name
+        tmux switch-client -t $session_name2
 fi
