@@ -1,7 +1,10 @@
-lastupdatecheck: 1640727481
+lastupdatecheck: 1642733638
 recentrepos:
 - /home/jrn23/.local/share/chezmoi
+- /home/jrn23/git/lazygit
 - /home/jrn23/Desktop/Projects/Python/MITx 6.00.1x
 - /home/jrn23/Desktop/Projects
 - /home/jrn23/ctags
 startuppopupversion: 5
+customcommandshistory: []
+hidecommandlog: false
