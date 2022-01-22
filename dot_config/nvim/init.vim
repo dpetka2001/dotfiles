@@ -12,6 +12,7 @@ call plug#begin("~/.config/nvim/plugged")
 " Register vim-plug itself, so we can gain `:help` info.
 Plug 'junegunn/vim-plug'
 
+""" VIM EDITOR:
 " vim-airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -19,7 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Package to show colors
 Plug 'chrisbra/Colorizer'
 
-" Packages for auto-completion
+""" AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lua'
@@ -31,7 +32,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
-" Telescope and dependencies
+""" TELESCOPE:
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -42,11 +43,11 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'kyazdani42/nvim-web-devicons'
 "Plug 'kyazdani42/nvim-tree.lua'
 
-" Fzf related (WIP)
+""" FZF RELATED:
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" LSP config and debug related (possibly add DAP later)
+""" LSP CONFIG AND DEBUG RELATED:
 Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc7965e'}
 Plug 'folke/lsp-trouble.nvim'
 " Provides support for runSingle command for rust-analyzer
@@ -54,27 +55,29 @@ Plug 'ericpubu/lsp_codelens_extensions.nvim'
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
 
-" TreeSitter
+""" TREESITTER:
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
+""" TEXT MANIPULATION:
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
+"Plug 'godlygeek/tabular'
 
 " Which-key
 Plug 'folke/which-key.nvim'
 
-" Notification plugin
+""" NOTIFICATION PLUGIN:
 Plug 'rcarriga/nvim-notify'
 
-" Ranger plugin for nvim
+""" RANGER PLUGIN:
 Plug 'kevinhwang91/rnvimr'
 
-" Cyclist for some extra chars (eol, tab, etc)
+""" CYCLIST FOR SOME EXTRA CHARS:
 Plug 'tjdevries/cyclist.vim'
 
-" Comment plugin
+""" COMMENTS:
 Plug 'numToStr/Comment.nvim'
 
 " Plugin to make vim motions easier
@@ -82,10 +85,10 @@ Plug 'numToStr/Comment.nvim'
 "Plug 'ggandor/lightspeed.nvim'
 "Plug 'tpope/vim-repeat'
 
-" Colorscheme plugin
+""" Colorscheme:
 Plug 'tjdevries/colorbuddy.nvim'
 
-" Git related
+""" GIT:
 Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 "Plug 'kdheepak/lazygit.nvim'
