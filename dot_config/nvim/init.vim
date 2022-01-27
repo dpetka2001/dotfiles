@@ -63,7 +63,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 """ TEXT MANIPULATION:
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
-"Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " Which-key
 Plug 'folke/which-key.nvim'
