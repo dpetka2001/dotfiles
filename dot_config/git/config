@@ -1,14 +1,27 @@
 [user]
-	name = Iordanis Petkakis
-	email = dpetka2001@gmail.com
+    name = Iordanis Petkakis
+    email = dpetka2001@gmail.com
 
 [init]
-	defaultBranch = main
-	templateDir = ~/Templates/git.git
+    defaultBranch = main
+    templateDir = ~/Templates/git.git
+
+[core]
+    editor = nvim
+    pager = delta
+
+[delta]
+    line-numbers = true
+    side-by-side = false
+    file-modified-label = modified:
+    syntax-theme = Dracula
+
+[interactive]
+    diffFilter = delta --color-only
 
 [credential]
-	credentialStore = cache
-	cacheOptions = --timeout 300
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager-core
+    credentialStore = cache
+    cacheOptions = --timeout 300
+    helper =
+    helper = /usr/local/share/gcm-core/git-credential-manager-core
 
