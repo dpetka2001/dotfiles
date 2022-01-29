@@ -17,9 +17,6 @@ Plug 'junegunn/vim-plug'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Package to show colors
-Plug 'chrisbra/Colorizer'
-
 """ AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -87,6 +84,9 @@ Plug 'numToStr/Comment.nvim'
 
 """ Colorscheme:
 Plug 'tjdevries/colorbuddy.nvim'
+
+" Package to show colors
+Plug 'chrisbra/Colorizer'
 
 """ GIT:
 Plug 'TimUntersberger/neogit'
