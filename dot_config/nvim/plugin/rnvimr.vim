@@ -51,3 +51,13 @@ let g:rnvimr_presets = [
             \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0},
             \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0.5}
             \ ]
+
+" Fullscreen for initial layout
+" let g:rnvimr_layout = {
+"            \ 'relative': 'editor',
+"            \ 'width': &columns,
+"            \ 'height': &lines - 2,
+"            \ 'col': 0,
+"            \ 'row': 0,
+"            \ 'style': 'minimal'
+"            \ }
