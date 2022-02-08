@@ -33,6 +33,7 @@ require("telescope").setup{
     -- prompt_position = "top",
     sorting_strategy = "ascending",
     buffer_previewer_maker = new_maker,
+    -- preview = false,
     scroll_strategy = "limit",
     -- path_display = "smart",
     selection_caret = "> ",
