@@ -22,7 +22,8 @@ let g:rnvimr_action = {
             \ '<C-x>': 'NvimEdit split',
             \ '<C-v>': 'NvimEdit vsplit',
             \ 'gw': 'JumpNvimCwd',
-            \ 'yw': 'EmitRangerCwd'
+            \ 'yw': 'EmitRangerCwd',
+            \ '<CR>': 'NvimEdit drop'
             \ }
 
 " Customize the initial layout
