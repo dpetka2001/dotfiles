@@ -130,6 +130,9 @@ set smarttab        " When on, a <Tab> in front of a line inserts blanks
 " Enable mouse in nvim
 set mouse=a
 
+" Make updates happen faster
+set updatetime=1000
+
 " Enable highlight of current line
 " set cursorline
 
@@ -168,7 +171,8 @@ hi Whitespace ctermfg=red guifg=red gui=bold
 "==============================================================
 
 " Use Enter to remove highlight after search
-nnoremap <silent> <CR> :nohlsearch<CR>
+" nnoremap <silent> <CR> :nohlsearch<CR>
+nnoremap <expr> <CR> {-> v:hlsearch ? ":nohl\<CR>" : "\<CR>"}()
 
 " Move lines up/down
 nnoremap <silent> <M-k> :m -2<CR>
