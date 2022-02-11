@@ -13,9 +13,8 @@ call plug#begin("~/.config/nvim/plugged")
 Plug 'junegunn/vim-plug'
 
 """ VIM EDITOR:
-" vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Lualine
+Plug 'nvim-lualine/lualine.nvim'
 
 """ AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
@@ -35,6 +34,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'ThePrimeagen/harpoon'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
+Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'tami5/sqlite.lua'
+Plug 'nvim-telescope/telescope-smart-history.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " Web-dev Icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -101,12 +105,11 @@ call plug#end()
 "==============================================================
 
 " Smarter tab line
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " enable powerline fonts
-let g:airline_powerline_fonts = 1
-"let g:airline_solarized_bg='dark'
+" let g:airline_powerline_fonts = 1
 
 " set laststatus=2           " Always display the status bar
 
@@ -188,7 +191,7 @@ nnoremap <leader>ff :Telescope find_files<CR>
 " Disabled this since `viml` api doesn't accept white spaces in options, hence we have
 " to use `lua` api instead.
 " nnoremap <leader>ff. :Telescope find_files prompt_title='~dotfiles~' cwd=~/.config/<CR>
-nnoremap <leader>ff. :lua require('telescope.builtin').find_files({ prompt_title = '~ dotfiles ~', cwd = '~/.config/'})<CR>
+nnoremap <leader>ff. :lua require('telescope.builtin').find_files({ prompt_title = '~ dotfiles ~', cwd = '~/.config/' })<CR>
 nnoremap <leader>fg :Telescope live_grep<CR>
 nnoremap <leader>mp :Telescope man_pages sections=ALL<CR>
 nnoremap <leader>h :Telescope help_tags<CR>
@@ -220,10 +223,24 @@ nnoremap <leader>t :ts /<CR>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <leader>P :pwd<CR>
 
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
 
-lua require("jrn23.telescope.telescope")
+lua require("jrn23.globals")
 lua require("jrn23.lsp")
 lua require("jrn23.completion")
+lua require('jrn23.telescope.setup')
+lua require('jrn23.telescope.mappings')
