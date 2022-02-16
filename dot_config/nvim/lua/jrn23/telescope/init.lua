@@ -86,6 +86,105 @@ function M.edit_config()
   }
 end
 
+function M.fd()
+  local opts = themes.get_ivy { hidden = false, sorting_strategy = "ascending" }
+  require("telescope.builtin").fd(opts)
+end
+
+-- function M.fs()
+--   local opts = themes.get_ivy { hidden = false, sorting_strategy = "descending" }
+--   require("telescope.builtin").fd(opts)
+-- end
+
+function M.installed_plugins()
+  require("telescope.builtin").find_files {
+    cwd = vim.fn.stdpath "config" .. "/plugged/",
+  }
+end
+
+function M.curbuf()
+  local opts = themes.get_dropdown {
+    -- winblend = 10,
+    border = true,
+    previewer = false,
+    shorten_path = false,
+  }
+  require("telescope.builtin").current_buffer_fuzzy_find(opts)
+end
+
+function M.help_tags()
+  require("telescope.builtin").help_tags {
+    show_version = true,
+  }
+end
+
+function M.search_all_files()
+  require("telescope.builtin").find_files {
+    find_command = { "rg", "--no-ignore", "--files" },
+  }
+end
+
+function M.search_only_certain_files()
+  require("telescope.builtin").find_files {
+    find_command = {
+      "rg",
+      "--files",
+      "--type",
+      vim.fn.input "Type: ",
+    },
+  }
+end
+
+function M.vim_options()
+  require("telescope.builtin").vim_options {
+    layout_config = {
+      width = 0.5,
+    },
+    sorting_strategy = "ascending",
+  }
+end
+
+function M.lsp_references()
+  require("telescope.builtin").lsp_references {
+    layout_strategy = "vertical",
+    layout_config = {
+      prompt_position = "top",
+    },
+    sorting_strategy = "ascending",
+    ignore_filename = false,
+  }
+end
+
+function M.lsp_document_symbols()
+  require("telescope.builtin").lsp_document_symbols {
+    layout_strategy = "vertical",
+    layout_config = {
+      prompt_position = "top",
+    },
+    sorting_strategy = "ascending",
+    ignore_filename = false,
+  }
+end
+
+function M.oldfiles()
+  require("telescope").extensions.frecency.frecency(themes.get_ivy {
+    initial_mode = "normal",
+  })
+end
+
+function M.buffers()
+  require("telescope.builtin").buffers {
+    shorten_path = false,
+    initial_mode = "normal",
+  }
+end
+
+function M.manpages()
+  require("telescope.builtin").man_pages {
+    sections = { "ALL" }
+  }
+end
+
 return setmetatable({}, {
   __index = function(_, k)
     reloader()

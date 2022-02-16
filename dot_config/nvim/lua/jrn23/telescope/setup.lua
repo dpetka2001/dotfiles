@@ -52,7 +52,7 @@ require("telescope").setup {
 
     selection_strategy = "reset",
     sorting_strategy = "ascending",
-    scroll_strategy = "cycle",
+    scroll_strategy = "limit",
     color_devicons = true,
 
     mappings = {
