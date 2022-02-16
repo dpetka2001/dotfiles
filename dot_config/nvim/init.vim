@@ -104,13 +104,6 @@ call plug#end()
 " GENERAL SETTINGS
 "==============================================================
 
-" Smarter tab line
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#buffer_nr_show = 1
-
-" enable powerline fonts
-" let g:airline_powerline_fonts = 1
-
 " set laststatus=2           " Always display the status bar
 
 " Set new vertical split window on right side
@@ -187,18 +180,7 @@ vnoremap <silent> <S-j> :m'>+<CR>gv=gv
 let mapleader = " "
 
 " Telescope keybindings
-nnoremap <leader>ff :Telescope find_files<CR>
-" Disabled this since `viml` api doesn't accept white spaces in options, hence we have
-" to use `lua` api instead.
-" nnoremap <leader>ff. :Telescope find_files prompt_title='~dotfiles~' cwd=~/.config/<CR>
-nnoremap <leader>ff. :lua require('telescope.builtin').find_files({ prompt_title = '~ dotfiles ~', cwd = '~/.config/' })<CR>
-nnoremap <leader>fg :Telescope live_grep<CR>
-nnoremap <leader>mp :Telescope man_pages sections=ALL<CR>
-nnoremap <leader>h :Telescope help_tags<CR>
-nnoremap <C-_> :Telescope current_buffer_fuzzy_find<CR>
-nnoremap <leader>bl :Telescope buffers<CR>
-nnoremap <leader>bo :Telescope oldfiles<CR>
-nnoremap <F4> :lua package.loaded.telescope.telescope=nil<CR>:source ~/.config/nvim/init.vim<CR>
+" nnoremap <F4> :lua package.loaded.telescope.telescope=nil<CR>:source ~/.config/nvim/init.vim<CR>
 
 " Get back to normal mode from insert mode in terminal
 tnoremap <leader><ESC> <C-\><C-n>
