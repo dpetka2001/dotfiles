@@ -15,8 +15,12 @@ fi
 # (i.e /home/jrn23/.config -> /h/j/.config)
 shortpath()
 {
+    # See https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+    # `%` deletes trailing portion of expansion pattern and `#` deletes
+    # begginning portion of expansion pattern
     dir=${1%/*} && last=${1##*/}
 
+    # See expansion pattern string replacement
     res=$(for i in ${dir//\// }
           do
               if [ "${i:0:1}" != '.' ]
@@ -29,7 +33,7 @@ shortpath()
     echo "/$res$last"
 }
 
-# Convert $HOME to ~ in path
+# Convert $HOME to ~ in path (see expansion pattern string replacement)
 session_name=$(shortpath "${dirpath/$HOME/\~}"| tr . _ )
 # Remove leading / from path
 session_name2="${session_name#/*}"
