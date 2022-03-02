@@ -129,6 +129,9 @@ set mouse=a
 " Make updates happen faster
 set updatetime=1000
 
+" Set up termdebug
+packadd termdebug
+
 " Enable highlight of current line
 " set cursorline
 
