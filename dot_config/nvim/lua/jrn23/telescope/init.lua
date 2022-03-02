@@ -99,6 +99,7 @@ end
 function M.installed_plugins()
   require("telescope.builtin").find_files {
     cwd = vim.fn.stdpath "config" .. "/plugged/",
+    prompt_title = "~ installed plugins ~",
   }
 end
 
