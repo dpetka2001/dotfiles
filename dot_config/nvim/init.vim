@@ -97,6 +97,11 @@ Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 "Plug 'kdheepak/lazygit.nvim'
 
+""" Improve Startup Time:
+Plug 'lewis6991/impatient.nvim'
+Plug 'nathom/filetype.nvim'
+Plug 'tweekmonster/startuptime.vim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -106,7 +111,7 @@ call plug#end()
 
 " set laststatus=2           " Always display the status bar
 
-" Set new vertical split window on right side
+" Set new split window on right/below
 set splitright
 set splitbelow
 
@@ -137,6 +142,9 @@ packadd termdebug
 
 " Highlight column after textwidth
 " set cc=+1
+
+" Do not source the default filetype.vim
+"vim.g.did_load_filetypes = 1
 
 "==============================================================
 " Colors
@@ -220,12 +228,21 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+" Resizing window
+nnoremap <leader>, <C-w><
+nnoremap <leader>. <C-w>>
+nnoremap <A-,> <C-W>5<
+nnoremap <A-.> <C-W>5>
+nnoremap <A-t> <C-w>+
+nnoremap <A-s> <C-w>-
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
 
-lua require("jrn23.globals")
-lua require("jrn23.lsp")
-lua require("jrn23.completion")
+lua require('impatient')
+lua require('jrn23.globals')
+lua require('jrn23.lsp')
+lua require('jrn23.completion')
 lua require('jrn23.telescope.setup')
 lua require('jrn23.telescope.mappings')
