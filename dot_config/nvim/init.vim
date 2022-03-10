@@ -99,7 +99,6 @@ Plug 'lewis6991/gitsigns.nvim'
 
 """ Improve Startup Time:
 Plug 'lewis6991/impatient.nvim'
-Plug 'nathom/filetype.nvim'
 Plug 'tweekmonster/startuptime.vim'
 
 " Initialize plugin system
@@ -144,7 +143,8 @@ packadd termdebug
 " set cc=+1
 
 " Do not source the default filetype.vim
-"vim.g.did_load_filetypes = 1
+let g:did_load_filetypes = 1
+let g:do_filetype_lua = 1
 
 "==============================================================
 " Colors
