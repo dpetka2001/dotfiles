@@ -236,6 +236,10 @@ nnoremap <A-.> <C-W>5>
 nnoremap <A-t> <C-w>+
 nnoremap <A-s> <C-w>-
 
+" Visual indent without losing focus
+vnoremap > >gv
+vnoremap < <gv
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
