@@ -137,7 +137,7 @@ set updatetime=1000
 packadd termdebug
 
 " Enable highlight of current line
-" set cursorline
+set cursorline
 
 " Highlight column after textwidth
 " set cc=+1
