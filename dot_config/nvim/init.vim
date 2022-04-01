@@ -240,6 +240,9 @@ nnoremap <A-s> <C-w>-
 vnoremap > >gv
 vnoremap < <gv
 
+" Change all word occurences under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
