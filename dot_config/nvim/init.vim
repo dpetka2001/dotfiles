@@ -16,6 +16,9 @@ Plug 'junegunn/vim-plug'
 " Lualine
 Plug 'nvim-lualine/lualine.nvim'
 
+" ToggleTerm
+Plug 'akinsho/toggleterm.nvim'
+
 """ AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -146,6 +149,9 @@ set cursorline
 let g:did_load_filetypes = 1
 let g:do_filetype_lua = 1
 
+" Set this for ToggleTerm terminals to not be discarded when closed
+set hidden
+
 "==============================================================
 " Colors
 "==============================================================
@@ -242,6 +248,8 @@ vnoremap < <gv
 
 " Change all word occurences under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
 
 "==============================================================
 " REQUIRE LUA FILES
