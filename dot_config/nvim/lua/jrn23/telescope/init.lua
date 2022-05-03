@@ -109,6 +109,7 @@ function M.curbuf()
     border = true,
     previewer = false,
     shorten_path = false,
+    sorting_strategy = ascending,
   }
   require("telescope.builtin").current_buffer_fuzzy_find(opts)
 end

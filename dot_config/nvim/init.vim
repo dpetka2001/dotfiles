@@ -237,8 +237,8 @@ noremap <leader>0 :tablast<cr>
 " Resizing window
 nnoremap <leader>, <C-w><
 nnoremap <leader>. <C-w>>
-nnoremap <A-,> <C-W>5<
-nnoremap <A-.> <C-W>5>
+nnoremap <A-,> <C-w>5<
+nnoremap <A-.> <C-w>5>
 nnoremap <A-t> <C-w>+
 nnoremap <A-s> <C-w>-
 
