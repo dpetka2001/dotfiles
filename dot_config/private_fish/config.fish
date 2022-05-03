@@ -11,3 +11,5 @@ bind \cs 'fzf'
 set -gx RANGER_LOAD_DEFAULT_RC FALSE
 set -gx LC_CTYPE en_US.UTF-8
 set -gx LC_NUMERIC en_US.UTF-8
+
+set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
