@@ -1,6 +1,6 @@
 function fisher --argument-names cmd --description "A plugin manager for Fish"
     set --query fisher_path || set --local fisher_path $__fish_config_dir
-    set --local fisher_version 4.3.4
+    set --local fisher_version 4.3.5
     set --local fish_plugins $__fish_config_dir/fish_plugins
 
     switch "$cmd"
@@ -87,18 +87,24 @@ function fisher --argument-names cmd --description "A plugin manager for Fish"
                         command cp -Rf $plugin/* $source
                     else
                         set temp (command mktemp -d)
-                        set name (string split \@ $plugin) || set name[2] HEAD
-                        set url https://api.github.com/repos/\$name[1]/tarball/\$name[2]
-                        set header 'Accept: application/vnd.github.v3+json'
+                        set repo (string split -- \@ $plugin) || set repo[2] HEAD
+
+                        if set path (string replace --regex -- '^(https://)?gitlab.com/' '' \$repo[1])
+                            set name (string split -- / \$path)[-1]
+                            set url https://gitlab.com/\$path/-/archive/\$repo[2]/\$name-\$repo[2].tar.gz
+                        else
+                            set url https://api.github.com/repos/\$repo[1]/tarball/\$repo[2]
+                        end
 
                         echo Fetching (set_color --underline)\$url(set_color normal)
 
-                        if curl --silent -L -H \$header \$url | tar -xzC \$temp -f - 2>/dev/null
+                        if curl --silent -L \$url | tar -xzC \$temp -f - 2>/dev/null
                             command cp -Rf \$temp/*/* $source
                         else
                             echo fisher: Invalid plugin name or host unavailable: \\\"$plugin\\\" >&2
                             command rm -rf $source
                         end
+
                         command rm -rf \$temp
                     end
 
