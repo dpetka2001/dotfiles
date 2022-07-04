@@ -19,6 +19,9 @@ Plug 'nvim-lualine/lualine.nvim'
 " ToggleTerm
 Plug 'akinsho/toggleterm.nvim'
 
+" Undotree
+Plug 'mbbill/undotree'
+
 """ AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -102,7 +105,6 @@ Plug 'lewis6991/gitsigns.nvim'
 
 """ Improve Startup Time:
 Plug 'lewis6991/impatient.nvim'
-Plug 'tweekmonster/startuptime.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -250,6 +252,8 @@ vnoremap < <gv
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
+
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 "==============================================================
 " REQUIRE LUA FILES
