@@ -1,5 +1,5 @@
 " General Settings
-set update.lastchecktime 1649244745041
+set update.lastchecktime 1657039688295
 set update.nag true
 set update.nagwait 7
 set update.lastnaggedversion 1.14.0
@@ -29,9 +29,10 @@ set searchurls.qwant https://www.qwant.com/?q=
 set tabopenpos last
 set theme default
 set smoothscroll true
+set newtab about:blank
 
 " Binds
-bind m gobble 1 jumpmaker
+bind <C-m> gobble 1 jumpmaker
 bind ;x hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool click 1")}
 bind ;X hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool keydown ctrl+shift; xdotool click 1; xdotool keyup ctrl+shift")}
 bind <A-p> pin
