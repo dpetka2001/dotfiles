@@ -108,7 +108,7 @@ require("telescope").setup {
     buffers = {
       -- sort_lastused = true,
       theme = "dropdown",
-      initial_mode = "normal",
+      --initial_mode = "normal",
       mappings = {
         i = {
           ["<c-r>"] = require("telescope.actions").delete_buffer,
@@ -122,7 +122,7 @@ require("telescope").setup {
     },
 
     oldfiles = {
-        initial_mode = "normal",
+        --initial_mode = "normal",
     },
 
     fd = {

@@ -170,7 +170,7 @@ end
 
 function M.oldfiles()
   require("telescope").extensions.frecency.frecency(themes.get_ivy {
-    initial_mode = "normal",
+    initial_mode = "insert",
   })
 end
 
