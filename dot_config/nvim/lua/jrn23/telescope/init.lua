@@ -156,6 +156,12 @@ function M.lsp_references()
   }
 end
 
+function M.telescope_notify()
+  require('telescope').extensions.notify.notify {
+    initial_mode = "normal"
+  }
+end
+
 function M.lsp_document_symbols()
   require("telescope.builtin").lsp_document_symbols {
     layout_strategy = "vertical",

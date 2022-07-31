@@ -202,7 +202,8 @@ let mapleader = " "
 " nnoremap <F4> :lua package.loaded.telescope.telescope=nil<CR>:source ~/.config/nvim/init.vim<CR>
 
 " Get back to normal mode from insert mode in terminal
-tnoremap <leader><ESC> <C-\><C-n>
+tnoremap <ESC> <C-\><C-n>
+"tnoremap <leader><ESC> <C-\><C-n>
 
 "LazyGit
 "nnoremap <leader>gs :LazyGit<CR>

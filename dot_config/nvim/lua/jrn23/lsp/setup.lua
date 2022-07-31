@@ -30,7 +30,7 @@ local on_attach = function(client, bufnr)
   opts)
   buf_set_keymap('n', 'ds', '<cmd>lua vim.diagnostic.show()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
   buf_set_keymap('n', "<space>lr", '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
 
   if client.server_capabilities.document_highlight then
