@@ -71,6 +71,8 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+" Might want to check this plugin for multiple cursor support
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Which-key
 Plug 'folke/which-key.nvim'
