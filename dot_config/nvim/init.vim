@@ -72,11 +72,11 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 " Might want to check this plugin for multiple cursor support
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+ 
 " Which-key
 Plug 'folke/which-key.nvim'
-
+ 
 """ NOTIFICATION PLUGIN:
 Plug 'rcarriga/nvim-notify'
 
@@ -155,6 +155,9 @@ let g:do_filetype_lua = 1
 
 " Set this for ToggleTerm terminals to not be discarded when closed
 set hidden
+
+" Enable mouse-mode for vim-visual-multi
+let g:VM_mouse_mappings = 1
 
 "==============================================================
 " Colors
