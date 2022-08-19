@@ -45,6 +45,7 @@ map_tele("<leader>mp", "manpages")
 -- LSP
 map_tele("<leader>gw", "lsp_document_symbols")
 map_tele("<leader>gr", "lsp_references")
+map_tele("<leader>ld", "Telescope_diagnostic")
 
 -- Notifications
 map_tele("<leader>tn", "telescope_notify")

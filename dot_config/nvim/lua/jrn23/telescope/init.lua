@@ -173,6 +173,18 @@ function M.lsp_document_symbols()
   }
 end
 
+function M.Telescope_diagnostic()
+  require("telescope.builtin").diagnostics {
+    layout_strategy = "vertical",
+    layout_config = {
+      prompt_position = "top",
+    },
+    sorting_strategy = "ascending",
+    ignore_filename = false,
+    initial_mode = "normal",
+  }
+end
+
 function M.oldfiles()
   require("telescope").extensions.frecency.frecency(themes.get_ivy {
     initial_mode = "insert",
