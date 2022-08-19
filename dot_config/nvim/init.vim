@@ -22,6 +22,9 @@ Plug 'akinsho/toggleterm.nvim'
 " Undotree
 Plug 'mbbill/undotree'
 
+" Which-key
+Plug 'folke/which-key.nvim'
+
 """ AUTO COMPLETION:
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
@@ -73,9 +76,6 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 " Might want to check this plugin for multiple cursor support
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
- 
-" Which-key
-Plug 'folke/which-key.nvim'
  
 """ NOTIFICATION PLUGIN:
 Plug 'rcarriga/nvim-notify'
@@ -158,6 +158,9 @@ set hidden
 
 " Enable mouse-mode for vim-visual-multi
 let g:VM_mouse_mappings = 1
+
+" Disable inserting automatically comment after hitting `o` or `O`
+autocmd FileType * setlocal formatoptions-=o
 
 "==============================================================
 " Colors
