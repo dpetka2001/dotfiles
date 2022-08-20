@@ -1,15 +1,71 @@
 local actions = require "telescope.actions"
 local action_state = require "telescope.actions.state"
 local action_layout = require "telescope.actions.layout"
+local transform_mod = require("telescope.actions.mt").transform_mod
 
-local set_prompt_to_entry_value = function(prompt_bufnr)
-  local entry = action_state.get_selected_entry()
-  if not entry or not type(entry) == "table" then
-    return
-  end
+-- https://github.com/nvim-telescope/telescope.nvim/issues/1048#issuecomment-1220846367
+local function multiopen(prompt_bufnr, method)
+    local cmd_map = {
+        vertical = "vsplit",
+        horizontal = "split",
+        tab = "tabe",
+        default = "edit"
+    }
+    local picker = action_state.get_current_picker(prompt_bufnr)
+    local multi_selection = picker:get_multi_selection()
 
-  action_state.get_current_picker(prompt_bufnr):reset_prompt(entry.ordinal)
+    if #multi_selection > 0 then
+        require("telescope.pickers").on_close_prompt(prompt_bufnr)
+        pcall(vim.api.nvim_set_current_win, picker.original_win_id)
+
+        for i, entry in ipairs(multi_selection) do
+            -- opinionated use-case
+            local cmd = i == 1 and "edit" or cmd_map[method]
+            vim.cmd(string.format("%s %s", cmd, entry.value))
+        end
+    else
+        actions["select_" .. method](prompt_bufnr)
+    end
 end
+
+local custom_actions = transform_mod({
+    multi_selection_open_vertical = function(prompt_bufnr)
+        multiopen(prompt_bufnr, "vertical")
+    end,
+    multi_selection_open_horizontal = function(prompt_bufnr)
+        multiopen(prompt_bufnr, "horizontal")
+    end,
+    multi_selection_open_tab = function(prompt_bufnr)
+        multiopen(prompt_bufnr, "tab")
+    end,
+    multi_selection_open = function(prompt_bufnr)
+        multiopen(prompt_bufnr, "default")
+    end,
+})
+
+local function stopinsert(callback)
+    return function(prompt_bufnr)
+        vim.cmd.stopinsert()
+        vim.schedule(function()
+            callback(prompt_bufnr)
+        end)
+    end
+end
+
+local multi_open_mappings = {
+    i = {
+        ["<C-v>"] = stopinsert(custom_actions.multi_selection_open_vertical),
+        ["<C-s>"] = stopinsert(custom_actions.multi_selection_open_horizontal),
+        ["<C-t>"] = stopinsert(custom_actions.multi_selection_open_tab),
+        ["<CR>"]  = stopinsert(custom_actions.multi_selection_open)
+    },
+    n = {
+        ["<C-v>"] = custom_actions.multi_selection_open_vertical,
+        ["<C-s>"] = custom_actions.multi_selection_open_horizontal,
+        ["<C-t>"] = custom_actions.multi_selection_open_tab,
+        ["<CR>"] = custom_actions.multi_selection_open,
+    },
+}
 
 require("telescope").setup {
   defaults = {
@@ -57,37 +113,12 @@ require("telescope").setup {
 
     mappings = {
       i = {
-        ["<C-x>"] = false,
-        ["<C-s>"] = actions.select_horizontal,
-        ["<C-n>"] = "move_selection_next",
-
-        ["<C-y>"] = set_prompt_to_entry_value,
-
-        -- These are new :)
-        ["<M-p>"] = action_layout.toggle_preview,
-        ["<M-m>"] = action_layout.toggle_mirror,
-        -- ["<M-p>"] = action_layout.toggle_prompt_position,
-
-        -- ["<M-m>"] = actions.master_stack,
-
-        -- ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        -- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-
-        -- This is nicer when used with smart-history plugin.
-        ["<C-k>"] = actions.cycle_history_next,
-        ["<C-j>"] = actions.cycle_history_prev,
-
-        ["<c-space>"] = function(prompt_bufnr)
-          local opts = {
-            callback = actions.toggle_selection,
-            loop_callback = actions.send_selected_to_qflist,
-          }
-          require("telescope").extensions.hop._hop_loop(prompt_bufnr, opts)
-        end,
-
-        ["<C-w>"] = function()
-          vim.api.nvim_input "<c-s-w>"
-        end,
+        ["<C-x>"] = actions.toggle_selection,
+        ["<C-r>"] = "delete_buffer",
+      },
+      n = {
+        ["<C-x>"] = actions.toggle_selection,
+        ["<C-r>"] = "delete_buffer",
       },
     },
 
@@ -106,31 +137,17 @@ require("telescope").setup {
 
   pickers = {
     buffers = {
-      -- sort_lastused = true,
       theme = "dropdown",
-      --initial_mode = "normal",
-      mappings = {
-        i = {
-          ["<c-r>"] = require("telescope.actions").delete_buffer,
-          -- or right hand side can also be a the name of the action as string
-          ["<c-r>"] = "delete_buffer"
-        },
-        n = {
-          ["<c-r>"] = require("telescope.actions").delete_buffer,
-        }
-      }
+      mappings = multi_open_mappings
     },
 
     oldfiles = {
-        --initial_mode = "normal",
+      --initial_mode = "normal",
+      mappings = multi_open_mappings
     },
 
     fd = {
-      mappings = {
-        n = {
-          ["kj"] = "close",
-        },
-      },
+      mappings = multi_open_mappings
     },
 
     git_branches = {
@@ -154,27 +171,6 @@ require("telescope").setup {
       use_highlighter = false,
       minimum_grep_characters = 6,
     },
-
-    -- hop = {
-    --   -- keys define your hop keys in order; defaults to roughly lower- and uppercased home row
-    --   keys = { "a", "s", "d", "f", "g", "h", "j", "k", "l", ";" }, -- ... and more
-    --
-    --   -- Highlight groups to link to signs and lines; the below configuration refers to demo
-    --   -- sign_hl typically only defines foreground to possibly be combined with line_hl
-    --   sign_hl = { "WarningMsg", "Title" },
-    --
-    --   -- optional, typically a table of two highlight groups that are alternated between
-    --   line_hl = { "CursorLine", "Normal" },
-    --
-    --   -- options specific to `hop_loop`
-    --   -- true temporarily disables Telescope selection highlighting
-    --   clear_selection_hl = false,
-    --   -- highlight hopped to entry with telescope selection highlight
-    --   -- note: mutually exclusive with `lear_selection_hl`
-    --   trace_entry = true,
-    --   -- jump to entry where hoop loop was started from
-    --   reset_selection = true,
-    -- },
 
     ["ui-select"] = {
       require("telescope.themes").get_dropdown {

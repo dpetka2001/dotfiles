@@ -186,7 +186,7 @@ function M.Telescope_diagnostic()
 end
 
 function M.oldfiles()
-  require("telescope").extensions.frecency.frecency(themes.get_ivy {
+  require("telescope.builtin").oldfiles(themes.get_ivy {
     initial_mode = "insert",
   })
 end
