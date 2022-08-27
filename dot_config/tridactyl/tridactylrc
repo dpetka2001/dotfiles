@@ -11,7 +11,7 @@ set searchurls.googlelucky https://www.google.com/search?btnI=I'm+Feeling+Lucky&
 set searchurls.scholar https://scholar.google.com/scholar?q=
 set searchurls.googleuk https://www.google.co.uk/search?q=
 set searchurls.bing https://www.bing.com/search?q=
-set searchurls.duckduckgo https://duckduckgo.com/?q=
+set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.yahoo https://search.yahoo.com/search?p=
 set searchurls.twitter https://twitter.com/search?q=
 set searchurls.wikipedia https://en.wikipedia.org/wiki/Special:Search/
@@ -25,11 +25,14 @@ set searchurls.cnrtl http://www.cnrtl.fr/lexicographie/
 set searchurls.osm https://www.openstreetmap.org/search?query=
 set searchurls.mdn https://developer.mozilla.org/en-US/search?q=
 set searchurls.gentoo_wiki https://wiki.gentoo.org/index.php?title=Special%3ASearch&profile=default&fulltext=Search&search=
-set searchurls.qwant https://www.qwant.com/?q=
+set searchurls.qw https://www.qwant.com/?q=
+set searchurls.dr https://docs.rs/releases/search?query=%s
+set searchurls.gm https://www.google.com/maps/?q=%s
 set tabopenpos last
 set theme default
 set smoothscroll true
 set newtab about:blank
+set scrollduration 400
 
 " Binds
 bind <C-m> gobble 1 jumpmaker
@@ -181,6 +184,7 @@ bind zz zoom 1
 bind zI zoom 3
 bind zO zoom 0.3
 bind . repeat
+bind <AS-ArrowUp><AS-ArrowUp><AS-ArrowDown><AS-ArrowDown><AS-ArrowLeft><AS-ArrowRight><AS-ArrowLeft><AS-ArrowRight>ba open https://www.youtube.com/watch?v=M3iOROuTuMA
 
 " Aliases
 alias jumpmaker js -p tri.excmds.bind("'"+JS_ARG,"taball " + document.location.href)

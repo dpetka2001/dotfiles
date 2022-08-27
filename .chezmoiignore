@@ -3,4 +3,5 @@
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**
 .config/gh/hosts.yml
+.config/kdeconnect/trusted_devices
 Documents/Obsidian Vault/jrn23/.obsidian/workspace
