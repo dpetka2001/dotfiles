@@ -65,6 +65,9 @@ Plug 'ericpubu/lsp_codelens_extensions.nvim'
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
 
+" UI and lsp plugin for neovim's built-in lsp
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+
 """ TREESITTER:
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/playground'
