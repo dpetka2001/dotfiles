@@ -16,7 +16,7 @@ keymap("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = 
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 -- Definition preview
-keymap("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+keymap("n", "gf", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
 
 -- Show line diagnostics
 keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
@@ -37,7 +37,7 @@ keymap("n", "]E", function()
 end, { silent = true })
 
 -- Outline
-keymap("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 
 -- Hover Doc
 keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })

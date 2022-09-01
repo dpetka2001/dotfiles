@@ -46,6 +46,7 @@ map_tele("<leader>mp", "manpages")
 map_tele("<leader>gw", "lsp_document_symbols")
 map_tele("<leader>gr", "lsp_references")
 map_tele("<leader>ld", "Telescope_diagnostic")
+map_tele("<leader>ws", "lsp_workspace_symbols", { fname_width = 60 })
 
 -- Notifications
 map_tele("<leader>tn", "telescope_notify")
