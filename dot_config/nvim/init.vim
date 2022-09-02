@@ -48,6 +48,7 @@ Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'tami5/sqlite.lua'
 Plug 'nvim-telescope/telescope-smart-history.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " Web-dev Icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -248,6 +249,10 @@ noremap <leader>8 8gt
 noremap <leader>9 9gt
 noremap <leader>0 :tablast<cr>
 
+"Buffers
+nnoremap > :bnext<cr>
+nnoremap < :bprev<cr>
+
 " Resizing window
 nnoremap <leader>, <C-w><
 nnoremap <leader>. <C-w>>
@@ -263,6 +268,7 @@ vnoremap < <gv
 " Change all word occurences under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" Toggle Terminal
 nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
 
 nnoremap <Leader>u :UndotreeToggle<CR>

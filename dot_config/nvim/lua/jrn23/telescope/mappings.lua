@@ -32,6 +32,7 @@ map_tele("<leader>fd", "fd")
 -- map_tele("<leader>fs", "fs")
 map_tele("<space>fz", "search_only_certain_files")
 map_tele("<space>bo", "oldfiles")
+-- map_tele("<space>fb", "file_browser")
 
 -- Nvim
 map_tele("<space>bl", "buffers")

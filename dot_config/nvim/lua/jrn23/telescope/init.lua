@@ -191,6 +191,13 @@ function M.oldfiles()
   })
 end
 
+function M.file_browser()
+  require("telescope").extensions.file_browser.file_browser({
+    -- path = "%:p:h",
+    initial_mode = "normal",
+  })
+end
+
 function M.buffers()
   require("telescope.builtin").buffers {
     shorten_path = false,

@@ -2,6 +2,7 @@ local actions = require "telescope.actions"
 local action_state = require "telescope.actions.state"
 local action_layout = require "telescope.actions.layout"
 local transform_mod = require("telescope.actions.mt").transform_mod
+local fb_actions = require "telescope".extensions.file_browser.actions
 
 -- https://github.com/nvim-telescope/telescope.nvim/issues/1048#issuecomment-1220846367
 local function multiopen(prompt_bufnr, method)
@@ -188,8 +189,8 @@ require("telescope").setup {
 }
 
 -- _ = require("telescope").load_extension "dap"
+_ = require('telescope').load_extension('file_browser')
 _ = require("telescope").load_extension "notify"
--- _ = require("telescope").load_extension "file_browser"
 _ = require("telescope").load_extension "ui-select"
 _ = require("telescope").load_extension "fzf"
 _ = require("telescope").load_extension "fzy_native"
