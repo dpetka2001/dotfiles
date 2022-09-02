@@ -42,7 +42,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-" Plug 'ThePrimeagen/harpoon'
+Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'tami5/sqlite.lua'
