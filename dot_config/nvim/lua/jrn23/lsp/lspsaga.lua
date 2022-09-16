@@ -18,7 +18,7 @@ keymap("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = 
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
 
 -- Definition preview
-keymap("n", "gf", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+keymap("n", "gf", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 
 -- Show line diagnostics
 keymap("n", "<leader>dl", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
