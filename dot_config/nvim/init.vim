@@ -66,6 +66,8 @@ Plug 'ericpubu/lsp_codelens_extensions.nvim'
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
 
+" Might also wanna check rust-tools
+
 " UI and lsp plugin for neovim's built-in lsp
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 
@@ -101,6 +103,9 @@ Plug 'numToStr/Comment.nvim'
 
 """ Colorscheme:
 Plug 'tjdevries/colorbuddy.nvim'
+Plug 'sainnhe/sonokai'
+Plug 'EdenEast/nightfox.nvim'
+Plug 'folke/tokyonight.nvim'
 
 " Package to show colors
 Plug 'chrisbra/Colorizer'
@@ -193,6 +198,9 @@ hi link NotifyTRACEBody Visual
 " For the list of listchars I use with cyclist
 hi NonText ctermfg=red guifg=red gui=bold
 hi Whitespace ctermfg=red guifg=red gui=bold
+
+" Set Colorscheme
+colorscheme tokyonight-moon
 
 "==============================================================
 " MY KEYBINDINGS
