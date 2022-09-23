@@ -48,11 +48,10 @@ Plug 'nvim-telescope/telescope-frecency.nvim'
 Plug 'tami5/sqlite.lua'
 Plug 'nvim-telescope/telescope-smart-history.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
+" Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " Web-dev Icons
 Plug 'kyazdani42/nvim-web-devicons'
-"Plug 'kyazdani42/nvim-tree.lua'
 
 """ FZF RELATED:
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -63,10 +62,13 @@ Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc
 Plug 'folke/lsp-trouble.nvim'
 " Provides support for runSingle command for rust-analyzer
 Plug 'ericpubu/lsp_codelens_extensions.nvim'
+
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
 
 " Might also wanna check rust-tools
+
+" Plug 'williamboman/mason.nvim'
 
 " UI and lsp plugin for neovim's built-in lsp
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
@@ -87,8 +89,15 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 """ NOTIFICATION PLUGIN:
 Plug 'rcarriga/nvim-notify'
 
-""" RANGER PLUGIN:
+""" FILE EXPLORERS:
+" RANGER PLUGIN
 Plug 'kevinhwang91/rnvimr'
+
+" Chadtree (Better than NerdTree??)
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
+" Nvim-tree
+" Plug 'kyazdani42/nvim-tree.lua'
 
 """ CYCLIST FOR SOME EXTRA CHARS:
 Plug 'tjdevries/cyclist.vim'
@@ -114,6 +123,9 @@ Plug 'chrisbra/Colorizer'
 Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 "Plug 'kdheepak/lazygit.nvim'
+
+""" BUFFERS:
+Plug 'johann2357/nvim-smartbufs'
 
 """ Improve Startup Time:
 Plug 'lewis6991/impatient.nvim'
@@ -246,21 +258,20 @@ nnoremap <leader>t :ts /<CR>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <leader>P :pwd<CR>
 
-" Go to tab by number
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>8 8gt
-noremap <leader>9 9gt
-noremap <leader>0 :tablast<cr>
-
 "Buffers
 nnoremap > :bnext<cr>
 nnoremap < :bprev<cr>
+
+nnoremap <leader>1 :lua require('nvim-smartbufs').goto_buffer(1)<CR>
+nnoremap <leader>2 :lua require('nvim-smartbufs').goto_buffer(2)<CR>
+nnoremap <leader>3 :lua require('nvim-smartbufs').goto_buffer(3)<CR>
+nnoremap <leader>4 :lua require('nvim-smartbufs').goto_buffer(4)<CR>
+nnoremap <leader>5 :lua require('nvim-smartbufs').goto_buffer(5)<CR>
+nnoremap <leader>6 :lua require('nvim-smartbufs').goto_buffer(6)<CR>
+nnoremap <leader>7 :lua require('nvim-smartbufs').goto_buffer(7)<CR>
+nnoremap <leader>8 :lua require('nvim-smartbufs').goto_buffer(8)<CR>
+nnoremap <leader>9 :lua require('nvim-smartbufs').goto_buffer(9)<CR>
+
 
 " Resizing window
 nnoremap <leader>, <C-w><
@@ -269,6 +280,12 @@ nnoremap <A-,> <C-w>5<
 nnoremap <A-.> <C-w>5>
 nnoremap <A-t> <C-w>+
 nnoremap <A-s> <C-w>-
+
+" Move cursor to other windows/splits
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-j> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
 
 " Visual indent without losing focus
 vnoremap > >gv
@@ -281,6 +298,9 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
 
 nnoremap <Leader>u :UndotreeToggle<CR>
+
+" Open Chadtree
+nnoremap <leader>ch :CHADopen<cr>
 
 "==============================================================
 " REQUIRE LUA FILES
