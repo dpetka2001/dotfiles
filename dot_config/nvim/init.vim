@@ -180,6 +180,7 @@ set hidden
 
 " Enable mouse-mode for vim-visual-multi
 let g:VM_mouse_mappings = 1
+let g:VM_theme = 'purplegray'
 
 " Disable inserting automatically comment after hitting `o` or `O`
 autocmd FileType * setlocal formatoptions-=o
