@@ -1,4 +1,4 @@
-set -g fish_prompt_pwd_dir_length 10
+set -g fish_prompt_pwd_dir_length 2
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 # set -gx FZF_DEFAULT_COMMAND "rg --hidden --files"
