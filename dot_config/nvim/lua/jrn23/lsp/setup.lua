@@ -31,15 +31,15 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
   buf_set_keymap('n', "<space>lr", '<cmd>lua vim.lsp.codelens.run()<CR>', opts)
 
-  if client.server_capabilities.document_highlight then
-    vim.cmd [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]]
-  end
+  -- if client.server_capabilities.documentHighlightProvider then
+  --   vim.cmd [[
+  --     augroup lsp_document_highlight
+  --       autocmd! * <buffer>
+  --       autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+  --       autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+  --     augroup END
+  --   ]]
+  -- end
 
   if client.server_capabilities.code_lens then
     vim.cmd [[
