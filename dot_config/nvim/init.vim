@@ -62,6 +62,7 @@ Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc
 Plug 'folke/lsp-trouble.nvim'
 " Provides support for runSingle command for rust-analyzer
 Plug 'ericpubu/lsp_codelens_extensions.nvim'
+Plug 'j-hui/fidget.nvim'
 
 " Provides hints for Rust and also some extra diagnostics
 " Plug 'nvim-lua/lsp_extensions.nvim'
@@ -125,7 +126,8 @@ Plug 'lewis6991/gitsigns.nvim'
 "Plug 'kdheepak/lazygit.nvim'
 
 """ BUFFERS:
-Plug 'johann2357/nvim-smartbufs'
+" Disable because Lualine already provides such function
+" Plug 'johann2357/nvim-smartbufs'
 
 """ Improve Startup Time:
 Plug 'lewis6991/impatient.nvim'
@@ -263,15 +265,19 @@ nnoremap <leader>P :pwd<CR>
 nnoremap > :bnext<cr>
 nnoremap < :bprev<cr>
 
-nnoremap <leader>1 :lua require('nvim-smartbufs').goto_buffer(1)<CR>
-nnoremap <leader>2 :lua require('nvim-smartbufs').goto_buffer(2)<CR>
-nnoremap <leader>3 :lua require('nvim-smartbufs').goto_buffer(3)<CR>
-nnoremap <leader>4 :lua require('nvim-smartbufs').goto_buffer(4)<CR>
-nnoremap <leader>5 :lua require('nvim-smartbufs').goto_buffer(5)<CR>
-nnoremap <leader>6 :lua require('nvim-smartbufs').goto_buffer(6)<CR>
-nnoremap <leader>7 :lua require('nvim-smartbufs').goto_buffer(7)<CR>
-nnoremap <leader>8 :lua require('nvim-smartbufs').goto_buffer(8)<CR>
-nnoremap <leader>9 :lua require('nvim-smartbufs').goto_buffer(9)<CR>
+let g:VM_maps = {}
+nmap <S-l> <Plug>(VM-Select-l)
+nmap <S-h> <Plug>(VM-Select-h)
+
+nnoremap <leader>1 :LualineBuffersJump 1<CR>
+nnoremap <leader>2 :LualineBuffersJump 2<CR>
+nnoremap <leader>3 :LualineBuffersJump 3<CR>
+nnoremap <leader>4 :LualineBuffersJump 4<CR>
+nnoremap <leader>5 :LualineBuffersJump 5<CR>
+nnoremap <leader>6 :LualineBuffersJump 6<CR>
+nnoremap <leader>7 :LualineBuffersJump 7<CR>
+nnoremap <leader>8 :LualineBuffersJump 8<CR>
+nnoremap <leader>9 :LualineBuffersJump 9<CR>
 
 
 " Resizing window
