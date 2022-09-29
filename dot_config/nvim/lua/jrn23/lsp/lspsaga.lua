@@ -3,6 +3,9 @@ local saga = require('lspsaga')
 
 saga.init_lsp_saga({
   -- finder_preview_hl_ns = 0,
+  symbol_in_winbar = {
+    enable = true,
+  }
 })
 
 -- Lsp finder find the symbol definition implement reference
@@ -42,7 +45,7 @@ end, { silent = true })
 keymap("n", "<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 
 -- Hover Doc
-keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+-- keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 -- Float terminal
 keymap("n", "<A-d>", "<cmd>Lspsaga open_floaterm<CR>", { silent = true })

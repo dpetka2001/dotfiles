@@ -32,13 +32,15 @@ require'lspconfig'.sumneko_lua.setup {
         disable = { 'lowercase-global', 'unused-local', 'duplicate-index', 'undefined-global' },
       },
       workspace = {
-        -- Make the server aware of Neovim runtime files
+        -- Increase preload files limit option
+        maxPreload = 10000,
+        preloadFileSize = 10000,
+        -- Make the server aware of Neovim runtime files and Awesome WM Lua Api
         library = {
             '/usr/share/nvim/runtime/lua',
             '/usr/share/nvim/runtime/lua/lsp',
-            '/usr/share/awesome/lib'
+            '/usr/share/awesome/lib',
         -- vim.api.nvim_get_runtime_file("", true),
-        -- This is for Awesome WM Lua API
       }
     },
     -- Do not send telemetry data containing a randomized but unique identifier
