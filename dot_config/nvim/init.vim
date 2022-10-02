@@ -261,10 +261,7 @@ nnoremap <leader>t :ts /<CR>
 nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 nnoremap <leader>P :pwd<CR>
 
-"Buffers
-nnoremap > :bnext<cr>
-nnoremap < :bprev<cr>
-
+" Visual-multi
 let g:VM_maps = {}
 nmap <S-l> <Plug>(VM-Select-l)
 nmap <S-h> <Plug>(VM-Select-h)
