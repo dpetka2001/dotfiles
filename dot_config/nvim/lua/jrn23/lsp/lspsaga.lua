@@ -3,9 +3,9 @@ local saga = require('lspsaga')
 
 saga.init_lsp_saga({
   -- finder_preview_hl_ns = 0,
-  -- symbol_in_winbar = {
-  --   enable = true,
-  -- }
+  symbol_in_winbar = {
+    enable = false,
+  }
 })
 
 -- Lsp finder find the symbol definition implement reference

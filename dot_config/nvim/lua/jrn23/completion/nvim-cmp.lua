@@ -25,8 +25,10 @@ cmp.setup {
   -- You should specify your *installed* sources.
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'nvim_lsp_signature_help' },
+    { name = 'luasnip' },
     { name = 'path' },
-    { name = 'nvim-lua' },
+    { name = 'nvim_lua' },
     { name = 'buffer' },
   }),
 
@@ -44,6 +46,7 @@ cmp.setup {
       -- set a name for each source
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
+        nvim_lsp_signature_help = "[LSP signature_help]",
         buffer = "[Buffer]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
@@ -54,6 +57,20 @@ cmp.setup {
     end,
   },
 }
+
+-- cmp.setup.cmdline(':', {
+--   sources = {
+--     { name = 'cmdline' },
+--   }
+-- })
+
+-- cmp.setup.cmdline('/', {
+--   sources = cmp.config.sources({
+--     { name = 'nvim_lsp_document_symbol' }
+--   }, {
+--     { name = 'buffer' }
+--   })
+-- })
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = vim.lsp.protocol.make_client_capabilities()
