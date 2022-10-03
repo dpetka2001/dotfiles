@@ -50,7 +50,6 @@ cmp.setup {
         buffer = "[Buffer]",
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
-        latex_symbols = "[Latex]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
@@ -59,6 +58,7 @@ cmp.setup {
 }
 
 -- cmp.setup.cmdline(':', {
+--   mapping = cmp.mapping.preset.cmdline(),
 --   sources = {
 --     { name = 'cmdline' },
 --   }
