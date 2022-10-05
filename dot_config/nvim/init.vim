@@ -33,8 +33,8 @@ Plug 'hrsh7th/cmp-path'
 Plug 'onsails/lspkind-nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
-" Plug 'hrsh7th/cmp-nvim-lsp-document-symbol'
-" Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lsp-document-symbol'
+Plug 'hrsh7th/cmp-cmdline'
 " Plug 'saecki/crates.nvim', { 'tag': 'v0.3.0' }
 " For luasnip user (Since it's mandatory now to have a snippet plugin for
 " `nvim-cmp` to work)
