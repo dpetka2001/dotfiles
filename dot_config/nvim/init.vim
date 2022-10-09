@@ -191,6 +191,9 @@ let g:VM_theme = 'purplegray'
 " Disable inserting automatically comment after hitting `o` or `O`
 autocmd FileType * setlocal formatoptions-=o
 
+" Set command-line height to zero
+" set cmdheight=0
+
 "==============================================================
 " Colors
 "==============================================================
