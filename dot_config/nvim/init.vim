@@ -285,8 +285,8 @@ nnoremap <leader>9 :LualineBuffersJump 9<CR>
 
 
 " Resizing window
-nnoremap <leader>, <C-w><
-nnoremap <leader>. <C-w>>
+nnoremap <C-,> <C-w><
+nnoremap <C-.> <C-w>>
 nnoremap <A-,> <C-w>5<
 nnoremap <A-.> <C-w>5>
 nnoremap <A-t> <C-w>+
