@@ -16,6 +16,9 @@ Plug 'junegunn/vim-plug'
 " Lualine
 Plug 'nvim-lualine/lualine.nvim'
 
+" Nvim-tabline
+Plug 'crispgm/nvim-tabline'
+
 " ToggleTerm
 Plug 'akinsho/toggleterm.nvim'
 
@@ -273,16 +276,25 @@ let g:VM_maps = {}
 nmap <S-l> <Plug>(VM-Select-l)
 nmap <S-h> <Plug>(VM-Select-h)
 
-nnoremap <leader>1 :LualineBuffersJump 1<CR>
-nnoremap <leader>2 :LualineBuffersJump 2<CR>
-nnoremap <leader>3 :LualineBuffersJump 3<CR>
-nnoremap <leader>4 :LualineBuffersJump 4<CR>
-nnoremap <leader>5 :LualineBuffersJump 5<CR>
-nnoremap <leader>6 :LualineBuffersJump 6<CR>
-nnoremap <leader>7 :LualineBuffersJump 7<CR>
-nnoremap <leader>8 :LualineBuffersJump 8<CR>
-nnoremap <leader>9 :LualineBuffersJump 9<CR>
+" nnoremap <leader>1 :LualineBuffersJump 1<CR>
+" nnoremap <leader>2 :LualineBuffersJump 2<CR>
+" nnoremap <leader>3 :LualineBuffersJump 3<CR>
+" nnoremap <leader>4 :LualineBuffersJump 4<CR>
+" nnoremap <leader>5 :LualineBuffersJump 5<CR>
+" nnoremap <leader>6 :LualineBuffersJump 6<CR>
+" nnoremap <leader>7 :LualineBuffersJump 7<CR>
+" nnoremap <leader>8 :LualineBuffersJump 8<CR>
+" nnoremap <leader>9 :LualineBuffersJump 9<CR>
 
+nnoremap <leader>1 1gt<CR>
+nnoremap <leader>2 2gt<CR>
+nnoremap <leader>3 3gt<CR>
+nnoremap <leader>4 4gt<CR>
+nnoremap <leader>5 5gt<CR>
+nnoremap <leader>6 6gt<CR>
+nnoremap <leader>7 7gt<CR>
+nnoremap <leader>8 8gt<CR>
+nnoremap <leader>9 9gt<CR>
 
 " Resizing window
 nnoremap <C-,> <C-w><
