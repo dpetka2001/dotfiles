@@ -1,6 +1,6 @@
 function fisher --argument-names cmd --description "A plugin manager for Fish"
     set --query fisher_path || set --local fisher_path $__fish_config_dir
-    set --local fisher_version 4.4.2
+    set --local fisher_version 4.4.3
     set --local fish_plugins $__fish_config_dir/fish_plugins
 
     switch "$cmd"
@@ -173,7 +173,7 @@ function fisher --argument-names cmd --description "A plugin manager for Fish"
                 end
 
                 for file in (string replace -- $source/ "" $files)
-                    command cp -Rf $source/$file $fisher_path/$file
+                    command cp -RLf $source/$file $fisher_path/$file
                 end
 
                 set --local plugin_files_var _fisher_(string escape --style=var -- $plugin)_files
