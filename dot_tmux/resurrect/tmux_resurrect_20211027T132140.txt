@@ -1,3 +1,0 @@
-pane	0	1	:fish	1	:*	0	:/home/jrn23/.local/lib/python3.8/site-packages/powerline/config_files	1	fish	:
-window	0	1	1	:*	ca3d,151x38,0,0,0
-state	0	

@@ -1,9 +1,0 @@
-pane	tmux	1	:nvim	1	:*	0	:/home/jrn23/.config/tmux	1	nvim	:nvim mykeybindings.tmux
-pane	tmux	2	:_	0	:	0	:/home/jrn23/.config/tmux/bin	1	fish	:
-pane	tmux	3	:nvim	0	:-	0	:/home/jrn23/.config/tmux/bin	1	fish	:
-pane	tmux	4	:kitty	0	:##	0	:/home/jrn23/.config/tmux/bin	1	fish	:
-window	tmux	1	1	:*	ca3d,151x38,0,0,0
-window	tmux	2	0	:	ca3e,151x38,0,0,1
-window	tmux	3	0	:-	ca3f,151x38,0,0,2
-window	tmux	4	0	:##	ca40,151x38,0,0,3
-state	tmux	
