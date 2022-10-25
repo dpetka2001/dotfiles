@@ -86,10 +86,12 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
-""" TEXT MANIPULATION:
+""" TEXT MANIPULATION AND EASY MOTIONS:
 " Plugin to surround words/phrases with braces, parentheses etc
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+Plug 'ggandor/leap.nvim'
+Plug 'ggandor/flit.nvim'
 
 " Might want to check this plugin for multiple cursor support
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
