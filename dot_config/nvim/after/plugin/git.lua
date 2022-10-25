@@ -6,7 +6,7 @@ end
 local nmap = require("jrn23.keymap").nmap
 
 neogit.setup {
-  kind = "replace",
+  -- kind = "replace",
   integrations = {
     diffview = true,
   },

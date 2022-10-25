@@ -1,5 +1,6 @@
 .config/nvim/plugged
 .config/nvim/plugged/**
+.config/nvim/minimal.lua
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**
 .config/gh/hosts.yml
