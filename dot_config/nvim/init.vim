@@ -327,6 +327,9 @@ nnoremap <Leader>u :UndotreeToggle<CR>
 " Open Chadtree
 nnoremap <leader>ch :CHADopen<cr>
 
+" Format buffer with lsp-server
+nnoremap <leader>fm :lua vim.lsp.buf.format()<cr>
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================
