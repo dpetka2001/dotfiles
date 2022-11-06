@@ -120,11 +120,12 @@ Plug 'numToStr/Comment.nvim'
 "Plug 'ggandor/lightspeed.nvim'
 "Plug 'tpope/vim-repeat'
 
-""" Colorscheme:
+""" COLORSCHEME:
 Plug 'tjdevries/colorbuddy.nvim'
 Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Package to show colors
 Plug 'chrisbra/Colorizer'
@@ -228,6 +229,7 @@ hi Whitespace ctermfg=red guifg=red gui=bold
 
 " Set Colorscheme
 colorscheme tokyonight-moon
+" colorscheme catppuccin-mocha
 
 "==============================================================
 " MY KEYBINDINGS
