@@ -126,6 +126,7 @@ Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'Mofiqul/dracula.nvim'
 
 " Package to show colors
 Plug 'chrisbra/Colorizer'
@@ -205,27 +206,27 @@ autocmd FileType * setlocal formatoptions-=o
 "==============================================================
 
 " Terminal gui colors
-set tgc
+" set tgc
 
 " Change Visual highlight fg and bg to match colors used by kitty/alacritty
-highlight Visual cterm=none guifg=#bd99ff guibg=#3d4c5f
+" highlight Visual cterm=none guifg=#bd99ff guibg=#3d4c5f
 
 " Change the color for Pmenu highlight groups (hover windows usually link to
 " that)
-highlight Pmenu guibg=darkblue
+" highlight Pmenu guibg=darkblue
 
 " For notify plugin (Normal hi-group has problems, maybe because of the color
 " palette kitty is using)
-hi link NotifyINFOBody4 Visual
-hi link NotifyERRORBody Visual
-hi link NotifyWARNBody  Visual
-hi link NotifyINFOBody  Visual
-hi link NotifyDEBUGBody Visual
-hi link NotifyTRACEBody Visual
+" hi link NotifyINFOBody4 Visual
+" hi link NotifyERRORBody Visual
+" hi link NotifyWARNBody  Visual
+" hi link NotifyINFOBody  Visual
+" hi link NotifyDEBUGBody Visual
+" hi link NotifyTRACEBody Visual
 
 " For the list of listchars I use with cyclist
-hi NonText ctermfg=red guifg=red gui=bold
-hi Whitespace ctermfg=red guifg=red gui=bold
+" hi NonText ctermfg=red guifg=red gui=bold
+" hi Whitespace ctermfg=red guifg=red gui=bold
 
 " Set Colorscheme
 colorscheme tokyonight-moon
