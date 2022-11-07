@@ -39,7 +39,7 @@ map_tele("<space>bl", "buffers")
 map_tele("<space>ip", "installed_plugins")
 map_tele("<space>ff", "search_all_files")
 map_tele("<C-/>", "curbuf")
-map_tele("<leader>h", "help_tags")
+map_tele("<leader>hl", "help_tags")
 map_tele("<leader>vo", "vim_options")
 map_tele("<leader>mp", "manpages")
 
