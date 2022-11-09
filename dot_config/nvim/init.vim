@@ -333,6 +333,9 @@ nnoremap <leader>ch :CHADopen<cr>
 " Format buffer with lsp-server
 nnoremap <leader>fm :lua vim.lsp.buf.format()<cr>
 
+" Execute this file
+nnoremap <leader><leader>x :call jrn23#save_and_exec()<CR>
+
 "==============================================================
 " REQUIRE LUA FILES
 "==============================================================

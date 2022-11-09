@@ -2,7 +2,7 @@ require('tabline').setup({})
 
 require('lualine').setup{
   options = {
-    theme = 'nord',
+    theme = 'tokyonight',
     component_separators = { left = '', right = ''},
   },
   -- tabline = {
