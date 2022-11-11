@@ -1,3 +1,7 @@
+[include]
+    ; path = ~/.config/nvim/plugged/tokyonight.nvim/extras/delta/tokyonight_moon.gitconfig
+    ; path = ~/.config/nvim/plugged/tokyonight.nvim/extras/delta/tokyonight_day.gitconfig
+
 [user]
     name = Iordanis Petkakis
     email = dpetka2001@gmail.com
@@ -12,6 +16,7 @@
 
 [delta]
     line-numbers = true
+    navigate = true
     side-by-side = false
     file-modified-label = modified:
     syntax-theme = Dracula
