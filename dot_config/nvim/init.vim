@@ -92,6 +92,7 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'ggandor/leap.nvim'
 Plug 'ggandor/flit.nvim'
+Plug 'ggandor/leap-spooky.nvim'
 
 " Might want to check this plugin for multiple cursor support
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -114,6 +115,7 @@ Plug 'tjdevries/cyclist.vim'
 
 """ COMMENTS:
 Plug 'numToStr/Comment.nvim'
+Plug 'folke/todo-comments.nvim'
 
 " Plugin to make vim motions easier
 "Plug 'phaazon/hop.nvim'
@@ -122,7 +124,7 @@ Plug 'numToStr/Comment.nvim'
 
 """ COLORSCHEME:
 Plug 'tjdevries/colorbuddy.nvim'
-Plug 'sainnhe/sonokai'
+" Plug 'sainnhe/sonokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }

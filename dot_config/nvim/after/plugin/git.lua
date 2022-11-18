@@ -12,7 +12,7 @@ neogit.setup {
   },
 }
 
-nmap { "<space>vv", ":DiffviewOpen " }
+nmap { "<space>vv", ":DiffviewOpen" }
 
 --nmap { "<leader>gs", ":Neogit kind=replace<CR>" }
 nmap { "<leader>git", neogit.open }
