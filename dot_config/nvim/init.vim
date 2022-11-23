@@ -208,7 +208,7 @@ autocmd FileType * setlocal formatoptions-=o
 "==============================================================
 
 " Terminal gui colors
-" set tgc
+set tgc
 
 " Change Visual highlight fg and bg to match colors used by kitty/alacritty
 " highlight Visual cterm=none guifg=#bd99ff guibg=#3d4c5f
