@@ -11,6 +11,7 @@ set ignorecase
 set scrolloff=8
 
 map <silent> q :qa!<CR>
+nnoremap <expr> <M-CR> {-> v:hlsearch ? ":nohl\<CR>" : "\<CR>"}()
 
 " Short highlight on yanked text
 augroup highlight_yank
