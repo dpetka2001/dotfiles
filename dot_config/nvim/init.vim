@@ -105,7 +105,9 @@ Plug 'rcarriga/nvim-notify'
 Plug 'kevinhwang91/rnvimr'
 
 " Chadtree (Better than NerdTree??)
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'nvim-neo-tree/neo-tree.nvim'
+Plug 'MunifTanjim/nui.nvim'
 
 " Nvim-tree
 " Plug 'kyazdani42/nvim-tree.lua'
@@ -330,7 +332,7 @@ nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Open Chadtree
-nnoremap <leader>ch :CHADopen<cr>
+nnoremap <leader>ch :Neotree<cr>
 
 " Format buffer with lsp-server
 nnoremap <leader>fm :lua vim.lsp.buf.format()<cr>
