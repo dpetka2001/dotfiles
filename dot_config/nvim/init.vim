@@ -332,7 +332,7 @@ nnoremap <Leader>tt :ToggleTerm direction=tab<CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Open Chadtree
-nnoremap <leader>ch :Neotree<cr>
+nnoremap <leader>ch :Neotree reveal<cr>
 
 " Format buffer with lsp-server
 nnoremap <leader>fm :lua vim.lsp.buf.format()<cr>
