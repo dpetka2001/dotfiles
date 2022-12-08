@@ -35,7 +35,8 @@ shortpath()
 }
 
 # Convert $HOME to ~ in path (see expansion pattern string replacement)
-session_name=$(shortpath "${dirpath/$HOME/\~}"| tr . _ )
+# session_name=$(shortpath "${dirpath/$HOME/\~}"| tr . _ )
+session_name=${dirpath##*/}
 
 cd $dirpath
 tmux new-session -d -s "$session_name" -c $dirpath
