@@ -1,5 +1,7 @@
 .config/nvim/plugged
 .config/nvim/plugged/**
+.config/ranger/__pycache__/
+.config/ranger/__pycache__/**
 .config/nvim/minimal.lua
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**

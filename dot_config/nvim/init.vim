@@ -65,7 +65,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 """ LSP CONFIG AND DEBUG RELATED:
-Plug 'neovim/nvim-lspconfig' ", { 'commit': '8ac41d75411c2ed92b1188dfdac624391fc7965e'}
+Plug 'neovim/nvim-lspconfig'
 Plug 'folke/lsp-trouble.nvim'
 " Provides support for runSingle command for rust-analyzer
 Plug 'ericpubu/lsp_codelens_extensions.nvim'
@@ -76,10 +76,12 @@ Plug 'j-hui/fidget.nvim'
 
 " Might also wanna check rust-tools
 
-" Plug 'williamboman/mason.nvim'
-
 " UI and lsp plugin for neovim's built-in lsp
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+
+" Mason and related
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 
 """ TREESITTER:
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
