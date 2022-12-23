@@ -131,6 +131,8 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'Mofiqul/dracula.nvim'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'rose-pine/neovim'
 
 " Package to show colors
 Plug 'chrisbra/Colorizer'
@@ -234,6 +236,7 @@ set tgc
 
 " Set Colorscheme
 colorscheme tokyonight-moon
+" colorscheme rose-pine
 " colorscheme catppuccin-mocha
 
 "==============================================================
@@ -339,6 +342,9 @@ nnoremap <leader>fm :lua vim.lsp.buf.format()<cr>
 
 " Execute this file
 nnoremap <leader><leader>x :call jrn23#save_and_exec()<CR>
+
+" Treesitter show Highlight under cursor
+nnoremap <leader>hu :TSHighlightCapturesUnderCursor<CR>
 
 "==============================================================
 " REQUIRE LUA FILES

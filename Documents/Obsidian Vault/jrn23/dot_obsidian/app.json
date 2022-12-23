@@ -18,7 +18,7 @@
   "lineWrap": true,
   "smartIndentList": true,
   "useTab": true,
-  "legacyEditor": true,
+  "legacyEditor": false,
   "spellcheck": true,
   "spellcheckDictionary": [
     "whitespace",
@@ -27,5 +27,6 @@
     "Rustacean",
     "struct",
     "Structs"
-  ]
+  ],
+  "livePreview": false
 }

@@ -32,5 +32,6 @@
     "Tooltip",
     "obsidian"
   ],
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "accentColor": ""
 }
