@@ -208,6 +208,7 @@ autocmd FileType * setlocal formatoptions-=o
 
 " Set command-line height to zero
 " set cmdheight=0
+set timeoutlen=500
 
 "==============================================================
 " Colors

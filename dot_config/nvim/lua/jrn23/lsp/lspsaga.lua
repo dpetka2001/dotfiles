@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 local saga = require('lspsaga')
 
-saga.init_lsp_saga({
+saga.setup({
   -- finder_preview_hl_ns = 0,
   symbol_in_winbar = {
     enable = false,

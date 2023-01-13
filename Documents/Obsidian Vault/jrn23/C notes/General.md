@@ -1,3 +1,5 @@
+#C_Notes 
+
 ## Naming Conventions
 Identifier names (variables, functions, macros, etc) can use:  
    - lowercase and uppercase letters (characters) and digits

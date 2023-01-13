@@ -1,1 +1,1 @@
-A *struct*, or *structure*, is a custom data type that lets you name and package together multiple related values that make up a meaningful group. A *struct* is like an object's data attributes. 
+A struct, or structure, is a custom data type that lets you name and package together multiple related values that make up a meaningful group. A struct is like an object's data attributes.

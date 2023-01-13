@@ -23,25 +23,25 @@ local map_tele = function(key, f, options, buffer)
 end
 
 -- Dotfiles
-map_tele("<leader>en", "edit_neovim")
-map_tele("<leader>ff.", "edit_config")
+-- map_tele("<leader>fn", "edit_neovim")
+-- map_tele("<leader>ff.", "edit_config")
 
 -- Files
-map_tele("<leader>rg", "multi_rg")
-map_tele("<leader>fd", "fd")
+-- map_tele("<leader>rg", "multi_rg")
+-- map_tele("<leader>fd", "fd")
 -- map_tele("<leader>fs", "fs")
 map_tele("<space>fz", "search_only_certain_files")
-map_tele("<space>bo", "oldfiles")
+-- map_tele("<space>bo", "oldfiles")
 -- map_tele("<space>fb", "file_browser")
 
 -- Nvim
-map_tele("<space>bl", "buffers")
+-- map_tele("<space>bl", "buffers")
 map_tele("<space>ip", "installed_plugins")
-map_tele("<space>ff", "search_all_files")
+-- map_tele("<space>ff", "search_all_files")
 map_tele("<C-/>", "curbuf")
-map_tele("<leader>hl", "help_tags")
-map_tele("<leader>vo", "vim_options")
-map_tele("<leader>mp", "manpages")
+-- map_tele("<leader>hl", "help_tags")
+-- map_tele("<leader>vo", "vim_options")
+-- map_tele("<leader>mp", "manpages")
 
 -- LSP
 map_tele("<leader>gw", "lsp_document_symbols")
