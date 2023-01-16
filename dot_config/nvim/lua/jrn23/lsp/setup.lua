@@ -50,6 +50,7 @@ local on_attach = function(client, bufnr)
       augroup END
     ]]
   end
+
 end
 
 return on_attach
