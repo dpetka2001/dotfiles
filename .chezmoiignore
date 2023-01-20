@@ -1,12 +1,10 @@
-.config/nvim/plugged
-.config/nvim/plugged/**
+.config/nvim.bak/plugged
+.config/nvim.bak/plugged/**
 .config/ranger/__pycache__/
 .config/ranger/__pycache__/**
-.config/nvim/minimal.lua
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**
 .config/gh/hosts.yml
 Documents/Obsidian Vault/jrn23/.obsidian/workspace
 .config/lazygit/state.yml
 .config/fish/fish_variables
-/* .config/fish/functions/** */

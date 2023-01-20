@@ -1,0 +1,5 @@
++myplugs	init.vim	/^"\s\*PLUGIN SETTINGS$/
++gen_settings	init.vim	/^"\s\*GENERAL SETTINGS$/
++my_colours	init.vim	/^"\s\*Colors$/
++mybindings	init.vim	/^"\s\*MY KEYBINDINGS$/
++myrequires	init.vim	/^"\s\*REQUIRE LUA FILES$/
