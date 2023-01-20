@@ -7,3 +7,5 @@ abbr -a gsh git show
 abbr -a gs git status
 abbr -a gp git push -u origin main
 abbr -a gd git diff
+abbr -a gsw git switch
+abbr -a gb git branch
