@@ -134,7 +134,7 @@ Plug 'folke/tokyonight.nvim'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'Mofiqul/dracula.nvim'
 Plug 'rebelot/kanagawa.nvim'
-Plug 'rose-pine/neovim'
+Plug 'rose-pine/neovim', { 'as': 'rose-pine' }
 
 " Package to show colors
 Plug 'chrisbra/Colorizer'
