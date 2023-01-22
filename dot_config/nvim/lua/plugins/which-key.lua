@@ -10,6 +10,9 @@ return {
         ["<leader>un"] = {
           name = "+Notifications",
         },
+        ["<leader>ut"] = {
+          name = "+Treesitter",
+        },
       })
     end,
   },
