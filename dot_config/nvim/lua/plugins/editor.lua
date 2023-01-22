@@ -38,4 +38,27 @@ return {
       },
     },
   },
+
+  -- Modify nvim-notify for Telescope
+  {
+    "rcarriga/nvim-notify",
+    keys = {
+      {
+        "<leader>und",
+        function()
+          require("notify").dismiss({ silent = true, pending = true })
+        end,
+        desc = "Delete all Notifications",
+      },
+      {
+        "<leader>unt",
+        function()
+          require("telescope").extensions.notify.notify({
+            initial_mode = "normal",
+          })
+        end,
+        desc = "Open Notifications (Telescope)",
+      },
+    },
+  },
 }
