@@ -1,4 +1,5 @@
 return {
+  -- Show symbols in a tree for LSP
   {
     "simrat39/symbols-outline.nvim",
     keys = {
