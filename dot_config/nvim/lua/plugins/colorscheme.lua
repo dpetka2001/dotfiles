@@ -1,5 +1,4 @@
 return {
-
   { "catppuccin/nvim", name = "catppuccin" },
   { "Mofiqul/dracula.nvim", lazy = true },
   { "rebelot/kanagawa.nvim", lazy = true },
