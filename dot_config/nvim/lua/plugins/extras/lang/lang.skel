@@ -3,15 +3,15 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "`lang`"})
+      vim.list_extend(opts.ensure_installed, { "`lang`" })
     end,
   },
 
-  -- Add `server` to mason
+  -- Add `server` and `formatter `to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "`server`"})
+      vim.list_extend(opts.ensure_installed, { "`server`", "`formatter`" })
     end,
   },
 
@@ -26,4 +26,13 @@ return {
       },
     },
   },
+
+  -- Setup null-ls
+  {
+      "jose-elias-alvarez/null-ls.nvim",
+      opts = function()
+        local nls = require("null-ls")
+        return nls.register({ nls.builtins.formatting.`formatter` })
+      end,
+    },
 }
