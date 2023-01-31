@@ -1,5 +1,5 @@
 return {
-  -- Add pyright to mason
+  -- Add `pyright` to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -7,12 +7,12 @@ return {
     end,
   },
 
-  -- Setup null-ls
+  -- Setup null-ls with `black`
   {
     "jose-elias-alvarez/null-ls.nvim",
-    opts = function()
+    opts = function(_, opts)
       local nls = require("null-ls")
-      return nls.register({ nls.builtins.formatting.black })
+      opts.sources = vim.list_extend(opts.sources, { nls.builtins.formatting.black })
     end,
   },
 }

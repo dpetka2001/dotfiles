@@ -1,5 +1,5 @@
 return {
-  -- Add `lang` to treesitter
+  -- Add ``lang`` to treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
@@ -7,7 +7,7 @@ return {
     end,
   },
 
-  -- Add `server` and `formatter `to mason
+  -- Add ``server`` and ``formatter`` to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -27,12 +27,12 @@ return {
     },
   },
 
-  -- Setup null-ls
+  -- Setup null-ls with ``formatter``
   {
       "jose-elias-alvarez/null-ls.nvim",
-      opts = function()
+      opts = function(_, opts)
         local nls = require("null-ls")
-        return nls.register({ nls.builtins.formatting.`formatter` })
+        opts.sources = vim.list_extend(opts.sources, { nls.builtins.formatting.`formatter` })
       end,
     },
 }

@@ -10,6 +10,19 @@ return {
     },
   },
 
+  -- Install fidget for LSP server progress visualization
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      text = {
+        spinner = "moon",
+      },
+      window = {
+        relative = "editor",
+      },
+    },
+  },
+
   -- Import some lsp configs
   { import = "plugins.extras.lang.python" },
 }
