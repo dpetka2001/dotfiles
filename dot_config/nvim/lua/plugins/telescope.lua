@@ -15,6 +15,9 @@ return {
             end,
           },
         },
+        layout_config = {
+          preview_width = 0.6,
+        },
       },
       pickers = {
         buffers = {
