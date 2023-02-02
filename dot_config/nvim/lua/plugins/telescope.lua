@@ -16,7 +16,7 @@ return {
           },
         },
         layout_config = {
-          preview_width = 0.6,
+          preview_width = 0.5,
         },
       },
       pickers = {
