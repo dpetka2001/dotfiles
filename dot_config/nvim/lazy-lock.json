@@ -1,4 +1,5 @@
 {
+  "Comment.nvim": { "branch": "master", "commit": "eab2c83a0207369900e92783f56990808082eac2" },
   "LazyVim": { "branch": "main", "commit": "e21f058fd47642edc1bc46904edd8f6e07445567" },
   "LuaSnip": { "branch": "master", "commit": "d404ec306bfa4cdb0c3605dbb17e8a93a9597337" },
   "NeoZoom.lua": { "branch": "main", "commit": "41ff45d41447a7d3e05227bc21655a618eb00c6e" },
@@ -44,7 +45,7 @@
   "nvim-ts-context-commentstring": { "branch": "main", "commit": "a0f89563ba36b3bacd62cf967b46beb4c2c29e52" },
   "nvim-web-devicons": { "branch": "master", "commit": "a421d183ef37dfa13f51a5805bed2381aebf9080" },
   "persistence.nvim": { "branch": "main", "commit": "d8a3eda0e19b4d5f3180fc832c25baab1709f2a1" },
-  "playground": { "branch": "master", "commit": "c19bcfd6a3681bc876e1b861f6685bfc04972d0d" },
+  "playground": { "branch": "master", "commit": "c481c660fa903a0e295902b1765ecfbd6e76a556" },
   "plenary.nvim": { "branch": "master", "commit": "9a0d3bf7b832818c042aaf30f692b081ddd58bd9" },
   "rnvimr": { "branch": "main", "commit": "40b4e0be0231eabc7406168b432d507c6b6332f9" },
   "rose-pine": { "branch": "main", "commit": "845a6ad5443e3559dde42910c4523a5835c9233b" },

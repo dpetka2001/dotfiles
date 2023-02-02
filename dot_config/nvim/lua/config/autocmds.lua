@@ -2,8 +2,13 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+local util = require("lazyvim.util")
+
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
+local usercmd = vim.api.nvim_create_user_command
+
+--[[ Auto Commands ]]
 
 -- Prefer creating groups and assigning autocmds to groups, because it makes it easier to clear them
 augroup("mygroup", { clear = true })
@@ -26,3 +31,9 @@ autocmd("BufWritePost", {
   group = "mygroup",
   desc = "Reload config on save",
 })
+
+--[[ User Commands ]]
+
+usercmd("Rwd", function()
+  print(util.get_root())
+end, {})
