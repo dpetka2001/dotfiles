@@ -6,8 +6,8 @@ local map = vim.keymap.set
 local util = require("lazyvim.util")
 
 -- Visual-multi
-map("n", "<S-h>", "<Plug>(VM-Select-h)")
-map("n", "<S-l>", "<Plug>(VM-Select-l)")
+map("n", "<C-Left>", "<Plug>(VM-Select-h)")
+map("n", "<C-Right>", "<Plug>(VM-Select-l)")
 map("n", "<C-Up>", "<Plug>(VM-Add-Cursor-Up)")
 map("n", "<C-Down>", "<Plug>(VM-Add-Cursor-Down)")
 

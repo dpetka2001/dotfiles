@@ -9,6 +9,3 @@ vim.g.VM_theme = "purplegray"
 
 opt.autoindent = true -- Copy indent from current line when starting a new line (When <CR> or 'o' or 'O')
 opt.smarttab = true -- When on, a <Tab> in front of a line inserts blanks according to 'shiftwidth'.
-
-local comment_ft = require("Comment.ft")
-comment_ft.set("lua", { "--%s", "--[[%s]]" })

@@ -19,6 +19,17 @@ autocmd("Filetype", {
     vim.opt.formatoptions = vim.opt.formatoptions - "o" -- Don't continue comments with o and O
   end,
   group = "mygroup",
+  desc = "Don't continue comments with o and O",
+})
+
+autocmd("Filetype", {
+  pattern = { "*" },
+  callback = function()
+    local comment_ft = require("Comment.ft")
+    comment_ft.set("lua", { "--%s", "--[[%s]]" })
+  end,
+  group = "mygroup",
+  desc = "Set line/block type comments for Lua",
 })
 
 autocmd("BufWritePost", {
@@ -36,4 +47,4 @@ autocmd("BufWritePost", {
 
 usercmd("Rwd", function()
   print(util.get_root())
-end, {})
+end, { desc = "Print root_dir of current buffer" })
