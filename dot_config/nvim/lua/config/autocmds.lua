@@ -33,7 +33,9 @@ autocmd("Filetype", {
 })
 
 autocmd("BufWritePost", {
-  pattern = "**/lua/config/*.lua",
+  -- Match all `lua` files in `lua/config` except `lazy.lua` which is the
+  -- setup file for `lazy.nvim` and doesn't support reloading
+  pattern = "**/lua/config/*[^lazy].lua",
   callback = function()
     local filepath = vim.fn.expand("%")
     dofile(filepath)
