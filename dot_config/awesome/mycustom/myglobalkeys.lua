@@ -6,9 +6,8 @@ local vars = require("mycustom.vars")
 -- Table to be returned and merged with default awesome key bindings.
 globalKeys = gears.table.join(
 	-- My custom program key bindings
-	-- awful.key({ modkey,           }, "f", function () awful.spawn('firefox') end,
 	awful.key({ modkey }, "f", function()
-		awful.spawn("brave-browser-nightly")
+		awful.spawn("firefox")
 	end, { description = "open firefox", group = "custom" }),
 
 	-- My logout popup menu

@@ -6,7 +6,7 @@ xrandr --dpi 102
 xset s off
 xset -dpms
 xset s noblank
-setxkbmap -layout "us,gr" -option "grp:alt_shift_toggle"
+setxkbmap -layout "us,gr" -option "grp:alt_space_toggle"
 export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
 #nm-applet&
 . ~/Scripts/wifi_enabled.sh
