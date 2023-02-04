@@ -9,8 +9,7 @@ myRules = {
 		properties = { screen = 1, tag = "term", switchtotag = true },
 	},
 	{
-		-- rule_any = { name = {"Mozilla Firefox (Private Browsing)"} },
-		rule_any = { name = { "New Private Tab - Brave" } },
+		rule_any = { name = { "Mozilla Firefox (Private Browsing)" } },
 		properties = { screen = 1, tag = "misc", switchtotag = true },
 	},
 	{

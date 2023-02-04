@@ -23,6 +23,18 @@ return {
     },
   },
 
+  -- Customize LSP to start for new files
+  {
+    "neovim/nvim-lspconfig",
+    event = { "BufReadPre", "BufNewFile" },
+  },
+
+  -- Also add null-ls to start for new files
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+  },
+
   -- Import some lsp configs
   { import = "plugins.extras.lang.python" },
 }
