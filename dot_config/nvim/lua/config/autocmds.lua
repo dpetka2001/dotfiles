@@ -45,6 +45,26 @@ autocmd("BufWritePost", {
   desc = "Reload config on save",
 })
 
+-- ToggleTerm
+function _G.set_terminal_keymaps()
+  local opts = { noremap = true }
+  vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+autocmd("TermOpen", {
+  pattern = "term://*",
+  callback = function()
+    set_terminal_keymaps()
+  end,
+  group = "mygroup",
+  desc = "Set terminal mappings for ToggleTerm",
+})
+
 --[[ User Commands ]]
 
 usercmd("Rwd", function()
