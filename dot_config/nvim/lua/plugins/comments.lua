@@ -1,6 +1,7 @@
 return {
   -- Comment plugin
   "numToStr/Comment.nvim",
+  lazy = true,
   opts = {
     -- LHS of operator-pending mapping in NORMAL + VISUAL mode
     opleader = {
