@@ -26,13 +26,13 @@ return {
   -- Customize LSP to start for new files
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre" },
   },
 
   -- Also add null-ls to start for new files
   {
     "jose-elias-alvarez/null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre" },
   },
 
   -- Import some lsp configs

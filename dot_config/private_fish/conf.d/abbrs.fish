@@ -9,3 +9,4 @@ abbr -a gp git push
 abbr -a gd git diff
 abbr -a gsw git switch
 abbr -a gb git branch
+abbr -a nv nvim

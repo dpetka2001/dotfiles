@@ -12,7 +12,7 @@ return {
   -- Add parsers to Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPre" },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "c",
