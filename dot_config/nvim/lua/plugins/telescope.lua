@@ -34,7 +34,7 @@ return {
           },
         },
         layout_config = {
-          preview_width = 0.5,
+          preview_width = 0.45,
         },
       },
       pickers = {
@@ -47,6 +47,7 @@ return {
       { "<leader>xlw", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
       { "<leader>xls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
       { "<leader>xld", "<cmd>Telescope diagnostics<cr>", desc = "LSP Diagnostics" },
+      { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
     },
   },
 }
