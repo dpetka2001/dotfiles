@@ -14,13 +14,15 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "j-hui/fidget.nvim",
-      opts = {
-        text = {
-          spinner = "moon",
-        },
-        window = {
-          relative = "editor",
+      {
+        "j-hui/fidget.nvim",
+        opts = {
+          text = {
+            spinner = "moon",
+          },
+          window = {
+            relative = "editor",
+          },
         },
       },
     },

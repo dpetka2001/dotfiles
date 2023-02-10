@@ -34,7 +34,12 @@ return {
           },
         },
         layout_config = {
-          preview_width = 0.45,
+          horizontal = {
+            preview_width = 0.45,
+          },
+          flex = {
+            preview_width = 0.45,
+          },
         },
       },
       pickers = {
