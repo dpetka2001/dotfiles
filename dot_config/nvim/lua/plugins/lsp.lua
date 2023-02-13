@@ -13,6 +13,14 @@ return {
   -- Customize LSP
   {
     "neovim/nvim-lspconfig",
+    -- Add, change or remove keymaps
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      keys[#keys + 1] = { "cwr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", desc = "Remove workspace" }
+      keys[#keys + 1] = { "cwa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", desc = "Add workspace" }
+      keys[#keys + 1] =
+        { "cwl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", desc = "List workspace" }
+    end,
     dependencies = {
       {
         "j-hui/fidget.nvim",

@@ -16,6 +16,9 @@ return {
         ["zd"] = { "Delete fold under cursor" },
         ["zD"] = { "Delete folds recursively under cursor" },
         ["zE"] = { "Eliminate all folds in window" },
+        ["<leader>cw"] = {
+          name = "+LSP Workspace",
+        },
       })
     end,
   },
