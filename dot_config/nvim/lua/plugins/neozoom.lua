@@ -15,6 +15,13 @@ return {
     opts = {
       scrolloff_on_enter = 7,
       exclude_buftypes = { "terminal" },
+      winopts = {
+        offset = {
+          -- Omit `top` and/or `left` to center the floating window
+          width = 150,
+          height = 0.85,
+        },
+      },
     },
   },
 }
