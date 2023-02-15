@@ -16,10 +16,14 @@ return {
     -- Add, change or remove keymaps
     init = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = { "cwr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", desc = "Remove workspace" }
-      keys[#keys + 1] = { "cwa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", desc = "Add workspace" }
       keys[#keys + 1] =
-        { "cwl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", desc = "List workspace" }
+        { "<leader>cwr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", desc = "Remove workspace" }
+      keys[#keys + 1] = { "<leader>cwa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", desc = "Add workspace" }
+      keys[#keys + 1] = {
+        "<leader>cwl",
+        "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
+        desc = "List workspace",
+      }
     end,
     dependencies = {
       {
@@ -38,4 +42,5 @@ return {
 
   -- Import some lsp configs
   { import = "plugins.extras.lang.python" },
+  { import = "plugins.extras.lang.web_dev" },
 }

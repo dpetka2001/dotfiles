@@ -19,6 +19,9 @@ return {
         ["<leader>cw"] = {
           name = "+LSP Workspace",
         },
+        ["<leader>t"] = {
+          name = "+Terminal",
+        },
       })
     end,
   },
