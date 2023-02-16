@@ -15,7 +15,26 @@ end
 return {
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = {
+      {
+        "nvim-telescope/telescope-project.nvim",
+        keys = {
+          { "<C-p>", "<cmd>lua require'telescope'.extensions.project.project{}<cr>", desc = "Telescope Project" },
+        },
+        config = function()
+          require("telescope").load_extension("project")
+        end,
+      },
+    },
     opts = {
+      extensions = {
+        project = {
+          base_dirs = {
+            { path = "~/Desktop/Projects/" },
+            { path = "~/.local/share/chezmoi/" },
+          },
+        },
+      },
       defaults = {
         mappings = {
           i = {
