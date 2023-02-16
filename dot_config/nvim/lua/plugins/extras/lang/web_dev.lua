@@ -20,12 +20,15 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
+        --[[LSP servers/linters]]
         "html-lsp",
         "typescript-language-server",
         "css-lsp",
-        "tailwindcss-language-server",
+        -- "tailwindcss-language-server",
         "stylelint-lsp",
         "eslint-lsp",
+
+        --[[Formatters]]
         "prettier",
       })
     end,

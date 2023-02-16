@@ -38,7 +38,7 @@ shortpath()
 # session_name=$(shortpath "${dirpath/$HOME/\~}"| tr . _ )
 session_name=${dirpath##*/}
 
-cd $dirpath
+# cd $dirpath
 tmux new-session -d -s "$session_name" -c $dirpath
 # tmux new-window -n "nvim" -t $session_name
 # tmux new-window -n "shell" -t $session_name -c $dirpath

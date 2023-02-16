@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
+-- local del = vim.keymap.del
 local util = require("lazyvim.util")
 
 -- Visual-multi
