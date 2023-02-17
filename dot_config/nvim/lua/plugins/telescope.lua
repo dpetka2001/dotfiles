@@ -21,20 +21,9 @@ return {
         keys = {
           { "<C-p>", "<cmd>lua require'telescope'.extensions.project.project{}<cr>", desc = "Telescope Project" },
         },
-        config = function()
-          require("telescope").load_extension("project")
-        end,
       },
     },
     opts = {
-      extensions = {
-        project = {
-          base_dirs = {
-            { path = "~/Desktop/Projects/" },
-            { path = "~/.local/share/chezmoi/" },
-          },
-        },
-      },
       defaults = {
         mappings = {
           i = {
@@ -66,6 +55,14 @@ return {
           initial_mode = "normal",
         },
       },
+      extensions = {
+        project = {
+          base_dirs = {
+            { path = "~/Desktop/Projects/" },
+            { path = "~/.local/share/chezmoi/" },
+          },
+        },
+      },
     },
     keys = {
       { "<leader>xlw", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
@@ -73,5 +70,10 @@ return {
       { "<leader>xld", "<cmd>Telescope diagnostics<cr>", desc = "LSP Diagnostics" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
     },
+    config = function(_, opts)
+      local telescope = require("telescope")
+      telescope.setup(opts)
+      telescope.load_extension("project")
+    end,
   },
 }
