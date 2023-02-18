@@ -14,6 +14,10 @@ return {
           select = true,
         }),
       }))
+      opts.preselect = cmp.PreselectMode.None
+      opts.completion = {
+        completeopt = "noselect",
+      }
       opts.formatting.format = function(entry, item)
         local icons = require("lazyvim.config").icons.kinds
         if icons[item.kind] then
