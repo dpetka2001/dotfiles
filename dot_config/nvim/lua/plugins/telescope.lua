@@ -60,6 +60,7 @@ return {
           base_dirs = {
             { path = "~/Desktop/Projects/" },
             { path = "~/.local/share/chezmoi/" },
+            { path = "~/.local/share/nvim/" },
           },
         },
       },
@@ -70,6 +71,7 @@ return {
       { "<leader>xld", "<cmd>Telescope diagnostics<cr>", desc = "LSP Diagnostics" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
     },
+    -- Setup here extensions that depend on `telescope.opts`, otherwise just setup when it is called
     config = function(_, opts)
       local telescope = require("telescope")
       telescope.setup(opts)

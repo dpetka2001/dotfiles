@@ -4,7 +4,7 @@
 
 local map = vim.keymap.set
 -- local del = vim.keymap.del
-local util = require("lazyvim.util")
+local Util = require("lazyvim.util")
 
 -- Visual-multi
 map("n", "<C-Left>", "<Plug>(VM-Select-h)")
@@ -22,12 +22,12 @@ map("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window wi
 map("c", "<C-j>", "<Down>", { desc = "Next command" })
 map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 
--- Lazygit
+-- Lazygit change size of window
 map("n", "<leader>gg", function()
-  require("lazyvim.util").float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = util.get_root() })
+  Util.float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.get_root() })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  require("lazyvim.util").float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+  Util.float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
 end, { desc = "Lazygit (cwd dir)" })
 
 -- Move to tabs convienently
