@@ -1,28 +1,4 @@
 return {
-  -- Modify nvim-notify for Telescope
-  {
-    "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<leader>und",
-        function()
-          require("notify").dismiss({ silent = true, pending = true })
-        end,
-        desc = "Delete all Notifications",
-      },
-      {
-        "<leader>unt",
-        function()
-          require("telescope").extensions.notify.notify({
-            initial_mode = "normal",
-            -- layout_strategy = "vertical",
-          })
-        end,
-        desc = "Open Notifications (Telescope)",
-      },
-    },
-  },
-
   -- Change default permissions for files created via Neo-tree
   {
     "nvim-neo-tree/neo-tree.nvim",
