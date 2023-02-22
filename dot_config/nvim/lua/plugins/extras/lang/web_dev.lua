@@ -5,12 +5,6 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "css",
-        "javascript",
-        "typescript",
-        "json",
-        "lua",
-        "bash",
-        "markdown",
       })
     end,
   },
@@ -25,11 +19,12 @@ return {
         "typescript-language-server",
         "css-lsp",
         -- "tailwindcss-language-server",
-        "stylelint-lsp",
+        "stylelint-lsp", -- css linter
         "eslint-lsp",
 
         --[[Formatters]]
-        "prettier",
+        "prettierd",
+        -- "prettier",
       })
     end,
   },
@@ -55,12 +50,16 @@ return {
     },
   },
 
-  -- Setup null-ls with ``formatter``
-  -- {
-  --     "jose-elias-alvarez/null-ls.nvim",
-  --     opts = function(_, opts)
-  --       local nls = require("null-ls")
-  --       opts.sources = vim.list_extend(opts.sources, { nls.builtins.formatting.`formatter` })
-  --     end,
-  --   },
+  -- Setup null-ls with `prettier`
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      opts.sources = vim.list_extend(opts.sources, {
+        nls.builtins.formatting.prettierd.with({
+          filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
+        }),
+      })
+    end,
+  },
 }
