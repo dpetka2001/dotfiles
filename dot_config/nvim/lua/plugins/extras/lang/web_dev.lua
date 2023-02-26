@@ -39,9 +39,9 @@ return {
             if client.name == "tsserver" then
               client.server_capabilities.documentFormattingProvider = false
             end
-            if client.name == "eslint" then
-              client.server_capabilities.documentFormattingProvider = true
-            end
+            -- if client.name == "eslint" then
+            --   client.server_capabilities.documentFormattingProvider = true
+            -- end
           end)
           require("typescript").setup({ server = opts })
           return true
@@ -50,15 +50,16 @@ return {
     },
   },
 
-  -- Setup null-ls with `prettier`
+  -- Setup null-ls with `prettierd`
   {
     "jose-elias-alvarez/null-ls.nvim",
     opts = function(_, opts)
       local nls = require("null-ls")
       opts.sources = vim.list_extend(opts.sources, {
-        nls.builtins.formatting.prettierd.with({
-          filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
-        }),
+        nls.builtins.formatting.prettierd,
+        -- nls.builtins.formatting.prettierd.with({
+        --   filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
+        -- }),
       })
     end,
   },
