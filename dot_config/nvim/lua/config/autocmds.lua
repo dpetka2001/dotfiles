@@ -66,7 +66,7 @@ autocmd("TermOpen", {
 })
 
 -- Colorscheme
-autocmd("Colorscheme", {
+autocmd({ "Colorscheme", "BufReadPre", "BufNewFile" }, {
   pattern = "*",
   callback = function()
     vim.cmd([[
