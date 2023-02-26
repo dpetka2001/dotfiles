@@ -1,3 +1,5 @@
+local icons = require("lazyvim.config").icons
+
 return {
   -- Modify nvim-notify for Telescope
   {
@@ -29,6 +31,35 @@ return {
     opts = {
       options = {
         always_show_bufferline = true,
+      },
+    },
+  },
+
+  -- Modify `lualine`
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = {
+      sections = {
+        lualine_c = {
+          {
+            "diagnostics",
+            symbols = {
+              error = icons.diagnostics.Error,
+              warn = icons.diagnostics.Warn,
+              info = icons.diagnostics.Info,
+              hint = icons.diagnostics.Hint,
+            },
+          },
+          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+          { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
+          -- stylua: ignore
+          {
+            function() return require("nvim-navic").get_location() end,
+            cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+            padding = { left =1, right = 0 },
+          },
+        },
       },
     },
   },
