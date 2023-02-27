@@ -7,34 +7,35 @@ return {
     opts = {
       style = "moon",
       on_highlights = function(hl, c)
-        hl.NavicIconsFile = { bg = c.bg_dark, fg = c.fg }
-        hl.NavicIconsModule = { bg = c.bg_dark, fg = c.yellow }
-        hl.NavicIconsNamespace = { bg = c.bg_dark, fg = c.fg }
-        hl.NavicIconsPackage = { bg = c.bg_dark, fg = c.fg }
-        hl.NavicIconsClass = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsMethod = { bg = c.bg_dark, fg = c.blue }
-        hl.NavicIconsProperty = { bg = c.bg_dark, fg = c.green1 }
-        hl.NavicIconsField = { bg = c.bg_dark, fg = c.green1 }
-        hl.NavicIconsConstructor = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsEnum = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsInterface = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsFunction = { bg = c.bg_dark, fg = c.blue }
-        hl.NavicIconsVariable = { bg = c.bg_dark, fg = c.magenta }
-        hl.NavicIconsConstant = { bg = c.bg_dark, fg = c.magenta }
-        hl.NavicIconsString = { bg = c.bg_dark, fg = c.green }
-        hl.NavicIconsNumber = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsBoolean = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsArray = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsObject = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsKey = { bg = c.bg_dark, fg = c.purple }
-        hl.NavicIconsNull = { bg = c.bg_dark, fg = c.purple }
-        hl.NavicIconsEnumMember = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsStruct = { bg = c.bg_dark, fg = c.green1 }
-        hl.NavicIconsEvent = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsOperator = { bg = c.bg_dark, fg = c.orange }
-        hl.NavicIconsTypeParameter = { bg = c.bg_dark, fg = c.fg }
-        hl.NavicText = { bg = c.bg_dark, fg = c.green1 }
-        hl.NavicSeparator = { bg = c.bg_dark, fg = c.fg }
+        hl.NavicIconsFile = { fg = c.fg, bg = c.bg_dark }
+        hl.NavicIconsModule = { fg = c.yellow, bg = c.bg_dark }
+        hl.NavicIconsNamespace = { fg = c.fg, bg = c.bg_dark }
+        hl.NavicIconsPackage = { fg = c.fg, bg = c.bg_dark }
+        hl.NavicIconsClass = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsMethod = { fg = c.blue, bg = c.bg_dark }
+        hl.NavicIconsProperty = { fg = c.green1, bg = c.bg_dark }
+        hl.NavicIconsField = { fg = c.green1, bg = c.bg_dark }
+        hl.NavicIconsConstructor = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsEnum = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsInterface = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsFunction = { fg = c.blue, bg = c.bg_dark }
+        hl.NavicIconsVariable = { fg = c.magenta, bg = c.bg_dark }
+        hl.NavicIconsConstant = { fg = c.magenta, bg = c.bg_dark }
+        hl.NavicIconsString = { fg = c.green, bg = c.bg_dark }
+        hl.NavicIconsNumber = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsBoolean = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsArray = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsObject = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsKey = { fg = c.purple, bg = c.bg_dark }
+        hl.NavicIconsKeyword = { fg = c.purple, bg = c.bg_dark }
+        hl.NavicIconsNull = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsEnumMember = { fg = c.green1, bg = c.bg_dark }
+        hl.NavicIconsStruct = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsEvent = { fg = c.orange, bg = c.bg_dark }
+        hl.NavicIconsOperator = { fg = c.fg, bg = c.bg_dark }
+        hl.NavicIconsTypeParameter = { fg = c.green1, bg = c.bg_dark }
+        hl.NavicText = { fg = c.fg, bg = c.bg_dark }
+        hl.NavicSeparator = { fg = c.fg, bg = c.bg_dark }
       end,
     },
   },
