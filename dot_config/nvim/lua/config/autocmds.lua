@@ -34,7 +34,7 @@ autocmd("Filetype", {
 
 autocmd("BufWritePost", {
   -- Match all `lua` files in `lua/config` except `lazy.lua` which is the
-  -- setup file for `lazy.nvim` and doesn't support reloading
+  -- setup file for `lazy.nvim` and should only be reloaded when updated.
   pattern = "**/lua/config/*[^lazy].lua",
   callback = function()
     local filepath = vim.fn.expand("%")
@@ -57,7 +57,7 @@ end
 
 -- if you only want these mappings for toggle term use term://*toggleterm#* instead
 autocmd("TermOpen", {
-  pattern = "term://*",
+  pattern = "term://*toggleterm#*",
   callback = function()
     set_terminal_keymaps()
   end,
