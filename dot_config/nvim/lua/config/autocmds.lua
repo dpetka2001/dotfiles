@@ -22,16 +22,6 @@ autocmd("Filetype", {
   desc = "Don't continue comments with o and O",
 })
 
-autocmd("Filetype", {
-  pattern = { "*" },
-  callback = function()
-    local comment_ft = require("Comment.ft")
-    comment_ft.set("lua", { "--%s", "--[[%s]]" })
-  end,
-  group = "mygroup",
-  desc = "Set line/block type comments for Lua",
-})
-
 autocmd("BufWritePost", {
   -- Match all `lua` files in `lua/config` except `lazy.lua` which is the
   -- setup file for `lazy.nvim` and should only be reloaded when updated.

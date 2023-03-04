@@ -1,6 +1,8 @@
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 
+local Util = require("lazyvim.util")
+
 local multi_open = function(pb)
   local picker = action_state.get_current_picker(pb)
   local multi = picker:get_multi_selection()
@@ -70,6 +72,7 @@ return {
       { "<leader>xls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
       { "<leader>xld", "<cmd>Telescope diagnostics<cr>", desc = "LSP Diagnostics" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
+      { "<leader>ff", Util.telescope("find_files"), desc = "Find files (root dir not git)" },
     },
     -- Setup here extensions that depend on `telescope.opts`, otherwise just setup when it is called
     config = function(_, opts)
