@@ -1,8 +1,17 @@
+local Util = require("lazyvim.util")
+
 return {
   {
     "akinsho/toggleterm.nvim",
     keys = {
-      { "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm (new tab)" },
+      -- { "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm (new tab)" },
+      {
+        "<leader>tt",
+        function()
+          require("toggleterm").toggle(1, 100, Util.get_root(), "tab")
+        end,
+        desc = "ToggleTerm (root_dir)",
+      },
     },
     opts = {
       -- size can be a number or function which is passed the current terminal
@@ -23,7 +32,7 @@ return {
       shade_filetypes = {},
       shade_terminals = false,
       -- shading_factor = '<number>', -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
-      start_in_insert = false,
+      start_in_insert = true,
       insert_mappings = true, -- whether or not the open mapping applies in insert mode
       terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
       persist_size = true,
