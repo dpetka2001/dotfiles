@@ -40,3 +40,6 @@ map("n", "<leader>6", "6gt", { desc = "Move to tab 6" })
 map("n", "<leader>7", "7gt", { desc = "Move to tab 7" })
 map("n", "<leader>8", "8gt", { desc = "Move to tab 8" })
 map("n", "<leader>9", "9gt", { desc = "Move to tab 9" })
+
+-- Open current file in chrome
+map("n", "<leader>gx", '<cmd>!google-chrome "%"<cr>', { desc = "Open file in Chrome" })
