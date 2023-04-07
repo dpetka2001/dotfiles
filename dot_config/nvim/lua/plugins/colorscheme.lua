@@ -39,13 +39,21 @@ return {
       end,
     },
   },
-  { "catppuccin/nvim", name = "catppuccin" },
-  { "rebelot/kanagawa.nvim", lazy = true },
+  { "catppuccin/nvim", name = "catppuccin", event = "VeryLazy" },
+  { "rebelot/kanagawa.nvim", event = "VeryLazy" },
   { "rose-pine/neovim", name = "rose-pine", event = "VeryLazy" },
 
   -- Colorizer for showing colors from RBG values
   {
-    "norcalli/nvim-colorizer.lua",
-    config = true,
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      filetypes = {
+        -- "css",
+        -- "html",
+      },
+      user_default_options = {
+        tailwind = true,
+      },
+    },
   },
 }

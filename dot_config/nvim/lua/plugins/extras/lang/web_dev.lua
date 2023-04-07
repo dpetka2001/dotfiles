@@ -18,7 +18,7 @@ return {
         "html-lsp",
         "typescript-language-server",
         "css-lsp",
-        -- "tailwindcss-language-server",
+        "tailwindcss-language-server",
         "stylelint-lsp", -- css linter
         "eslint-lsp",
 

@@ -2,6 +2,9 @@ return {
   -- Modify nvim-cmp
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+    },
     opts = function(_, opts)
       local cmp = require("cmp")
       opts.mapping = cmp.mapping.preset.insert(vim.tbl_deep_extend("force", opts.mapping, {
@@ -29,7 +32,8 @@ return {
           luasnip = "[LuaSnip]",
           path = "[Path]",
         })[entry.source.name]
-        return item
+        -- return item
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
       end
     end,
   },
