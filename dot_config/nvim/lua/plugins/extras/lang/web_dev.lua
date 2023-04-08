@@ -5,6 +5,7 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "css",
+        "php",
       })
     end,
   },
@@ -21,6 +22,7 @@ return {
         "tailwindcss-language-server",
         "stylelint-lsp", -- css linter
         "eslint-lsp",
+        "intelephense",
 
         --[[Formatters]]
         "prettierd",
