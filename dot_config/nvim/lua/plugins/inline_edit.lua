@@ -5,7 +5,7 @@ return {
     "AndrewRadev/inline_edit.vim",
     cmd = { "InlineEdit" },
     keys = {
-      { "<leader>cI", "<cmd>InlineEdit<cr>", desc = "Inline Edit" },
+      { "<leader>cI", "<cmd>InlineEdit<cr>", desc = "Inline Edit (JS inside <script> html)" },
     },
     config = true,
   },

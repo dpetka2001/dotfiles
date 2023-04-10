@@ -23,6 +23,7 @@ return {
         "stylelint-lsp", -- css linter
         "eslint-lsp",
         "intelephense",
+        "emmet-ls",
 
         --[[Formatters]]
         "prettierd",
