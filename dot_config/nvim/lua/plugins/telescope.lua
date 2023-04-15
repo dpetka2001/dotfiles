@@ -24,6 +24,10 @@ return {
           { "<C-p>", "<cmd>lua require'telescope'.extensions.project.project{}<cr>", desc = "Telescope Project" },
         },
       },
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+      },
     },
     opts = {
       defaults = {
@@ -79,6 +83,7 @@ return {
       local telescope = require("telescope")
       telescope.setup(opts)
       telescope.load_extension("project")
+      telescope.load_extension("fzf")
     end,
   },
 }
