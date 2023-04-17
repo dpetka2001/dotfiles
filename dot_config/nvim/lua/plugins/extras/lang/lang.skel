@@ -15,6 +15,14 @@ return {
     end,
   },
 
+  -- Setup DAP ``adapter``
+  {
+    "mason-nvim-dap.nvim",
+    opts = {
+      ensure_installed = { "`adapter`" },
+    },
+  },
+
   -- Setup lspconfig
   {
     "neovim/nvim-lspconfig",
