@@ -31,6 +31,13 @@ return {
         ["<leader>cl"] = { name = "+lsp" },
       })
     end,
+    opts = {
+      diagnostics = {
+        virtual_text = {
+          prefix = "icons",
+        },
+      },
+    },
     dependencies = {
       {
         "SmiteshP/nvim-navbuddy",
@@ -49,4 +56,5 @@ return {
   -- Import some lsp configs
   { import = "plugins.extras.lang.python" },
   { import = "plugins.extras.lang.web_dev" },
+  { import = "plugins.extras.lang.clangd" },
 }
