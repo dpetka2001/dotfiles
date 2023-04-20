@@ -22,6 +22,17 @@ autocmd("Filetype", {
   desc = "Don't continue comments with o and O",
 })
 
+-- Disable Ufo for neo-tree
+autocmd("Filetype", {
+  pattern = "neo-tree",
+  callback = function()
+    vim.cmd("UfoDetach")
+  end,
+  group = "mygroup",
+  desc = "Disable Ufo for neo-tree",
+})
+
+-- Reload config on save
 autocmd("BufWritePost", {
   -- Match all `lua` files in `lua/config` except `lazy.lua` which is the
   -- setup file for `lazy.nvim` and should only be reloaded when updated.
