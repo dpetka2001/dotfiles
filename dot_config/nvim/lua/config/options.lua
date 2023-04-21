@@ -14,3 +14,7 @@ opt.smarttab = true -- When on, a <Tab> in front of a line inserts blanks accord
 
 -- Set this for ToggleTerm terminals to not be discarded when closed
 opt.hidden = true
+
+-- Set fold level, so that folds are open when entering buffer
+opt.foldlevel = 99
+opt.foldlevelstart = 99
