@@ -11,16 +11,28 @@ return {
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "`server`", "`formatter`" })
+      vim.list_extend(opts.ensure_installed, {
+        "`server`",
+        "`formatter`"
+      })
     end,
   },
 
-  -- Setup DAP ``adapter``
+  -- Add nvim-dap dependencies
   {
-    "mason-nvim-dap.nvim",
-    opts = {
-      ensure_installed = { "`adapter`" },
+    "mfussenegger/nvim-dap",
+    dependencies = {
     },
+  },
+
+  -- Setup mason DAP ``adapter``
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "`adapter`",
+      }),
+    end,
   },
 
   -- Setup lspconfig
