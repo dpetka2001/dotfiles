@@ -13,6 +13,27 @@ return {
     end,
   },
 
+  -- Modify nvim-dap
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = {
+      "mfussenegger/nvim-dap-python",
+      config = function()
+        require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
+      end,
+    },
+  },
+
+  -- Mason-nvim-dap
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed, {
+        "python",
+      })
+    end,
+  },
+
   -- Setup null-ls with `black`
   {
     "jose-elias-alvarez/null-ls.nvim",
