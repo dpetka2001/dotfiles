@@ -6,6 +6,38 @@ return {
     keys = {
       -- { "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm (new tab)" },
       {
+        "<leader>tp",
+        -- "<Cmd>lua _G.input_result = vim.fn.input({ prompt = 'Enter: ' })<CR>",
+        function()
+          _G.input_result = vim.fn.input({ prompt = "Enter: " })
+        end,
+        desc = "ToggleTerm (prompt)",
+      },
+      {
+        "<leader>th",
+        function()
+          require("toggleterm").toggle(tonumber(_G.input_result), 0, vim.loop.cwd(), "horizontal")
+        end,
+        desc = "ToggleTerm (horizontal)",
+      },
+      {
+        "<leader>tv",
+        function()
+          require("toggleterm").toggle(tonumber(_G.input_result), 0, vim.loop.cwd(), "vertical")
+        end,
+        desc = "ToggleTerm (vertical)",
+      },
+      {
+        "<leader>tn",
+        "<cmd>ToggleTermSetName<cr>",
+        desc = "Set term name",
+      },
+      {
+        "<leader>ts",
+        "<cmd>TermSelect<cr>",
+        desc = "Select term",
+      },
+      {
         "<leader>tt",
         function()
           require("toggleterm").toggle(1, 100, Util.get_root(), "tab")
