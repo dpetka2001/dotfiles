@@ -43,3 +43,6 @@ map("n", "<leader>9", "9gt", { desc = "Move to tab 9" })
 
 -- Open current file in chrome
 map("n", "<leader>fx", '<cmd>!google-chrome "%"<cr>', { desc = "Open file in Chrome" })
+
+-- Set `foldlevel` in buffer
+map("n", "zp", "<cmd>set foldlevel=2<cr>", { desc = "Set fold level to buffer" })

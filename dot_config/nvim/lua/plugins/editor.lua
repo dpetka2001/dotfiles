@@ -2,6 +2,10 @@ return {
   -- Change default permissions for files created via Neo-tree
   {
     "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "s1n7ax/nvim-window-picker",
+      opts = {},
+    },
     opts = {
       filesystem = {
         filtered_items = {
@@ -38,6 +42,7 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = {
+      current_line_blame = true,
       on_attach = function(buffer)
         local gs = package.loaded.gitsigns
 
