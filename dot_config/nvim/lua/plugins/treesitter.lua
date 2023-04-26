@@ -16,7 +16,7 @@ return {
       -- Add nvim-ts-autotag
       { "windwp/nvim-ts-autotag" },
     },
-    event = { "BufReadPre" },
+    -- event = { "BufReadPre" },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         "c",
