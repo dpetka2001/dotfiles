@@ -4,9 +4,9 @@ return {
     "folke/which-key.nvim",
     opts = function()
       require("which-key").register({
-        ["<leader>xl"] = {
-          name = "+LSP (Telescope)",
-        },
+        -- ["<leader>xl"] = {
+        --   name = "+LSP (Telescope)",
+        -- },
         ["<leader>un"] = {
           name = "+Notifications",
         },

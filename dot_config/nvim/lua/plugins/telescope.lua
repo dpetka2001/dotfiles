@@ -72,9 +72,8 @@ return {
       },
     },
     keys = {
-      { "<leader>xlw", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
-      { "<leader>xls", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
-      { "<leader>xld", "<cmd>Telescope diagnostics<cr>", desc = "LSP Diagnostics" },
+      { "<leader>xS", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
+      { "<leader>xs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
       { "<leader>ff", Util.telescope("find_files"), desc = "Find files (root dir not git)" },
     },
