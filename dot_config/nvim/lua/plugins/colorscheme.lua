@@ -1,3 +1,5 @@
+Util = require("lazyvim.util")
+
 return {
   -- { "LazyVim/LazyVim", opts = {
   --   colorscheme = "tokyonight",
@@ -39,9 +41,26 @@ return {
       end,
     },
   },
-  { "catppuccin/nvim", name = "catppuccin", event = "VeryLazy" },
-  { "rebelot/kanagawa.nvim", event = "VeryLazy" },
-  { "rose-pine/neovim", name = "rose-pine", event = "VeryLazy" },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    keys = {
+      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+    },
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    keys = {
+      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+    },
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    keys = {
+      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+    },
+  },
 
   -- Colorizer for showing colors from RBG values
   {
