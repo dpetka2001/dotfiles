@@ -15,6 +15,8 @@ return {
 
       -- Add nvim-ts-autotag
       { "windwp/nvim-ts-autotag" },
+      -- Modify nvim-ts-context-commentstring
+      { "JoosepAlviste/nvim-ts-context-commentstring" },
     },
     -- event = { "BufReadPre" },
     opts = function(_, opts)
@@ -27,6 +29,13 @@ return {
       return vim.tbl_deep_extend("force", opts, {
         autotag = {
           enable = true,
+        },
+        context_commentstring = {
+          enable = true,
+          config = {
+            c = { __default = "// %s", __multiline = "/* %s */" },
+            cpp = { __default = "// %s", __multiline = "/* %s */" },
+          },
         },
       })
     end,
