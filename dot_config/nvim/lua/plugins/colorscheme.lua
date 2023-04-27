@@ -46,6 +46,7 @@ return {
   -- Colorizer for showing colors from RBG values
   {
     "NvChad/nvim-colorizer.lua",
+    ft = { "css", "html" },
     opts = {
       filetypes = {
         -- "css",

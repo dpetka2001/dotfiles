@@ -1,15 +1,4 @@
 return {
-  -- Show symbols in a tree for LSP
-  {
-    "simrat39/symbols-outline.nvim",
-    keys = {
-      { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
-    },
-    opts = {
-      width = 35,
-    },
-  },
-
   -- Customize LSP
   {
     "neovim/nvim-lspconfig",
@@ -41,6 +30,7 @@ return {
     dependencies = {
       {
         "SmiteshP/nvim-navbuddy",
+        lazy = true,
         dependencies = {
           "SmiteshP/nvim-navic",
           "MunifTanjim/nui.nvim",
@@ -48,6 +38,18 @@ return {
         opts = { lsp = { auto_attach = true } },
         keys = {
           { "<leader>cln", "<cmd>Navbuddy<cr>", desc = "Lsp Navigation" },
+        },
+      },
+
+      -- Show symbols in a tree for LSP
+      {
+        "simrat39/symbols-outline.nvim",
+        lazy = true,
+        keys = {
+          { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
+        },
+        opts = {
+          width = 35,
         },
       },
     },

@@ -3,6 +3,7 @@ return {
   -- floating one
   {
     "nyngwang/NeoZoom.lua",
+    lazy = true,
     keys = {
       {
         "<leader><CR>",

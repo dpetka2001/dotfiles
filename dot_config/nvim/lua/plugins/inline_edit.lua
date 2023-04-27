@@ -3,6 +3,7 @@ return {
   -- which also provides support for correct attach `typescript` LSP
   {
     "AndrewRadev/inline_edit.vim",
+    lazy = true,
     cmd = { "InlineEdit" },
     keys = {
       { "<leader>cI", "<cmd>InlineEdit<cr>", desc = "Inline Edit (JS inside <script> html)" },

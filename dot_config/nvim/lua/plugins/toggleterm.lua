@@ -3,6 +3,7 @@ local Util = require("lazyvim.util")
 return {
   {
     "akinsho/toggleterm.nvim",
+    lazy = true,
     keys = {
       -- { "<leader>tt", "<cmd>ToggleTerm direction=tab<cr>", desc = "ToggleTerm (new tab)" },
       {
