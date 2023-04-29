@@ -81,7 +81,11 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
+      local timer = function()
+        return require("countdown").get_time()
+      end
       table.insert(opts.sections.lualine_x, { "encoding" })
+      table.insert(opts.sections.lualine_x, { timer })
     end,
   },
 }

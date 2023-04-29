@@ -65,6 +65,7 @@ return {
         project = {
           base_dirs = {
             { path = "~/Desktop/Projects/" },
+            { path = "~/projects/plugins/" },
             { path = "~/.local/share/chezmoi/" },
             { path = "~/.local/share/nvim/" },
           },
