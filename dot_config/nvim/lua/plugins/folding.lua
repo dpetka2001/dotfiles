@@ -28,6 +28,7 @@ local foldVirtualTextHandler = function(virtText, lnum, endLnum, width, truncate
 end
 
 return {
+  -- Modify nvim-lspconfig for nvim-ufo
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -40,43 +41,47 @@ return {
         },
       },
     },
-    {
-      "kevinhwang91/nvim-ufo",
-      dependencies = "kevinhwang91/promise-async",
-      event = "BufReadPost",
-      ---@class UfoConfig
-      opts = {
-        fold_virt_text_handler = foldVirtualTextHandler,
+  },
+
+  -- Add nvim-ufo
+  {
+    "kevinhwang91/nvim-ufo",
+    dependencies = "kevinhwang91/promise-async",
+    -- Don't lazy load it, cuz its commands are not available during autocmds
+    lazy = false,
+    -- event = "BufReadPost",
+    ---@class UfoConfig
+    opts = {
+      fold_virt_text_handler = foldVirtualTextHandler,
+    },
+    keys = {
+      {
+        "zR",
+        function()
+          require("ufo").openAllFolds()
+        end,
+        desc = "Open all folds",
       },
-      keys = {
-        {
-          "zR",
-          function()
-            require("ufo").openAllFolds()
-          end,
-          desc = "Open all folds",
-        },
-        {
-          "zM",
-          function()
-            require("ufo").closeAllFolds()
-          end,
-          desc = "Close all folds",
-        },
-        {
-          "zr",
-          function()
-            require("ufo").openFoldsExceptKinds()
-          end,
-          desc = "Open more",
-        },
-        {
-          "zm",
-          function()
-            require("ufo").closeFoldsWith()
-          end,
-          desc = "Close more",
-        },
+      {
+        "zM",
+        function()
+          require("ufo").closeAllFolds()
+        end,
+        desc = "Close all folds",
+      },
+      {
+        "zr",
+        function()
+          require("ufo").openFoldsExceptKinds()
+        end,
+        desc = "Open more",
+      },
+      {
+        "zm",
+        function()
+          require("ufo").closeFoldsWith()
+        end,
+        desc = "Close more",
       },
     },
   },
