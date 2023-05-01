@@ -15,6 +15,7 @@ return {
 
       -- Add nvim-ts-autotag
       { "windwp/nvim-ts-autotag" },
+
       -- Modify nvim-ts-context-commentstring
       { "JoosepAlviste/nvim-ts-context-commentstring" },
     },

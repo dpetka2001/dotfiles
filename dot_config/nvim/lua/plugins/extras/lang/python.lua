@@ -1,5 +1,6 @@
 return {
   -- Add `pyright` to mason
+  -- TODO: check following tools -> mypy types-requests types-docutils
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
