@@ -22,8 +22,6 @@ return {
     -- event = { "BufReadPre" },
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        "c",
-        "cpp",
         "fish",
         "rust",
       })
