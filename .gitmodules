@@ -1,0 +1,3 @@
+[submodule "plugins"]
+	path = plugins
+	url = https://github.com/dpetka2001/plugins
