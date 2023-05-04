@@ -1,4 +1,5 @@
 return {
+  -- Manipulate windows height and width with animations
   {
     "anuvyklack/windows.nvim",
     dependencies = {
@@ -21,7 +22,7 @@ return {
     },
   },
 
-  -- Maximizer
+  -- Toggle maximize for current window and restore
   {
     "declancm/maximize.nvim",
     keys = {

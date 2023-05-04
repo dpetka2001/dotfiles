@@ -55,8 +55,6 @@ return {
     },
   },
 
-  -- Import some lsp configs
-  { import = "plugins.extras.lang.python" },
-  { import = "plugins.extras.lang.web_dev" },
-  { import = "plugins.extras.lang.clangd" },
+  -- Import extra lsp languages configs
+  { import = "plugins.extras.lang" },
 }
