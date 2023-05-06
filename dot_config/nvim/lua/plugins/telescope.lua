@@ -77,6 +77,7 @@ return {
       { "<leader>xs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
       { "<leader>ff", Util.telescope("find_files"), desc = "Find files (root dir not git)" },
+      { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current Buffer Fuzzy" },
     },
     -- Setup here extensions that depend on `telescope.opts`, otherwise just setup when it is called
     config = function(_, opts)
@@ -84,6 +85,17 @@ return {
       telescope.setup(opts)
       telescope.load_extension("project")
       telescope.load_extension("fzf")
+    end,
+  },
+
+  -- Modify `alpha.nvim` to include `telescope-project`
+  {
+    "goolord/alpha-nvim",
+    opts = function(_, dashboard)
+      local button = dashboard.button("p", " " .. " Projects", ":Telescope project <CR>")
+      button.opts.hl = "AlphaButtons"
+      button.opts.hl_shortcut = "AlphaShortcut"
+      table.insert(dashboard.section.buttons.val, 4, button)
     end,
   },
 }
