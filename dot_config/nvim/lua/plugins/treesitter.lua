@@ -34,6 +34,7 @@ return {
           config = {
             c = { __default = "// %s", __multiline = "/* %s */" },
             cpp = { __default = "// %s", __multiline = "/* %s */" },
+            kdl = { __default = "// %s", __multiline = "/* %s */" },
           },
         },
       })
