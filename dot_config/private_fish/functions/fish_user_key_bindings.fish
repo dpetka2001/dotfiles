@@ -5,5 +5,5 @@ function fish_user_key_bindings
     bind \ck history-token-search-backward
     bind \cj history-token-search-forward
     bind \cs fzf
-    bind \cn nvims
+    bind \co nvims
 end
