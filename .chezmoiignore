@@ -2,6 +2,8 @@
 .config/nvim.bak/plugged/**
 .config/ranger/__pycache__/
 .config/ranger/__pycache__/**
+.config/ranger/plugins
+.config/ranger/plugins/**
 .local/share/fish/generated_completions
 .local/share/fish/generated_completions/**
 .config/gh/hosts.yml

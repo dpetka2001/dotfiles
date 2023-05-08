@@ -1,6 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-7240d95defcc442d334a1eedc3f1906d3f897935 refs/remotes/origin/15/add_pypi_registry_entry
-4210e045e1230191a2f10b8dcb5cd4e2bac6ce48 refs/remotes/origin/fix_filename_mode_overwrite
-11941619b853e9608a41028ac8ebde2e6ca7d934 refs/remotes/origin/main
-226db1dd3e56abdb9e628f918f554cd4345ec576 refs/remotes/origin/remove_default_line_mode_make_uninstall
-f84976d472be68c47bd994e1594e0bf4d59ec61d refs/remotes/origin/remove_old_install_method
