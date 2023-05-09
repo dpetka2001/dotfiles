@@ -10,3 +10,6 @@
 Documents/Obsidian Vault/jrn23/.obsidian/workspace
 .config/lazygit/state.yml
 .config/fish/fish_variables
+!.config/fish/functions
+.config/fish/functions/**
+!.config/fish/functions/{addpaths,fish_ssh_agent,fish_title,fish_user_key_bindings,hg,ll,nvims,removepath,tt,tw}.fish
