@@ -47,12 +47,19 @@ return {
             ["<CR>"] = multi_open,
           },
         },
+        layout_strategy = "flex",
         layout_config = {
           horizontal = {
             preview_width = 0.45,
           },
+          vertical = {
+            width = 0.9,
+            height = 0.95,
+            preview_height = 0.5,
+            preview_cutoff = 0,
+          },
           flex = {
-            preview_width = 0.45,
+            flip_columns = 140,
           },
         },
       },
