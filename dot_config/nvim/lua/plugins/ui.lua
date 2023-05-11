@@ -39,11 +39,11 @@ return {
         --   -- check if the current buffer is being viewed in the current tab
         --   return vim.tbl_contains(tab_buffers, buf)
         -- end,
-        custom_filter = function(buf_number)
-          if not not vim.api.nvim_buf_get_name(buf_number):find(vim.fn.getcwd(), 0, true) then
-            return true
-          end
-        end,
+        -- custom_filter = function(buf_number)
+        --   if not not vim.api.nvim_buf_get_name(buf_number):find(vim.fn.getcwd(), 0, true) then
+        --     return true
+        --   end
+        -- end,
       },
     },
   },
