@@ -13,3 +13,5 @@ print(vim.inspect(vim.tbl_filter(function(lang)
   added[lang] = true
   return true
 end, ensure_installed)))
+print("table added: ")
+print(vim.inspect(added))

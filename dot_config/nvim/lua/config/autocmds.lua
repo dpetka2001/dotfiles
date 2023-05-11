@@ -26,7 +26,9 @@ autocmd("Filetype", {
 autocmd("Filetype", {
   pattern = "neo-tree",
   callback = function()
-    vim.cmd("UfoDetach")
+    if package.loaded["ufo"] then
+      vim.cmd("UfoDetach")
+    end
   end,
   group = "mygroup",
   desc = "Disable Ufo for neo-tree",

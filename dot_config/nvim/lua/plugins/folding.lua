@@ -47,8 +47,7 @@ return {
   {
     "kevinhwang91/nvim-ufo",
     dependencies = "kevinhwang91/promise-async",
-    -- Don't lazy load it, cuz its commands are not available during autocmds
-    lazy = false,
+    lazy = true,
     -- event = "BufReadPost",
     ---@class UfoConfig
     opts = {
