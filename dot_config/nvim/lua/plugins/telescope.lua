@@ -38,6 +38,7 @@ return {
             end,
             -- Add opening multi-selection support to telescope pickers
             ["<CR>"] = multi_open,
+            ["<S-t>"] = actions.select_tab,
           },
           n = {
             ["<C-b>"] = function(...)

@@ -83,6 +83,13 @@ return {
         end,
         desc = "Close more",
       },
+      {
+        "zP",
+        function()
+          require("ufo.preview"):peekFoldedLinesUnderCursor()
+        end,
+        desc = "Preview folds",
+      },
     },
   },
 }
