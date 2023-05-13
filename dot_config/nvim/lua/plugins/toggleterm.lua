@@ -9,7 +9,7 @@ return {
         "<leader>th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, vim.loop.cwd(), "horizontal")
+          require("toggleterm").toggle(count, 10, vim.loop.cwd(), "horizontal")
         end,
         desc = "ToggleTerm (horizontal)",
       },
