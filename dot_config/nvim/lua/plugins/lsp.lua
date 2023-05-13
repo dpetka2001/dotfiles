@@ -29,9 +29,10 @@ return {
     end,
     opts = {
       diagnostics = {
-        virtual_text = {
-          prefix = "icons",
-        },
+        -- virtual_text = {
+        --   prefix = "icons",
+        -- },
+        virtual_text = false,
       },
     },
     dependencies = {
