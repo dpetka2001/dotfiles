@@ -28,6 +28,9 @@ return {
   -- Modify `bufferline`
   {
     "akinsho/bufferline.nvim",
+    event = function()
+      return { "BufReadPost", "BufNewFile" }
+    end,
     opts = {
       options = {
         always_show_bufferline = true,
