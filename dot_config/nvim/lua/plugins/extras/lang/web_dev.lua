@@ -62,6 +62,7 @@ return {
       local nls = require("null-ls")
       opts.sources = vim.list_extend(opts.sources, {
         nls.builtins.formatting.prettierd,
+        nls.builtins.code_actions.eslint,
         -- nls.builtins.formatting.prettierd.with({
         --   filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
         -- }),
