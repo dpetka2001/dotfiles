@@ -10,3 +10,4 @@ abbr -a gd git diff
 abbr -a gsw git switch
 abbr -a gb git branch
 abbr -a nv nvim
+abbr -a cl chezmoi git -- log --color --graph --date=format:\'\%Y-\%m-\%d \%H:\%M:\%S\' --pretty=format:\'\%Cred\%h\%Creset -\%C\(yellow\)\%d\%Creset \%s \%Cgreen\(\%ad\) \%C\(bold blue\)\<\%an\>\%Creset\'
