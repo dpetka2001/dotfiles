@@ -11,3 +11,5 @@ abbr -a gsw git switch
 abbr -a gb git branch
 abbr -a nv nvim
 abbr -a cl chezmoi git -- log --color --graph --date=format:\'\%Y-\%m-\%d \%H:\%M:\%S\' --pretty=format:\'\%Cred\%h\%Creset -\%C\(yellow\)\%d\%Creset \%s \%Cgreen\(\%ad\) \%C\(bold blue\)\<\%an\>\%Creset\'
+abbr -a nv_build make CMAKE_BUILD_TYPE=RelWithDebInfo
+abbr -a nv_install "cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb"
