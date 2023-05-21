@@ -16,7 +16,10 @@ augroup("mygroup", { clear = true })
 autocmd("Filetype", {
   pattern = { "*" },
   callback = function()
-    vim.opt.formatoptions = vim.opt.formatoptions - "o" -- Don't continue comments with o and O
+    -- vim.opt.formatoptions = vim.opt.formatoptions - "o"
+    vim.opt.formatoptions = vim.opt.formatoptions + {
+      o = false, -- Don't continue comments with o and O
+    }
   end,
   group = "mygroup",
   desc = "Don't continue comments with o and O",
