@@ -6,5 +6,15 @@
       ],
       "key": "Q"
     }
-  ]
+  ],
+  "app:delete-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "D"
+    }
+  ],
+  "table-editor-obsidian:table-control-bar": []
 }
