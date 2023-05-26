@@ -2,6 +2,7 @@ return {
   -- Don't open files from terminal in nested Neovim instances
   {
     "willothy/flatten.nvim",
+    event = "BufReadPre",
     opts = {
       window = {
         open = "alternate",
