@@ -77,6 +77,7 @@ return {
             padding = { left =1, right = 0 },
           },
         },
+        lualine_z = {},
       },
     },
   },
