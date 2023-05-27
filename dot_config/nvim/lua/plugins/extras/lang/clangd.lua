@@ -9,11 +9,11 @@ return {
     end,
   },
 
-  -- Add `clangd` and `clang_format` to mason
+  -- Add `tools` to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, { "clangd", "clang-format" })
+      vim.list_extend(opts.ensure_installed, { "clang-format" })
     end,
   },
 
@@ -25,7 +25,7 @@ return {
   --   },
   -- },
 
-  -- Setup lspconfig
+  -- Add `server` and setup lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -35,6 +35,9 @@ return {
       },
     },
     opts = {
+      servers = {
+        clangd = {},
+      },
       setup = {
         clangd = function(_, opts)
           opts.capabilities.offsetEncoding = { "utf-16" }

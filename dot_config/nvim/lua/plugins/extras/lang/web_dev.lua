@@ -17,16 +17,6 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
-        --[[LSP servers/linters]]
-        "html-lsp",
-        "typescript-language-server",
-        "css-lsp",
-        "tailwindcss-language-server",
-        "stylelint-lsp", -- css linter
-        "eslint-lsp",
-        "intelephense",
-        "emmet-ls",
-
         --[[Formatters]]
         "prettierd",
         -- "prettier",
@@ -38,6 +28,16 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      servers = {
+        html = {},
+        tsserver = {},
+        cssls = {},
+        tailwindcss = {},
+        stylelint_lsp = {}, -- css linter
+        eslint = {},
+        intelephense = {},
+        emmet_ls = {},
+      },
       setup = {
         tsserver = function(_, opts)
           require("lazyvim.util").on_attach(function(client, buffer)

@@ -35,6 +35,7 @@ return {
         virtual_text = false,
       },
       servers = {
+        yamlls = {},
         tsserver = {
           single_file_support = false,
           settings = {

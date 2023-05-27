@@ -6,9 +6,7 @@ return {
     opts = function(_, opts)
       -- vim.list_extend(opts.ensure_installed, { "pyright", "black", "ruff-lsp", "ruff" })
       vim.list_extend(opts.ensure_installed, {
-        "pyright",
         "black",
-        "ruff-lsp",
         "ruff",
       })
     end,
@@ -33,6 +31,18 @@ return {
         "python",
       })
     end,
+  },
+
+  -- Add `server` and setup lspconfig
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {},
+    opts = {
+      servers = {
+        pyright = {},
+        ruff_lsp = {},
+      },
+    },
   },
 
   -- Setup null-ls with `black`

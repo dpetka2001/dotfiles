@@ -9,7 +9,7 @@ return {
     end,
   },
 
-  -- Add ``server`` and ``formatter`` to mason
+  -- Add `tools` to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -37,11 +37,14 @@ return {
     end,
   },
 
-  -- Setup lspconfig
+  -- Add `server` and setup lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = {},
     opts = {
+      servers = {
+        `server` = {},
+        },
       setup = {
         `server` = function(_, opts)
         end,
