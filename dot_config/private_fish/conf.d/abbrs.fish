@@ -1,4 +1,5 @@
-abbr -a gc --set-cursor git commit -m \"%\"
+# abbr -a gc --set-cursor git commit -m \"%\"
+abbr -a gc git commit -m
 abbr -a gl git\ log\ --color\ --graph\ --date=format:\'\%Y-\%m-\%d\ \%H:\%M:\%S\'\ --pretty=format:\'\%Cred\%h\%Creset\ -\%C\(yellow\)\%d\%Creset\ \%s\ \%Cgreen\(\%ad\)\ \%C\(bold\ blue\)\<\%an\>\%Creset\'
 abbr -a ga git add
 abbr -a gch git checkout

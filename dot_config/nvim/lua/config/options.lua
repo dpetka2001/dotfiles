@@ -20,4 +20,4 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 
 -- Set eventignore so that tmux does not show `activity` every time we change from a window with Neovim
-opt.eventignore = "FocusLost,Focusgained"
+opt.eventignore = "FocusLost"
