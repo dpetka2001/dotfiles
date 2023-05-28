@@ -3,10 +3,6 @@
 -- Add any additional options here
 
 local opt = vim.opt
-local g = vim.g
-
-g.VM_mouse_mappings = 1
-g.VM_theme = "purplegray"
 
 -- Indent
 opt.autoindent = true -- Copy indent from current line when starting a new line (When <CR> or 'o' or 'O')
