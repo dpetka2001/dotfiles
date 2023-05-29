@@ -1,7 +1,7 @@
 # Change the prefix key to C-a
 unbind C-b
-set -g prefix M-a
-bind M-a send-prefix
+set -g prefix C-a
+bind C-a send-prefix
 
 # Some extra key bindings to select higher numbered windows
 bind F1 selectw -t:10
