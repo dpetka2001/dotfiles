@@ -61,20 +61,4 @@ return {
       { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
     },
   },
-
-  -- Colorizer for showing colors from RBG values
-  {
-    "NvChad/nvim-colorizer.lua",
-    ft = { "css", "html" },
-    cmd = { "ColorizerToggle" },
-    opts = {
-      filetypes = {
-        -- "css",
-        -- "html",
-      },
-      user_default_options = {
-        tailwind = true,
-      },
-    },
-  },
 }
