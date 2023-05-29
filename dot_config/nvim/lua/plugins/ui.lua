@@ -92,4 +92,16 @@ return {
       table.insert(opts.sections.lualine_x, { timer })
     end,
   },
+
+  -- Style windows with different colorschemes
+  {
+    "folke/styler.nvim",
+    event = "VeryLazy",
+    opts = {
+      themes = {
+        markdown = { colorscheme = "catppuccin" },
+        help = { colorscheme = "catppuccin", background = "dark" },
+      },
+    },
+  },
 }
