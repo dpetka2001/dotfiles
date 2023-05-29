@@ -1,37 +1,32 @@
 #! /usr/bin/env bash
-if [ -z $1 ]
-then
-        dirpath=$(find ~/ -mindepth 1 -maxdepth 3 -iname '*' -o -iname '.*' -type d | fzf)
+if [ -z $1 ]; then
+	dirpath=$(find ~/ -mindepth 1 -maxdepth 3 -iname '*' -o -iname '.*' -type d | fzf)
 else
-        dirpath=$(realpath $1 -s )
+	dirpath=$(realpath $1 -s)
 fi
 
-if [ -z $dirpath ]
-then
-        exit 1
+if [ -z $dirpath ]; then
+	exit 1
 fi
 
 # Function to shorten full path to 1 char except the last field
 # (i.e /home/jrn23/.config/nvim -> /h/j/.co/nvim)
-shortpath()
-{
-    # See https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
-    # `%` deletes trailing portion of expansion pattern and `#` deletes
-    # begginning portion of expansion pattern
-    dir=${1%/*} && last=${1##*/}
+shortpath() {
+	# See https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html
+	# `%` deletes trailing portion of expansion pattern and `#` deletes
+	# begginning portion of expansion pattern
+	dir=${1%/*} && last=${1##*/}
 
-    # See expansion pattern string replacement
-    res=$(for i in ${dir//\// }
-          do
-              # See Substring Expansion
-              if [ "${i:0:1}" != '.' ]
-              then
-                  echo -n "${i:0:1}/"
-              else
-                  echo -n "${i:0:2}/"
-              fi
-          done)
-    echo "$res$last"
+	# See expansion pattern string replacement
+	res=$(for i in ${dir//\// }; do
+		# See Substring Expansion
+		if [ "${i:0:1}" != '.' ]; then
+			echo -n "${i:0:1}/"
+		else
+			echo -n "${i:0:2}/"
+		fi
+	done)
+	echo "$res$last"
 }
 
 # Convert $HOME to ~ in path (see expansion pattern string replacement)
@@ -40,17 +35,14 @@ session_name=${dirpath##*/}
 
 # cd $dirpath
 tmux new-session -d -s "$session_name" -c $dirpath
-# tmux new-window -n "nvim" -t $session_name
 # tmux new-window -n "shell" -t $session_name -c $dirpath
 # tmux send-keys -t $session_name:"shell" "git status" Enter
 # tmux send-keys -t $session_name:"nvim" "nvim" Enter
 
-
 # $TMUX is set if we are inside a tmux session, otherwise if it's not set we're
 # not inside a session
-if [ -z $TMUX ]
-then
-        tmux attach-session -t $session_name
+if [ -z $TMUX ]; then
+	tmux attach-session -t "$session_name"
 else
-        tmux switch-client -t $session_name
+	tmux switch-client -t "$session_name"
 fi
