@@ -30,9 +30,17 @@ return {
     opts = {
       servers = {
         html = {},
-        tsserver = {},
+        tsserver = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern(".git")(...)
+          end,
+        },
         cssls = {},
-        tailwindcss = {},
+        tailwindcss = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern(".git")(...)
+          end,
+        },
         stylelint_lsp = {}, -- css linter
         eslint = {},
         intelephense = {},
