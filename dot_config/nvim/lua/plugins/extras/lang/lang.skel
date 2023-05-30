@@ -20,14 +20,14 @@ return {
     end,
   },
 
-  -- Add nvim-dap dependencies
+  -- Setup adapters as nvim-dap dependencies
   {
     "mfussenegger/nvim-dap",
     dependencies = {
     },
   },
 
-  -- Setup mason DAP ``adapter``
+  -- Add ``adapter`` debugger to mason DAP to auto-install
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = function(_, opts)

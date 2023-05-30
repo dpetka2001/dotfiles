@@ -12,7 +12,7 @@ return {
     end,
   },
 
-  -- Modify nvim-dap
+  -- Setup adapters as nvim-dap dependencies
   {
     "mfussenegger/nvim-dap",
     dependencies = {
@@ -23,7 +23,7 @@ return {
     },
   },
 
-  -- Mason-nvim-dap
+  -- Add `python` debugger to mason DAP to auto-install
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = function(_, opts)
