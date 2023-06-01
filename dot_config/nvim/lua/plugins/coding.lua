@@ -40,4 +40,12 @@ return {
       end
     end,
   },
+
+  -- Modify Luasnip
+  {
+    "L3MON4D3/LuaSnip",
+    config = function()
+      require("luasnip.loaders.from_lua").load({ paths = "lua/plugins/snippets" })
+    end,
+  },
 }
