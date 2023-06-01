@@ -6,4 +6,5 @@ function fish_user_key_bindings
     bind \cj history-token-search-forward
     bind \cs fzf
     bind \co nvims
+    bind \e\cR ranger
 end
