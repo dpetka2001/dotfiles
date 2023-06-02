@@ -4,5 +4,4 @@ configuration {
  combi-modi: "window,drun,ssh";
  }
 
-@theme "gruvbox-dark-soft"
-// @import "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"

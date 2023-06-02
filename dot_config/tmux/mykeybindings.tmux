@@ -60,3 +60,9 @@ bind C-j split-window -v "tmux ls | sed -E 's/:.*$//' | fzf --reverse | xargs tm
 
 # Kill server
 bind C-k run "tmux kill-server > /dev/null"
+
+# Enable select/yank in `copy-mode`
+unbind-key -T copy-mode-vi v
+setw -g mode-keys vi
+bind -T copy-mode-vi 'v' send -X begin-selection
+bind-key -T copy-mode-vi 'y' send -X copy-selection
