@@ -6,6 +6,14 @@ return {
     lazy = true,
     keys = {
       {
+        "<leader>tf",
+        function()
+          local count = vim.v.count1
+          require("toggleterm").toggle(count, 0, vim.loop.cwd(), "float")
+        end,
+        desc = "ToggleTerm (float)",
+      },
+      {
         "<leader>th",
         function()
           local count = vim.v.count1
