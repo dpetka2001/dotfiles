@@ -22,7 +22,7 @@ return {
       }))
       opts.preselect = cmp.PreselectMode.None
       opts.completion = {
-        completeopt = "noselect",
+        completeopt = "menu,menuone,noinsert,noselect",
       }
       opts.formatting.format = function(entry, item)
         local icons = require("lazyvim.config").icons.kinds
