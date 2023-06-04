@@ -37,6 +37,17 @@ return {
     end,
   },
 
+  -- Add which-key namespace for `server` debugging
+  {
+    "folke/which-key.nvim",
+    optional = true,
+    opts = {
+      defaults = {
+        ["<leader>dP"] = { name = "+server" },
+      },
+    },
+  },
+
   -- Add `server` and setup lspconfig
   {
     "neovim/nvim-lspconfig",

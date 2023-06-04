@@ -38,6 +38,7 @@ return {
     end,
   },
 
+  -- Add which-key namespace for Python debugging
   {
     "folke/which-key.nvim",
     optional = true,
