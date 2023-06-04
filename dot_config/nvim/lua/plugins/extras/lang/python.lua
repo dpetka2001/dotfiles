@@ -17,6 +17,11 @@ return {
     "mfussenegger/nvim-dap",
     dependencies = {
       "mfussenegger/nvim-dap-python",
+      -- stylua: ignore
+      keys = {
+        { "<leader>dPt", function() require('dap-python').test_method() end, desc = "Debug test method" },
+        { "<leader>dPc", function() require('dap-python').test_class() end, desc = "Debug class" },
+      },
       config = function()
         require("dap-python").setup("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
       end,
@@ -31,6 +36,16 @@ return {
         "python",
       })
     end,
+  },
+
+  {
+    "folke/which-key.nvim",
+    optional = true,
+    opts = {
+      defaults = {
+        ["<leader>dP"] = { name = "+Python" },
+      },
+    },
   },
 
   -- Add `server` and setup lspconfig
