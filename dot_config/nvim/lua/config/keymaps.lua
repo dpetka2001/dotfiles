@@ -48,3 +48,10 @@ map("n", "<leader>fx", '<cmd>!/home/jrn23/.local/opt/firefox/firefox "%"<cr>', {
 
 -- Set `foldlevel` in buffer
 map("n", "zp", "<cmd>set foldlevel=2<cr>", { desc = "Set fold level to buffer" })
+
+-- Remap float term to `C-_`, cuz `tmux` doesn't interpret the correct keycode from `C-/`
+local lazyterm = function()
+  Util.float_term(nil, { cwd = Util.get_root() })
+end
+map("n", "<C-_>", lazyterm, { desc = "Terminal (root dir)" })
+map("t", "<C-_>", "<cmd>close<cr>", { desc = "Hide Terminal" })
