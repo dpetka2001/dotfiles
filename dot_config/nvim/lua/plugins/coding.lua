@@ -24,9 +24,10 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
-        { name = "codeium", priority = 10 },
+        { name = "codeium", priority = 50 },
       }))
       opts.mapping = cmp.mapping.preset.insert(vim.tbl_deep_extend("force", opts.mapping, {
         ["<CR>"] = cmp.mapping.confirm({
