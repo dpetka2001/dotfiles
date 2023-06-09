@@ -74,4 +74,19 @@ return {
       require("luasnip.loaders.from_lua").load({ paths = "lua/plugins/snippets" })
     end,
   },
+
+  -- Easily create annotations
+  {
+    "danymat/neogen",
+    keys = {
+      {
+        "<leader>cc",
+        function()
+          require("neogen").generate({})
+        end,
+        desc = "Neogen Comment",
+      },
+    },
+    opts = { snippet_engine = "luasnip" },
+  },
 }
