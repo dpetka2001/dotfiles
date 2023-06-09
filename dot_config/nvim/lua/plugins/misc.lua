@@ -12,4 +12,21 @@ return {
       vim.g.matchup_matchparen_offscreen = { method = "status_manual" }
     end,
   },
+
+  -- Dims inactive portions of the code you're editing
+  { "folke/twilight.nvim" },
+
+  -- Opens the current buffer in a new full-screen floating window
+  {
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+    opts = {
+      plugins = {
+        gitsigns = true,
+        tmux = true,
+        kitty = { enabled = false, font = "+2" },
+      },
+    },
+    keys = { { "<leader>zz", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
+  },
 }

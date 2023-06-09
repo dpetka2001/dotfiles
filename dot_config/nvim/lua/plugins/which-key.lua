@@ -19,6 +19,9 @@ return {
         ["<leader>t"] = {
           name = "+Terminal",
         },
+        ["<leader>z"] = {
+          name = "+Zoom",
+        },
       })
     end,
   },

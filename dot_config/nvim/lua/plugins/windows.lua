@@ -26,7 +26,7 @@ return {
   {
     "declancm/maximize.nvim",
     keys = {
-      { "<Leader>z", "<Cmd>lua require('maximize').toggle()<CR>", desc = "Toggle maximize" },
+      { "<Leader>zm", "<Cmd>lua require('maximize').toggle()<CR>", desc = "Toggle maximize" },
     },
   },
 }
