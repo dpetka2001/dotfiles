@@ -14,11 +14,15 @@ return {
   },
 
   -- Dims inactive portions of the code you're editing
-  { "folke/twilight.nvim" },
+  {
+    "folke/twilight.nvim",
+    lazy = true,
+  },
 
   -- Opens the current buffer in a new full-screen floating window
   {
     "folke/zen-mode.nvim",
+    dependencies = { "folke/twilight.nvim" },
     cmd = "ZenMode",
     opts = {
       plugins = {
