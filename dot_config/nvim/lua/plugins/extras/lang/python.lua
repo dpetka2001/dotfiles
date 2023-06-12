@@ -56,7 +56,7 @@ return {
     dependencies = {},
     opts = {
       servers = {
-        pyright = {},
+        -- pyright = {},
         ruff_lsp = {},
       },
     },
