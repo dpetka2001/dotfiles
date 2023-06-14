@@ -37,6 +37,10 @@ globalKeys = gears.table.join(
 	end),
 	awful.key({}, "XF86AudioMute", function()
 		awful.util.spawn("amixer -D pulse set Master toggle", false)
+	end),
+
+	awful.key({}, "Print", function()
+		awful.util.spawn("flameshot gui -p /home/jrn23/Pictures", false)
 	end)
 )
 
