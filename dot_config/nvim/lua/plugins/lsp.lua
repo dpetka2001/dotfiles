@@ -37,7 +37,7 @@ return {
       servers = {
         yamlls = {},
         tsserver = {
-          single_file_support = false,
+          -- single_file_support = false,
           settings = {
             typescript = {
               inlayHints = {
