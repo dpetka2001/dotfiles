@@ -655,5 +655,6 @@ require("mycustom.mysignals")
 -- Execute `compton' at start up
 awful.spawn.with_shell("$HOME/.screenlayout/multi-monitor.sh")
 awful.spawn.single_instance("compton", awful.rules.rules)
+awful.spawn.single_instance("/usr/libexec/geoclue-2.0/demos/agent", awful.rules.rules)
 -- compton --backend="glx"
 --awful.spawn.once("nm-applet")
