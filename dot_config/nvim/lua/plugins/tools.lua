@@ -68,4 +68,12 @@ return {
       },
     },
   },
+
+  -- Better scope for buffers throughout tabs
+  {
+    "tiagovla/scope.nvim",
+    opts = {
+      restore_state = false,
+    },
+  },
 }
