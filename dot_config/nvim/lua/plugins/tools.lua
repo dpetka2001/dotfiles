@@ -72,6 +72,7 @@ return {
   -- Better scope for buffers throughout tabs
   {
     "tiagovla/scope.nvim",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {
       restore_state = false,
     },
@@ -83,5 +84,13 @@ return {
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
     config = true,
     keys = { { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "DiffView" } },
+  },
+
+  -- Better search/replace like `spectre`
+  {
+    "AckslD/muren.nvim",
+    lazy = true,
+    cmd = { "MurenToggle", "MurenOpen", "MurenClose", "MurenFresh", "MurenUnique" },
+    config = true,
   },
 }
