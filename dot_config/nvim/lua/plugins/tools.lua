@@ -90,6 +90,7 @@ return {
   {
     "AckslD/muren.nvim",
     lazy = true,
+    keys = { { "<leader>sR", "<cmd>MurenToggle<cr>", desc = "Replace in files (Muren)" } },
     cmd = { "MurenToggle", "MurenOpen", "MurenClose", "MurenFresh", "MurenUnique" },
     config = true,
   },
