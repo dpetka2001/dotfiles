@@ -8,9 +8,12 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local usercmd = vim.api.nvim_create_user_command
 
---[[ Auto Commands ]]
+--[[ -------------
+     AUTO COMMANDS
+     ------------- ]]
 
 -- Prefer creating groups and assigning autocmds to groups, because it makes it easier to clear them
+--[[ Mygroup Group ]]
 augroup("mygroup", { clear = true })
 
 autocmd("Filetype", {
@@ -84,7 +87,30 @@ autocmd("BufRead", {
   desc = "Disable Treesitter for files larger than 1MB",
 })
 
---[[ User Commands ]]
+--[[ Remember Folds Group ]]
+augroup("remember_folds", { clear = true })
+
+autocmd({ "BufWinLeave", "BufLeave" }, {
+  pattern = "*",
+  callback = function()
+    vim.cmd("silent! mkview")
+  end,
+  group = "remember_folds",
+  desc = "Remember folds on buffer exit",
+})
+
+autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    vim.cmd("silent! loadview")
+  end,
+  group = "remember_folds",
+  desc = "Restore folds on buffer enter",
+})
+
+--[[ -------------
+     USER COMMANDS
+     ------------- ]]
 
 usercmd("Rwd", function()
   print(util.get_root())

@@ -47,8 +47,8 @@ return {
   {
     "kevinhwang91/nvim-ufo",
     dependencies = "kevinhwang91/promise-async",
-    lazy = true,
-    -- event = "BufReadPost",
+    -- lazy = true,
+    event = "BufReadPre",
     ---@class UfoConfig
     opts = {
       fold_virt_text_handler = foldVirtualTextHandler,
