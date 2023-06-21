@@ -88,25 +88,25 @@ autocmd("BufRead", {
 })
 
 --[[ Remember Folds Group ]]
-augroup("remember_folds", { clear = true })
-
-autocmd({ "BufWinLeave", "BufLeave" }, {
-  pattern = "*",
-  callback = function()
-    vim.cmd("silent! mkview")
-  end,
-  group = "remember_folds",
-  desc = "Remember folds on buffer exit",
-})
-
-autocmd("BufReadPost", {
-  pattern = "*",
-  callback = function()
-    vim.cmd("silent! loadview")
-  end,
-  group = "remember_folds",
-  desc = "Restore folds on buffer enter",
-})
+-- augroup("remember_folds", { clear = true })
+--
+-- autocmd({ "BufWinLeave", "BufLeave" }, {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd("silent! mkview")
+--   end,
+--   group = "remember_folds",
+--   desc = "Remember folds on buffer exit",
+-- })
+--
+-- autocmd("BufReadPost", {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd("silent! loadview")
+--   end,
+--   group = "remember_folds",
+--   desc = "Restore folds on buffer enter",
+-- })
 
 --[[ -------------
      USER COMMANDS
