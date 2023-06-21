@@ -3,6 +3,7 @@ return {
   {
     "jcdickinson/codeium.nvim",
     lazy = true,
+    pin = true,
     dependencies = {
       { "jcdickinson/http.nvim", build = "cargo build --workspace --release" },
       "nvim-lua/plenary.nvim",
