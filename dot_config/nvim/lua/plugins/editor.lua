@@ -83,4 +83,14 @@ return {
       end,
     },
   },
+
+  -- Modify todo-comments
+  {
+    "folke/todo-comments.nvim",
+    opts = {
+      highlight = {
+        keyword = "bg",
+      },
+    },
+  },
 }
