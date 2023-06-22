@@ -84,8 +84,12 @@ return {
       },
     },
     keys = {
-      { "<leader>xS", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
+      { "<leader>sd", false },
+      { "<leader>sD", false },
+      { "<leader>xd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
+      { "<leader>xD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
       { "<leader>xs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
+      { "<leader>xS", "<cmd>Telescope lsp_workspace_symbols<cr>", desc = "LSP Workspace Symbols" },
       { "<leader>sM", "<cmd>Telescope man_pages sections=ALL<cr>", desc = "Man Pages" },
       { "<leader>ff", Util.telescope("find_files"), desc = "Find files (root dir not git)" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current Buffer Fuzzy" },
