@@ -90,7 +90,7 @@ autocmd("BufRead", {
 --[[ Remember Folds Group ]]
 augroup("remember_folds", { clear = true })
 
-autocmd({ "BufWinLeave", "BufLeave" }, {
+autocmd({ "BufLeave" }, {
   pattern = "*",
   callback = function()
     vim.cmd("silent! mkview")
