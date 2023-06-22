@@ -90,6 +90,8 @@ return {
     opts = {
       highlight = {
         keyword = "bg",
+        -- add extra pattern for `KEYWORD(AUTHOR):`
+        pattern = { [[.*<(KEYWORDS)\s*:]], [[.*<(KEYWORDS)\s*[(][^)]*[)]:]] },
       },
     },
   },
