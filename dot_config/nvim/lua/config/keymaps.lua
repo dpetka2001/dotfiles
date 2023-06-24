@@ -41,6 +41,9 @@ map("n", "<leader>7", "7gt", { desc = "Move to tab 7" })
 map("n", "<leader>8", "8gt", { desc = "Move to tab 8" })
 map("n", "<leader>9", "9gt", { desc = "Move to tab 9" })
 
+-- Close buffer and window together
+map("n", "<leader>bw", "<cmd>execute 'bdelete' | silent! close<cr>", { desc = "Close buffer and window" })
+
 -- Open current file in chrome
 -- map("n", "<leader>fx", '<cmd>!google-chrome "%"<cr>', { desc = "Open file in Chrome" })
 -- stylua: ignore
