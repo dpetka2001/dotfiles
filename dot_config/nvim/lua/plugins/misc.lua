@@ -17,6 +17,7 @@ return {
   {
     "folke/twilight.nvim",
     lazy = true,
+    cmd = "Twilight",
   },
 
   -- Opens the current buffer in a new full-screen floating window
