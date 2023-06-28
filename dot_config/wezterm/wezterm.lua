@@ -102,13 +102,13 @@ return {
 		border_left_width = "0.2cell",
 		border_right_width = "0.0cell",
 		border_bottom_height = "0.0cell",
-		border_top_height = "0.30cell",
+		border_top_height = "0.00cell",
 	},
 	window_padding = {
 		left = 0,
 		right = 0,
-		top = 0,
-		bottom = 0,
+		top = "5px",
+		bottom = "0px",
 	},
 	-- disable_default_key_bindings = true,
 	keys = {
