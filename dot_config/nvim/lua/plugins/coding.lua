@@ -27,7 +27,21 @@ return {
     opts = function(_, opts)
       local cmp = require("cmp")
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+      local types = require("cmp.types")
 
+      -- Function to sort LSP snippets, so that they appear at the end of LSP suggestions
+      local function deprioritize_snippet(entry1, entry2)
+        if entry1:get_kind() == types.lsp.CompletionItemKind.Snippet then
+          return false
+        end
+        if entry2:get_kind() == types.lsp.CompletionItemKind.Snippet then
+          return true
+        end
+      end
+
+      -- Insert `deprioritize_snippet` first in the `comparators` table, so that it has priority
+      -- over the other default comparators
+      table.insert(opts.sorting.comparators, 1, deprioritize_snippet)
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
       opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
         { name = "codeium", priority = 50 },
