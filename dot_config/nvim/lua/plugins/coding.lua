@@ -106,30 +106,4 @@ return {
     },
     opts = { snippet_engine = "luasnip" },
   },
-
-  -- Modify `yanky.nvim`
-  {
-    "gbprod/yanky.nvim",
-    opts = {
-      picker = {
-        telescope = {
-          use_default_mappings = false,
-          mappings = {
-            i = {
-              ["<c-v>"] = mapping.put("p"),
-              ["<c-k>"] = mapping.put("P"),
-              ["<c-x>"] = mapping.delete(),
-              ["<c-r>"] = mapping.set_register(utils.get_default_register()),
-            },
-            n = {
-              p = mapping.put("p"),
-              P = mapping.put("P"),
-              d = mapping.delete(),
-              r = mapping.set_register(utils.get_default_register()),
-            },
-          },
-        },
-      },
-    },
-  },
 }
