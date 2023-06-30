@@ -29,10 +29,12 @@ return {
     end,
     opts = {
       diagnostics = {
-        -- virtual_text = {
-        --   prefix = "icons",
-        -- },
-        virtual_text = false,
+        virtual_text = {
+          prefix = "icons",
+          spacing = 4,
+          source = "if_many",
+        },
+        -- virtual_text = false,
       },
       inlay_hints = {
         enabled = true,
