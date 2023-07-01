@@ -34,4 +34,18 @@ return {
     },
     keys = { { "<leader>zz", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
+
+  -- Distinguish windows with colorful borders
+  {
+    "nvim-zh/colorful-winsep.nvim",
+    opts = {},
+  },
+
+  -- Dim inactive windows
+  {
+    "levouh/tint.nvim",
+    opts = {
+      saturation = 0.4,
+    },
+  },
 }
