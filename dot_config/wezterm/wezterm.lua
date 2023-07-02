@@ -1,7 +1,7 @@
 ---@diagnostic disable: unused-local
 local wezterm = require("wezterm")
 local act = wezterm.action
--- local mod = "LEADER"
+local mod = "SHIFT|CTRL"
 
 local function font(opts)
 	return wezterm.font_with_fallback({
@@ -31,7 +31,6 @@ local function make_mouse_binding(dir, streak, button, mods, action)
 end
 
 return {
-	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
   -- stylua: ignore
 	mouse_bindings = {
 		make_mouse_binding( "Up", 1, "Left", "NONE", wezterm.action.CompleteSelectionOrOpenLinkAtMouseCursor("ClipboardAndPrimarySelection")),
@@ -116,18 +115,18 @@ return {
 		{ mods = "CTRL", key = "DownArrow", action = act.ActivatePaneDirection("Down") },
 		{ mods = "CTRL", key = "RightArrow", action = act.ActivatePaneDirection("Right") },
 		{ mods = "CTRL", key = "LeftArrow", action = act.ActivatePaneDirection("Left") },
-		{ mods = "LEADER", key = "t", action = act.SpawnTab("CurrentPaneDomain") },
-		{ mods = "LEADER|SHIFT", key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-		{ mods = "LEADER|SHIFT", key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-		{ mods = "LEADER|SHIFT", key = ">", action = act.MoveTabRelative(1) },
-		{ mods = "LEADER|SHIFT", key = "<", action = act.MoveTabRelative(-1) },
-		{ mods = "LEADER|SHIFT", key = "M", action = act.TogglePaneZoomState },
-		{ mods = "LEADER", key = "p", action = act.PaneSelect({ alphabet = "", mode = "Activate" }) },
-		{ mods = "LEADER", key = "C", action = act.CopyTo("ClipboardAndPrimarySelection") },
-		{ mods = "LEADER", key = "l", action = wezterm.action({ ActivateTabRelative = 1 }) },
-		{ mods = "LEADER", key = "h", action = wezterm.action({ ActivateTabRelative = -1 }) },
+		{ mods = mod, key = "t", action = act.SpawnTab("CurrentPaneDomain") },
+		{ mods = mod, key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ mods = mod, key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ mods = mod, key = ">", action = act.MoveTabRelative(1) },
+		{ mods = mod, key = "<", action = act.MoveTabRelative(-1) },
+		{ mods = mod, key = "M", action = act.TogglePaneZoomState },
+		{ mods = mod, key = "p", action = act.PaneSelect({ alphabet = "", mode = "Activate" }) },
+		{ mods = mod, key = "C", action = act.CopyTo("ClipboardAndPrimarySelection") },
+		{ mods = mod, key = "l", action = wezterm.action({ ActivateTabRelative = 1 }) },
+		{ mods = mod, key = "h", action = wezterm.action({ ActivateTabRelative = -1 }) },
 		{ key = "C", mods = "CTRL", action = wezterm.action.CopyTo("ClipboardAndPrimarySelection") },
-		{ mods = "LEADER", key = "d", action = wezterm.action.ShowDebugOverlay },
+		{ mods = mod, key = "d", action = wezterm.action.ShowDebugOverlay },
 	},
 	bold_brightens_ansi_colors = true,
 	window_background_opacity = 1.0,
