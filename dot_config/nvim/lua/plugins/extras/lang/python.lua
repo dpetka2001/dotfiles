@@ -30,14 +30,10 @@ return {
   },
 
   -- Add `python` debugger to mason DAP to auto-install
-  {
-    "jay-babu/mason-nvim-dap.nvim",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "python",
-      })
-    end,
-  },
+  -- Not absolutely necessary to declare adapter in `ensure_installed`, since `mason-nvim-dap`
+  -- has `automatic-install = true` in LazyVim by default and it automatically installs adapters
+  -- that are are set up (via dap) but not yet installed. Might as well skip the lines below as
+  -- a whole.
 
   -- Add which-key namespace for Python debugging
   {
