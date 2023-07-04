@@ -1,6 +1,3 @@
-local utils = require("yanky.utils")
-local mapping = require("yanky.telescope.mapping")
-
 return {
   -- Add `codeium.nvim`
   {
