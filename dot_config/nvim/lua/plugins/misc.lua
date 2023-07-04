@@ -38,12 +38,14 @@ return {
   -- Distinguish windows with colorful borders
   {
     "nvim-zh/colorful-winsep.nvim",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {},
   },
 
   -- Dim inactive windows
   {
     "levouh/tint.nvim",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       saturation = 0.4,
     },
