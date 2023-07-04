@@ -9,7 +9,7 @@ return {
     end,
   },
 
-  -- Add `tools` to mason
+  -- Add tools to mason
   {
     "williamboman/mason.nvim",
     opts = function(_, opts)
@@ -43,7 +43,19 @@ return {
     optional = true,
     opts = {
       defaults = {
-        ["<leader>dP"] = { name = "+server" },
+        ["<leader>dP"] = { name = "+`server`" },
+      },
+    },
+  },
+
+  -- Setup `neotest`
+  {
+    "nvim-neotest/neotest",
+    optional = true,
+    dependencies = {
+    },
+    opts = {
+      adapters = {
       },
     },
   },
