@@ -48,6 +48,3 @@ map("n", "<leader>bw", "<cmd>execute 'bdelete' | silent! close<cr>", { desc = "C
 -- map("n", "<leader>fx", '<cmd>!google-chrome "%"<cr>', { desc = "Open file in Chrome" })
 -- stylua: ignore
 map("n", "<leader>fx", '<cmd>!/home/jrn23/.local/opt/firefox/firefox "%"<cr>', { desc = "Open file in Firefox Developer" })
-
--- Set `foldlevel` in buffer
-map("n", "zp", "<cmd>set foldlevel=2<cr>", { desc = "Set fold level to buffer" })
