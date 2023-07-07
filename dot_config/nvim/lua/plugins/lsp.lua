@@ -4,6 +4,15 @@ return {
     "neovim/nvim-lspconfig",
     -- Add, change or remove keymaps
     init = function()
+      -- disable lsp watcher. Too slow on linux
+      local ok, wf = pcall(require, "vim.lsp._watchfiles")
+      if ok then
+        wf._watchfunc = function()
+          return function() end
+        end
+      end
+
+      --[[Modify LSP keymaps]]
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
       keys[#keys + 1] = { "<leader>cl", false }
       keys[#keys + 1] = { "<leader>cli", "<cmd>LspInfo<cr>", desc = "LspInfo" }
