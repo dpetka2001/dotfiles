@@ -17,6 +17,8 @@ return {
     "williamboman/mason.nvim",
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
+        --[[Servers]]
+        "emmet-language-server",
         --[[Formatters]]
         "prettierd",
         -- "prettier",
@@ -44,7 +46,6 @@ return {
         stylelint_lsp = {}, -- css linter
         eslint = {},
         intelephense = {},
-        emmet_ls = {},
       },
       setup = {
         tsserver = function(_, opts)
