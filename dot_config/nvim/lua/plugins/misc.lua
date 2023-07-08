@@ -46,7 +46,8 @@ return {
         local win_n = require("colorful-winsep.utils").calculate_number_windows()
         if win_n == 2 then
           local win_id
-          if vim.fn.win_getid(vim.fn.winnr("h")) == 1000 then
+          local cur_win_id = vim.fn.win_getid(vim.fn.winnr())
+          if vim.fn.win_getid(vim.fn.winnr("h")) == cur_win_id then
             win_id = vim.fn.win_getid(vim.fn.winnr("j"))
           else
             win_id = vim.fn.win_getid(vim.fn.winnr("h"))
