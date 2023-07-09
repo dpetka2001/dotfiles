@@ -103,4 +103,23 @@ return {
     },
     opts = { snippet_engine = "luasnip" },
   },
+
+  -- Refactoring
+  {
+    "ThePrimeagen/refactoring.nvim",
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("refactoring").select_refactor()
+        end,
+        mode = "v",
+        noremap = true,
+        silent = true,
+        expr = false,
+        desc = "Refactor",
+      },
+    },
+    opts = {},
+  },
 }
