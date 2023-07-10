@@ -18,7 +18,6 @@ return {
     opts = function(_, opts)
       vim.list_extend(opts.ensure_installed, {
         --[[Servers]]
-        "emmet-language-server",
         --[[Formatters]]
         "prettierd",
         -- "prettier",
@@ -46,6 +45,7 @@ return {
         stylelint_lsp = {}, -- css linter
         eslint = {},
         intelephense = {},
+        emmet_language_server = {},
       },
       setup = {
         tsserver = function(_, opts)
