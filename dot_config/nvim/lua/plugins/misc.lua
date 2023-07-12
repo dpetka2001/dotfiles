@@ -68,5 +68,8 @@ return {
     opts = {
       saturation = 0.4,
     },
+    keys = {
+      { "<leader>uT", "<cmd>lua require('tint').toggle()<cr>", desc = "Toggle tint" },
+    },
   },
 }
