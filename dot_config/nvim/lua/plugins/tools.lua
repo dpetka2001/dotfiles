@@ -81,7 +81,12 @@ return {
   -- Better diffing
   {
     "sindrets/diffview.nvim",
-    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+    -- stylua: ignore start
+    cmd = {
+      "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles",
+      "DiffviewFileHistory", "DiffviewRefresh"
+    },
+    -- stylua: ignore end
     config = true,
     keys = { { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "DiffView" } },
   },
