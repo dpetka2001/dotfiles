@@ -72,4 +72,10 @@ return {
       { "<leader>uT", "<cmd>lua require('tint').toggle()<cr>", desc = "Toggle tint" },
     },
   },
+
+  -- Disable certain features if file is big
+  {
+    "LunarVim/bigfile.nvim",
+    opts = {},
+  },
 }

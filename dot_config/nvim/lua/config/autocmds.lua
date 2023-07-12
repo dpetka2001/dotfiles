@@ -74,18 +74,19 @@ autocmd("TermOpen", {
   desc = "Set terminal mappings for ToggleTerm",
 })
 
+-- I don't believe this is necessary any more, since installed `LunarVim/bigfile.nvim`
 -- Disable tree-sitter for files over 1MB in size
-autocmd("BufRead", {
-  pattern = "*",
-  callback = function()
-    local size = vim.fn.getfsize(vim.fn.expand("%:p"))
-    if size > 500000 then
-      vim.treesitter.stop()
-    end
-  end,
-  group = "mygroup",
-  desc = "Disable Treesitter for files larger than 1MB",
-})
+-- autocmd("BufRead", {
+--   pattern = "*",
+--   callback = function()
+--     local size = vim.fn.getfsize(vim.fn.expand("%:p"))
+--     if size > 500000 then
+--       vim.treesitter.stop()
+--     end
+--   end,
+--   group = "mygroup",
+--   desc = "Disable Treesitter for files larger than 1MB",
+-- })
 
 --[[ Remember Folds Group ]]
 augroup("remember_folds", { clear = true })
