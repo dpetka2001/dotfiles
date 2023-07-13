@@ -72,12 +72,21 @@ return {
       servers = {
         -- pyright = {},
         ruff_lsp = {},
+        jedi_language_server = {},
       },
       setup = {
         ruff_lsp = function()
           require("lazyvim.util").on_attach(function(client, _)
             if client.name == "ruff_lsp" then
               -- Disable hover in favor of Pyright
+              client.server_capabilities.hoverProvider = false
+            end
+          end)
+        end,
+        pyright = function()
+          require("lazyvim.util").on_attach(function(client, _)
+            if client.name == "pyright" then
+              -- disable hover in favor of jedi-language-server
               client.server_capabilities.hoverProvider = false
             end
           end)
