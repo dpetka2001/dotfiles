@@ -121,4 +121,15 @@ return {
       },
     },
   },
+
+  -- Glance at definitions, refs, etc a la VS Code
+  {
+    "DNLHC/glance.nvim",
+    event = "BufReadPre",
+    config = true,
+    keys = {
+      { "gD", "<cmd>Glance definitions<cr>", desc = "Goto Definitions (Glance)" },
+      { "gR", "<cmd>Glance references<cr>", desc = "Goto References (Glance)" },
+    },
+  },
 }
