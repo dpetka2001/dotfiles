@@ -2,6 +2,7 @@ return {
   -- Add `codeium.nvim`
   {
     "jcdickinson/codeium.nvim",
+    -- commit = "b1ff0d6c993e3d87a4362d2ccd6c660f7444599f",
     lazy = true,
     dependencies = {
       { "jcdickinson/http.nvim", build = "cargo build --workspace --release" },

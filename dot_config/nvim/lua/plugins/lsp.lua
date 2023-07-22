@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   -- Customize LSP
   {
