@@ -9,7 +9,7 @@ return {
         "<leader>Tf",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, vim.loop.cwd(), "float")
+          require("toggleterm").toggle(count, 0, Util.get_root(), "float")
         end,
         desc = "ToggleTerm (float)",
       },
@@ -17,7 +17,7 @@ return {
         "<leader>Th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 10, vim.loop.cwd(), "horizontal")
+          require("toggleterm").toggle(count, 10, Util.get_root(), "horizontal")
         end,
         desc = "ToggleTerm (horizontal)",
       },
@@ -25,7 +25,7 @@ return {
         "<leader>Tv",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, vim.loop.cwd(), "vertical")
+          require("toggleterm").toggle(count, 0, Util.get_root(), "vertical")
         end,
         desc = "ToggleTerm (vertical)",
       },
