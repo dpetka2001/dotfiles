@@ -118,6 +118,25 @@ return {
   {
     "folke/flash.nvim",
     keys = {
+      -- Disable default mappings, cuz they conflict with `vim-surround`
+      { "s", mode = { "n", "x", "o" }, false },
+      { "S", mode = { "n", "x", "o" }, false },
+      {
+        "m",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+      {
+        "M",
+        mode = { "n", "o", "x" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
       {
         "]f",
         diag_jump,

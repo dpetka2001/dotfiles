@@ -78,4 +78,9 @@ return {
       { "gR", "<cmd>Glance references<cr>", desc = "Goto References (Glance)" },
     },
   },
+
+  -- Better surround for vim-visual-multi
+  {
+    "tpope/vim-surround",
+  },
 }
