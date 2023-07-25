@@ -48,7 +48,7 @@ return {
         -- virtual_text = false,
       },
       inlay_hints = {
-        enabled = true,
+        -- enabled = true,
       },
       servers = {
         yamlls = {},
