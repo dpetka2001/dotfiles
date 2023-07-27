@@ -137,7 +137,7 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 ### syntax
 
 - [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)<a href="https://dotfyle.com/plugins/dpetka2001/dotfiles">
-  <img src="https://dotfyle.com/plugins/{owner}/{name}/shield" />
+  <img src="https://dotfyle.com/plugins/dpetka2001/dotfiles/shield" />
   </a>
 
 ### tabline
