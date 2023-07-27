@@ -16,6 +16,9 @@ local usercmd = vim.api.nvim_create_user_command
 --[[ Mygroup Group ]]
 augroup("mygroup", { clear = true })
 
+-- Disable `lazyvim_resize_splits` as it conflicts with tmux window resizing
+augroup("lazyvim_resize_splits", { clear = true })
+
 autocmd("Filetype", {
   pattern = { "*" },
   callback = function()
