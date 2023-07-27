@@ -1,6 +1,6 @@
 local function diag_jump()
+  -- More advanced example that also highlights diagnostics:
   require("flash").jump({
-    -- adds highlight to diagnostics targets
     matcher = function(win)
       ---@param diag Diagnostic
       return vim.tbl_map(function(diag)
@@ -14,8 +14,8 @@ local function diag_jump()
       vim.api.nvim_win_call(match.win, function()
         vim.api.nvim_win_set_cursor(match.win, match.pos)
         vim.diagnostic.open_float()
-        vim.api.nvim_win_set_cursor(match.win, state.pos)
       end)
+      state:restore()
     end,
   })
 end
@@ -141,11 +141,6 @@ return {
         "]f",
         diag_jump,
         desc = "Flash diagnostic at chosen target",
-      },
-      {
-        "]F",
-        "<cmd>lua require('flash.plugins.diagnostics').show()<cr>",
-        desc = "Flash All Diagnostics",
       },
     },
     opts = {
