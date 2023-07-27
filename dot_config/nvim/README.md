@@ -25,114 +25,198 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### bars-and-lines
 
-- [SmiteshP/nvim-navic](https://dotfyle.com/plugins/SmiteshP/nvim-navic)
-- [luukvbaal/statuscol.nvim](https://dotfyle.com/plugins/luukvbaal/statuscol.nvim)
+- [SmiteshP/nvim-navic](https://dotfyle.com/plugins/SmiteshP/nvim-navic)<a href="https://dotfyle.com/plugins/SmiteshP/nvim-navic">
+  <img src="https://dotfyle.com/plugins/SmiteshP/nvim-navic/shield" />
+  </a>
+- [luukvbaal/statuscol.nvim](https://dotfyle.com/plugins/luukvbaal/statuscol.nvim)<a href="https://dotfyle.com/plugins/luukvbaal/statuscol.nvim">
+  <img src="https://dotfyle.com/plugins/luukvbaal/statuscol.nvim/shield" />
+  </a>
 
 ### color
 
-- [NvChad/nvim-colorizer.lua](https://dotfyle.com/plugins/NvChad/nvim-colorizer.lua)
-- [folke/twilight.nvim](https://dotfyle.com/plugins/folke/twilight.nvim)
+- [NvChad/nvim-colorizer.lua](https://dotfyle.com/plugins/NvChad/nvim-colorizer.lua)<a href="https://dotfyle.com/plugins/NvChad/nvim-colorizer.lua">
+  <img src="https://dotfyle.com/plugins/NvChad/nvim-colorizer.lua/shield" />
+  </a>
+- [folke/twilight.nvim](https://dotfyle.com/plugins/folke/twilight.nvim)<a href="https://dotfyle.com/plugins/folke/twilight.nvim">
+  <img src="https://dotfyle.com/plugins/folke/twilight.nvim/shield" />
+  </a>
 
 ### colorscheme
 
-- [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)
-- [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)
-- [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
-- [rose-pine/neovim](https://dotfyle.com/plugins/rose-pine/neovim)
+- [folke/tokyonight.nvim](https://dotfyle.com/plugins/folke/tokyonight.nvim)<a href="https://dotfyle.com/plugins/folke/tokyonight.nvim">
+  <img src="https://dotfyle.com/plugins/folke/tokyonight.nvim/shield" />
+  </a>
+- [catppuccin/nvim](https://dotfyle.com/plugins/catppuccin/nvim)<a href="https://dotfyle.com/plugins/catppuccin/nvim">
+  <img src="https://dotfyle.com/plugins/catppuccin/nvim/shield" />
+  </a>
+- [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)<a href="https://dotfyle.com/plugins/rebelot/kanagawa.nvim">
+  <img src="https://dotfyle.com/plugins/rebelot/kanagawa.nvim/shield" />
+  </a>
+- [rose-pine/neovim](https://dotfyle.com/plugins/rose-pine/neovim)<a href="https://dotfyle.com/plugins/rose-pine/neovim">
+  <img src="https://dotfyle.com/plugins/rose-pine/neovim/shield" />
+  </a>
 
 ### comment
 
-- [numToStr/Comment.nvim](https://dotfyle.com/plugins/numToStr/Comment.nvim)
-- [danymat/neogen](https://dotfyle.com/plugins/danymat/neogen)
-- [JoosepAlviste/nvim-ts-context-commentstring](https://dotfyle.com/plugins/JoosepAlviste/nvim-ts-context-commentstring)
-- [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
+- [numToStr/Comment.nvim](https://dotfyle.com/plugins/numToStr/Comment.nvim)<a href="https://dotfyle.com/plugins/numToStr/Comment.nvim">
+  <img src="https://dotfyle.com/plugins/numToStr/Comment.nvim/shield" />
+  </a>
+- [danymat/neogen](https://dotfyle.com/plugins/danymat/neogen)<a href="https://dotfyle.com/plugins/danymat/neogen">
+  <img src="https://dotfyle.com/plugins/danymat/neogen/shield" />
+  </a>
+- [JoosepAlviste/nvim-ts-context-commentstring](https://dotfyle.com/plugins/JoosepAlviste/nvim-ts-context-commentstring)<a href="https://dotfyle.com/plugins/JoosepAlviste/nvim-ts-context-commentstring">
+  <img src="https://dotfyle.com/plugins/JoosepAlviste/nvim-ts-context-commentstring/shield" />
+  </a>
+- [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)<a href="https://dotfyle.com/plugins/folke/todo-comments.nvim">
+  <img src="https://dotfyle.com/plugins/folke/todo-comments.nvim/shield" />
+  </a>
 
 ### completion
 
-- [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)
+- [hrsh7th/nvim-cmp](https://dotfyle.com/plugins/hrsh7th/nvim-cmp)<a href="https://dotfyle.com/plugins/hrsh7th/nvim-cmp">
+  <img src="https://dotfyle.com/plugins/hrsh7th/nvim-cmp/shield" />
+  </a>
 
 ### debugging
 
-- [mfussenegger/nvim-dap](https://dotfyle.com/plugins/mfussenegger/nvim-dap)
+- [mfussenegger/nvim-dap](https://dotfyle.com/plugins/mfussenegger/nvim-dap)<a href="https://dotfyle.com/plugins/mfussenegger/nvim-dap">
+  <img src="https://dotfyle.com/plugins/mfussenegger/nvim-dap/shield" />
+  </a>
 
 ### editing-support
 
-- [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
-- [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
-- [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)
+- [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)<a href="https://dotfyle.com/plugins/folke/zen-mode.nvim">
+  <img src="https://dotfyle.com/plugins/folke/zen-mode.nvim/shield" />
+  </a>
+- [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)<a href="https://dotfyle.com/plugins/windwp/nvim-autopairs">
+  <img src="https://dotfyle.com/plugins/windwp/nvim-autopairs/shield" />
+  </a>
+- [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)<a href="https://dotfyle.com/plugins/windwp/nvim-ts-autotag">
+  <img src="https://dotfyle.com/plugins/windwp/nvim-ts-autotag/shield" />
+  </a>
 
 ### file-explorer
 
-- [kevinhwang91/rnvimr](https://dotfyle.com/plugins/kevinhwang91/rnvimr)
-- [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
+- [kevinhwang91/rnvimr](https://dotfyle.com/plugins/kevinhwang91/rnvimr)<a href="https://dotfyle.com/plugins/kevinhwang91/rnvimr">
+  <img src="https://dotfyle.com/plugins/kevinhwang91/rnvimr/shield" />
+  </a>
+- [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)<a href="https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim">
+  <img src="https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim/shield" />
+  </a>
 
 ### fuzzy-finder
 
-- [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)
+- [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)<a href="https://dotfyle.com/plugins/nvim-telescope/telescope.nvim">
+  <img src="https://dotfyle.com/plugins/nvim-telescope/telescope.nvim/shield" />
+  </a>
 
 ### git
 
-- [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
-- [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)
+- [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)<a href="https://dotfyle.com/plugins/lewis6991/gitsigns.nvim">
+  <img src="https://dotfyle.com/plugins/lewis6991/gitsigns.nvim/shield" />
+  </a>
+- [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)<a href="https://dotfyle.com/plugins/sindrets/diffview.nvim">
+  <img src="https://dotfyle.com/plugins/sindrets/diffview.nvim/shield" />
+  </a>
 
 ### keybinding
 
-- [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)
+- [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)<a href="https://dotfyle.com/plugins/folke/which-key.nvim">
+  <img src="https://dotfyle.com/plugins/folke/which-key.nvim/shield" />
+  </a>
 
 ### lsp
 
-- [simrat39/symbols-outline.nvim](https://dotfyle.com/plugins/simrat39/symbols-outline.nvim)
-- [jose-elias-alvarez/null-ls.nvim](https://dotfyle.com/plugins/jose-elias-alvarez/null-ls.nvim)
-- [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
-- [DNLHC/glance.nvim](https://dotfyle.com/plugins/DNLHC/glance.nvim)
-- [SmiteshP/nvim-navbuddy](https://dotfyle.com/plugins/SmiteshP/nvim-navbuddy)
+- [simrat39/symbols-outline.nvim](https://dotfyle.com/plugins/simrat39/symbols-outline.nvim)<a href="https://dotfyle.com/plugins/simrat39/symbols-outline.nvim">
+  <img src="https://dotfyle.com/plugins/simrat39/symbols-outline.nvim/shield" />
+  </a>
+- [jose-elias-alvarez/null-ls.nvim](https://dotfyle.com/plugins/jose-elias-alvarez/null-ls.nvim)<a href="https://dotfyle.com/plugins/jose-elias-alvarez/null-ls.nvim">
+  <img src="https://dotfyle.com/plugins/jose-elias-alvarez/null-ls.nvim/shield" />
+  </a>
+- [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)<a href="https://dotfyle.com/plugins/neovim/nvim-lspconfig">
+  <img src="https://dotfyle.com/plugins/neovim/nvim-lspconfig/shield" />
+  </a>
+- [DNLHC/glance.nvim](https://dotfyle.com/plugins/DNLHC/glance.nvim)<a href="https://dotfyle.com/plugins/DNLHC/glance.nvim">
+  <img src="https://dotfyle.com/plugins/DNLHC/glance.nvim/shield" />
+  </a>
+- [SmiteshP/nvim-navbuddy](https://dotfyle.com/plugins/SmiteshP/nvim-navbuddy)<a href="https://dotfyle.com/plugins/SmiteshP/nvim-navbuddy">
+  <img src="https://dotfyle.com/plugins/SmiteshP/nvim-navbuddy/shield" />
+  </a>
 
 ### lsp-installer
 
-- [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
+- [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)<a href="https://dotfyle.com/plugins/williamboman/mason.nvim">
+  <img src="https://dotfyle.com/plugins/williamboman/mason.nvim/shield" />
+  </a>
 
 ### markdown-and-latex
 
-- [toppair/peek.nvim](https://dotfyle.com/plugins/toppair/peek.nvim)
+- [toppair/peek.nvim](https://dotfyle.com/plugins/toppair/peek.nvim)<a href="https://dotfyle.com/plugins/toppair/peek.nvim">
+  <img src="https://dotfyle.com/plugins/toppair/peek.nvim/shield" />
+  </a>
 
 ### marks
 
-- [ThePrimeagen/harpoon](https://dotfyle.com/plugins/ThePrimeagen/harpoon)
+- [ThePrimeagen/harpoon](https://dotfyle.com/plugins/ThePrimeagen/harpoon)<a href="https://dotfyle.com/plugins/ThePrimeagen/harpoon">
+  <img src="https://dotfyle.com/plugins/ThePrimeagen/harpoon/shield" />
+  </a>
 
 ### motion
 
-- [folke/flash.nvim](https://dotfyle.com/plugins/folke/flash.nvim)
+- [folke/flash.nvim](https://dotfyle.com/plugins/folke/flash.nvim)<a href="https://dotfyle.com/plugins/folke/flash.nvim">
+  <img src="https://dotfyle.com/plugins/folke/flash.nvim/shield" />
+  </a>
 
 ### nvim-dev
 
-- [anuvyklack/animation.nvim](https://dotfyle.com/plugins/anuvyklack/animation.nvim)
-- [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
-- [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
+- [anuvyklack/animation.nvim](https://dotfyle.com/plugins/anuvyklack/animation.nvim)<a href="https://dotfyle.com/plugins/anuvyklack/animation.nvim">
+  <img src="https://dotfyle.com/plugins/anuvyklack/animation.nvim/shield" />
+  </a>
+- [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)<a href="https://dotfyle.com/plugins/MunifTanjim/nui.nvim">
+  <img src="https://dotfyle.com/plugins/MunifTanjim/nui.nvim/shield" />
+  </a>
+- [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)<a href="https://dotfyle.com/plugins/nvim-lua/plenary.nvim">
+  <img src="https://dotfyle.com/plugins/nvim-lua/plenary.nvim/shield" />
+  </a>
 
 ### plugin-manager
 
-- [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
+- [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)<a href="https://dotfyle.com/plugins/folke/lazy.nvim">
+  <img src="https://dotfyle.com/plugins/folke/lazy.nvim/shield" />
+  </a>
 
 ### preconfigured
 
-- [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
+- [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)<a href="https://dotfyle.com/plugins/LazyVim/LazyVim">
+  <img src="https://dotfyle.com/plugins/LazyVim/LazyVim/shield" />
+  </a>
 
 ### snippet
 
-- [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
+- [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)<a href="https://dotfyle.com/plugins/L3MON4D3/LuaSnip">
+  <img src="https://dotfyle.com/plugins/L3MON4D3/LuaSnip/shield" />
+  </a>
 
 ### split-and-window
 
-- [anuvyklack/windows.nvim](https://dotfyle.com/plugins/anuvyklack/windows.nvim)
-- [nvim-zh/colorful-winsep.nvim](https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim)
+- [anuvyklack/windows.nvim](https://dotfyle.com/plugins/anuvyklack/windows.nvim)<a href="https://dotfyle.com/plugins/anuvyklack/windows.nvim">
+  <img src="https://dotfyle.com/plugins/anuvyklack/windows.nvim/shield" />
+  </a>
+- [nvim-zh/colorful-winsep.nvim](https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim)<a href="https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim">
+  <img src="https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim/shield" />
+  </a>
 
 ### startup
 
-- [goolord/alpha-nvim](https://dotfyle.com/plugins/goolord/alpha-nvim)
+- [goolord/alpha-nvim](https://dotfyle.com/plugins/goolord/alpha-nvim)<a href="https://dotfyle.com/plugins/goolord/alpha-nvim">
+  <img src="https://dotfyle.com/plugins/goolord/alpha-nvim/shield" />
+  </a>
 
 ### statusline
 
-- [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
+- [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)<a href="https://dotfyle.com/plugins/nvim-lualine/lualine.nvim">
+  <img src="https://dotfyle.com/plugins/nvim-lualine/lualine.nvim/shield" />
+  </a>
 
 ### syntax
 
@@ -142,17 +226,27 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### tabline
 
-- [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
+- [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)<a href="https://dotfyle.com/plugins/akinsho/bufferline.nvim">
+  <img src="https://dotfyle.com/plugins/akinsho/bufferline.nvim/shield" />
+  </a>
 
 ### test
 
-- [nvim-neotest/neotest](https://dotfyle.com/plugins/nvim-neotest/neotest)
+- [nvim-neotest/neotest](https://dotfyle.com/plugins/nvim-neotest/neotest)<a href="https://dotfyle.com/plugins/nvim-neotest/neotest">
+  <img src="https://dotfyle.com/plugins/nvim-neotest/neotest/shield" />
+  </a>
 
 ### utility
 
-- [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
-- [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
-- [kevinhwang91/nvim-ufo](https://dotfyle.com/plugins/kevinhwang91/nvim-ufo)
+- [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)<a href="https://dotfyle.com/plugins/folke/noice.nvim">
+  <img src="https://dotfyle.com/plugins/folke/noice.nvim/shield" />
+  </a>
+- [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)<a href="https://dotfyle.com/plugins/rcarriga/nvim-notify">
+  <img src="https://dotfyle.com/plugins/rcarriga/nvim-notify/shield" />
+  </a>
+- [kevinhwang91/nvim-ufo](https://dotfyle.com/plugins/kevinhwang91/nvim-ufo)<a href="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo">
+  <img src="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo/shield" />
+  </a>
 
 ## Language Servers
 
