@@ -23,6 +23,12 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ## Plugins
 
+### animation
+
+- [anuvyklack/animation.nvim](https://dotfyle.com/plugins/anuvyklack/animation.nvim)<a href="https://dotfyle.com/plugins/anuvyklack/animation.nvim">
+  <img src="https://dotfyle.com/plugins/anuvyklack/animation.nvim/shield" />
+  </a>
+
 ### bars-and-lines
 
 - [SmiteshP/nvim-navic](https://dotfyle.com/plugins/SmiteshP/nvim-navic)<a href="https://dotfyle.com/plugins/SmiteshP/nvim-navic">
@@ -118,6 +124,9 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 - [sindrets/diffview.nvim](https://dotfyle.com/plugins/sindrets/diffview.nvim)<a href="https://dotfyle.com/plugins/sindrets/diffview.nvim">
   <img src="https://dotfyle.com/plugins/sindrets/diffview.nvim/shield" />
   </a>
+- [kdheepak/lazygit.nvim](https://dotfyle.com/plugins/kdheepak/lazygit.nvim)<a href="https://dotfyle.com/plugins/kdheepak/lazygit.nvim">
+  <img src="https://dotfyle.com/plugins/kdheepak/lazygit.nvim/shield" />
+  </a>
 
 ### keybinding
 
@@ -169,9 +178,6 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### nvim-dev
 
-- [anuvyklack/animation.nvim](https://dotfyle.com/plugins/anuvyklack/animation.nvim)<a href="https://dotfyle.com/plugins/anuvyklack/animation.nvim">
-  <img src="https://dotfyle.com/plugins/anuvyklack/animation.nvim/shield" />
-  </a>
 - [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)<a href="https://dotfyle.com/plugins/MunifTanjim/nui.nvim">
   <img src="https://dotfyle.com/plugins/MunifTanjim/nui.nvim/shield" />
   </a>
