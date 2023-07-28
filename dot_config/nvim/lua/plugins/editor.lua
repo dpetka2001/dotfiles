@@ -160,4 +160,10 @@ return {
       },
     },
   },
+
+  -- Try out `fzf-lua`
+  {
+    "ibhagwan/fzf-lua",
+    opts = {},
+  },
 }
