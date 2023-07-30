@@ -164,6 +164,7 @@ return {
   -- Try out `fzf-lua`
   {
     "ibhagwan/fzf-lua",
+    cmd = "FzfLua",
     opts = {},
   },
 }
