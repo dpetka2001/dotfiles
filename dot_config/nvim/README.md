@@ -112,6 +112,10 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### fuzzy-finder
 
+- [ibhagwan/fzf-lua](https://dotfyle.com/plugins/ibhagwan/fzf-lua)<a href="https://dotfyle.com/plugins/ibhagwan/fzf-lua">
+  <img src="https://dotfyle.com/plugins/ibhagwan/fzf-lua/shield" />
+  </a>
+
 - [nvim-telescope/telescope.nvim](https://dotfyle.com/plugins/nvim-telescope/telescope.nvim)<a href="https://dotfyle.com/plugins/nvim-telescope/telescope.nvim">
   <img src="https://dotfyle.com/plugins/nvim-telescope/telescope.nvim/shield" />
   </a>
