@@ -42,6 +42,7 @@ return {
             ["<c-a-t>"] = actions.select_tab,
             ["<C-j>"] = "move_selection_next",
             ["<C-k>"] = "move_selection_previous",
+            ["<C-a>"] = require("dpetka2001.harpoon").mark_file,
           },
           n = {
             ["<C-b>"] = function(...)
@@ -49,6 +50,7 @@ return {
             end,
             -- Add opening multi-selection support to telescope pickers
             ["<CR>"] = multi_open,
+            ["<C-a>"] = require("dpetka2001.harpoon").mark_file,
           },
         },
         layout_strategy = "flex",
