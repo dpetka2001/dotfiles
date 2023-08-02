@@ -1,11 +1,13 @@
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
+local my_actions = require("dpetka2001.harpoon")
 
 local Util = require("lazyvim.util")
 
 local multi_open = function(pb)
   local picker = action_state.get_current_picker(pb)
   local multi = picker:get_multi_selection()
+  my_actions.mark_file(pb)
   actions.select_default(pb) -- the normal enter behaviour
   for _, j in pairs(multi) do
     if j.path ~= nil then -- is it a file -> open it as well:
