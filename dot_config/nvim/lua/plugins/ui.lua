@@ -87,7 +87,7 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local timer = function()
-        return require("countdown").get_time()
+        return require("nomodoro").status()
       end
       table.insert(opts.sections.lualine_x, { "encoding" })
       table.insert(opts.sections.lualine_x, { timer })
@@ -102,6 +102,33 @@ return {
       themes = {
         markdown = { colorscheme = "catppuccin" },
         help = { colorscheme = "catppuccin", background = "dark" },
+      },
+    },
+  },
+
+  -- `indent-blankline` alternative with some extra features
+  {
+    "shellRaining/hlchunk.nvim",
+    event = { "UIEnter" },
+    opts = {
+      indent = {
+        enable = false,
+      },
+      blank = {
+        enable = false,
+      },
+      line_num = {
+        enable = false,
+      },
+      chunk = {
+        chars = {
+          horizontal_line = "─",
+          vertical_line = "│",
+          left_top = "╭",
+          left_bottom = "╰",
+          right_arrow = ">",
+        },
+        style = "#00ffff",
       },
     },
   },
