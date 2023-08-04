@@ -109,4 +109,9 @@ return {
       { "<leader>ns", "<cmd>NomoStop<cr>", noremap = true, silent = true },
     },
   },
+
+  -- vim-tmux-navigator
+  {
+    "christoomey/vim-tmux-navigator",
+  },
 }
