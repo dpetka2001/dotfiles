@@ -132,6 +132,12 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
   <img src="https://dotfyle.com/plugins/kdheepak/lazygit.nvim/shield" />
   </a>
 
+### indent
+
+- [shellRaining/hlchunk.nvim](https://dotfyle.com/plugins/shellRaining/hlchunk.nvim)<a href="https://dotfyle.com/plugins/shellRaining/hlchunk.nvim">
+  <img src="https://dotfyle.com/plugins/shellRaining/hlchunk.nvim/shield" />
+  </a>
+
 ### keybinding
 
 - [folke/which-key.nvim](https://dotfyle.com/plugins/folke/which-key.nvim)<a href="https://dotfyle.com/plugins/folke/which-key.nvim">
@@ -240,6 +246,10 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
   <img src="https://dotfyle.com/plugins/akinsho/bufferline.nvim/shield" />
   </a>
 
+### terminal multiplexer
+
+- [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+
 ### test
 
 - [nvim-neotest/neotest](https://dotfyle.com/plugins/nvim-neotest/neotest)<a href="https://dotfyle.com/plugins/nvim-neotest/neotest">
@@ -257,6 +267,7 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 - [kevinhwang91/nvim-ufo](https://dotfyle.com/plugins/kevinhwang91/nvim-ufo)<a href="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo">
   <img src="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo/shield" />
   </a>
+- [dbinagi/nomodoro](https://github.com/dbinagi/nomodoro) (Pomodoro for Nvim)
 
 ## Language Servers
 
