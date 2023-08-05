@@ -107,29 +107,29 @@ return {
   },
 
   -- `indent-blankline` alternative with some extra features
-  {
-    "shellRaining/hlchunk.nvim",
-    event = { "UIEnter" },
-    opts = {
-      indent = {
-        enable = false,
-      },
-      blank = {
-        enable = false,
-      },
-      line_num = {
-        enable = false,
-      },
-      chunk = {
-        chars = {
-          horizontal_line = "─",
-          vertical_line = "│",
-          left_top = "╭",
-          left_bottom = "╰",
-          right_arrow = ">",
-        },
-        style = "#00ffff",
-      },
-    },
-  },
+  -- {
+  --   "shellRaining/hlchunk.nvim",
+  --   event = { "UIEnter" },
+  --   opts = {
+  --     indent = {
+  --       enable = false,
+  --     },
+  --     blank = {
+  --       enable = false,
+  --     },
+  --     line_num = {
+  --       enable = false,
+  --     },
+  --     chunk = {
+  --       chars = {
+  --         horizontal_line = "─",
+  --         vertical_line = "│",
+  --         left_top = "╭",
+  --         left_bottom = "╰",
+  --         right_arrow = ">",
+  --       },
+  --       style = "#00ffff",
+  --     },
+  --   },
+  -- },
 }
