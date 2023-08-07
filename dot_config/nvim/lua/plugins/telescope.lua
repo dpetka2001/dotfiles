@@ -90,6 +90,7 @@ return {
     keys = {
       { "<leader>sd", false },
       { "<leader>sD", false },
+      { "<leader>sR", false },
       { "<leader>xd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document diagnostics" },
       { "<leader>xD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace diagnostics" },
       { "<leader>xs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "LSP Document Symbols" },
