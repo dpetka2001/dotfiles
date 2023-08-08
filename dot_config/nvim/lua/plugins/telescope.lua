@@ -1,5 +1,7 @@
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
+local builtins = require("telescope.builtin")
+local action_set = require("telescope.actions.set")
 -- local my_actions = require("dpetka2001.harpoon")
 
 local Util = require("lazyvim.util")
@@ -14,6 +16,25 @@ local multi_open = function(pb)
       vim.cmd(string.format("%s %s", "edit", j.path))
     end
   end
+end
+
+local picker_config = {}
+for builtin, _ in pairs(builtins) do
+  picker_config[builtin] = {
+    -- Don't show the matched line since it is already in the preview.
+    show_line = false,
+    -- Center and unfold when selecting a result.
+    attach_mappings = function(prompt_bufnr, _)
+      action_set.select:enhance({
+        post = function()
+          vim.cmd(":normal! zv")
+        end,
+      })
+      actions.center(prompt_bufnr)
+
+      return true
+    end,
+  }
 end
 
 return {
@@ -71,11 +92,17 @@ return {
           },
         },
       },
-      pickers = {
-        buffers = {
-          initial_mode = "normal",
-        },
-      },
+      -- pickers = {
+      --   buffers = {
+      --     initial_mode = "normal",
+      --   },
+      -- },
+      pickers = vim.tbl_deep_extend("force", picker_config, {
+        -- Open Telescope even if there's only one result.
+        lsp_references = { jump_type = "never" },
+        lsp_definitions = { jump_type = "never" },
+        buffers = { initial_mode = "normal" },
+      }),
       extensions = {
         project = {
           base_dirs = {
