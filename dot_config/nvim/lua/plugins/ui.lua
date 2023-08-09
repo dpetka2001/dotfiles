@@ -1,4 +1,5 @@
 local icons = require("lazyvim.config").icons
+local Util = require("lazyvim.util")
 
 return {
   -- Modify nvim-notify for Telescope
@@ -15,10 +16,19 @@ return {
       {
         "<leader>unt",
         function()
-          require("telescope").extensions.notify.notify({
-            initial_mode = "normal",
-            -- layout_strategy = "vertical",
-          })
+          if Util.has("telescope.nvim") then
+            require("telescope").extensions.notify.notify({
+              initial_mode = "normal",
+              -- layout_strategy = "vertical",
+            })
+          else
+            Util.on_load("which-key.nvim", function()
+              require("which-key").register({
+                ["<leader>unt"] = "which_key_ignore",
+              })
+              vim.keymap.del("n", "<leader>unt")
+            end)
+          end
         end,
         desc = "Open Notifications (Telescope)",
       },
