@@ -52,6 +52,7 @@ return {
       --   build = "make",
       -- },
       { "natecraddock/telescope-zf-native.nvim" },
+      { "debugloop/telescope-undo.nvim" },
     },
     opts = {
       defaults = {
@@ -112,6 +113,9 @@ return {
             { path = "~/.local/share/nvim/" },
           },
         },
+        undo = {
+          side_by_side = true,
+        },
       },
     },
     keys = {
@@ -126,6 +130,7 @@ return {
       { "<leader>ff", Util.telescope("find_files"), desc = "Find files (root dir not git)" },
       { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Current Buffer Fuzzy" },
       { "<leader>gb", "<cmd>Telescope git_bcommits<cr>", desc = "Buffer commits" },
+      { "<leader>U", "<cmd>Telescope undo<cr>", desc = "Telescope undo" },
     },
     -- Setup here extensions that depend on `telescope.opts`, otherwise just setup when it is called
     config = function(_, opts)
@@ -133,6 +138,7 @@ return {
       telescope.setup(opts)
       telescope.load_extension("project")
       telescope.load_extension("zf-native")
+      telescope.load_extension("undo")
       -- telescope.load_extension("fzf")
     end,
   },
