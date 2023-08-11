@@ -99,7 +99,7 @@ return {
       texts = {
         on_break_complete = "BREAK IS UP!",
         on_work_complete = "TIME IS UP!",
-        status_icon = "羽",
+        status_icon = "󰔟 ",
         timer_format = "!%0M:%0S", -- To include hours: '!%0H:%0M:%0S'
       },
     },
