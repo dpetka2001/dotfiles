@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+require("dpetka2001.mouse_hover")
 local map = vim.keymap.set
 -- local del = vim.keymap.del
 local Util = require("lazyvim.util")
