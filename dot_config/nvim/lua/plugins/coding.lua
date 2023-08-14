@@ -19,7 +19,12 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
-      { "windwp/nvim-autopairs", config = true },
+      {
+        "windwp/nvim-autopairs",
+        opts = {
+          fast_wrap = {},
+        },
+      },
       { "jcdickinson/codeium.nvim" },
     },
     opts = function(_, opts)
