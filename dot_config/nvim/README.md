@@ -91,6 +91,10 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### editing-support
 
+- [debugloop/telescope-undo.nvim](https://dotfyle.com/plugins/debugloop/telescope-undo.nvim)<a href="https://dotfyle.com/plugins/debugloop/telescope-undo.nvim">
+  <img src="https://dotfyle.com/plugins/debugloop/telescope-undo.nvim/shield" />
+  </a>
+
 - [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)<a href="https://dotfyle.com/plugins/folke/zen-mode.nvim">
   <img src="https://dotfyle.com/plugins/folke/zen-mode.nvim/shield" />
   </a>
@@ -99,6 +103,9 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
   </a>
 - [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)<a href="https://dotfyle.com/plugins/windwp/nvim-ts-autotag">
   <img src="https://dotfyle.com/plugins/windwp/nvim-ts-autotag/shield" />
+  </a>
+- [Wansmer/treesj](https://dotfyle.com/plugins/Wansmer/treesj)<a href="https://dotfyle.com/plugins/Wansmer/treesj">
+  <img src="https://dotfyle.com/plugins/Wansmer/treesj/shield" />
   </a>
 
 ### file-explorer
@@ -249,6 +256,7 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 ### terminal multiplexer
 
 - [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/christoomey/vim-tmux-navigator?labelColor=%232c4bae&color=%2330c266)
 
 ### test
 
@@ -267,7 +275,13 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 - [kevinhwang91/nvim-ufo](https://dotfyle.com/plugins/kevinhwang91/nvim-ufo)<a href="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo">
   <img src="https://dotfyle.com/plugins/kevinhwang91/nvim-ufo/shield" />
   </a>
-- [dbinagi/nomodoro](https://github.com/dbinagi/nomodoro) (Pomodoro for Nvim)
+- [dbinagi/nomodoro](https://github.com/dbinagi/nomodoro) ![GitHub Repo stars](https://img.shields.io/github/stars/dbinagi/nomodoro?labelColor=%232c4bae&color=%2330c266)
+
+### web-development
+
+- [roobert/tailwindcss-colorizer-cmp.nvim](https://dotfyle.com/plugins/roobert/tailwindcss-colorizer-cmp.nvim)<a href="https://dotfyle.com/plugins/roobert/tailwindcss-colorizer-cmp.nvim">
+  <img src="https://dotfyle.com/plugins/roobert/tailwindcss-colorizer-cmp.nvim/shield" />
+  </a>
 
 ## Language Servers
 
