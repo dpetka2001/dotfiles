@@ -56,3 +56,7 @@ if os.getenv("TMUX") then
   map("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
   map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
 end
+
+map("n", "<leader>S", function()
+  require("dpetka2001.scratch").launch_notepad()
+end, { silent = true, desc = "Open Scratch" })
