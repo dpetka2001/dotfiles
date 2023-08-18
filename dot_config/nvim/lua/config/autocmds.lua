@@ -120,8 +120,16 @@ usercmd("Rwd", function()
   print(util.get_root())
 end, { desc = "Print root_dir of current buffer" })
 
+-- User command for diffing current buffer when not in .git repo
 usercmd("DiffOrig", function()
-  vim.cmd([[
-    vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis
-  ]])
+  local scratch_buffer = vim.api.nvim_create_buf(false, true)
+  local current_ft = vim.bo.filetype
+  vim.cmd("vertical sbuffer" .. scratch_buffer)
+  vim.bo[scratch_buffer].filetype = current_ft
+  vim.cmd("read ++edit #") -- load contents of previous buffer into scratch_buffer
+  vim.cmd.normal('1G"_d_') -- delete extra newline at top of scratch_buffer without overriding register
+  vim.cmd.diffthis() -- scratch_buffer
+  vim.cmd.wincmd("p")
+  vim.cmd.diffthis() -- current buffer
+  vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = scratch_buffer, silent = true })
 end, { desc = "Print root_dir of current buffer" })
