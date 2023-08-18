@@ -119,3 +119,9 @@ autocmd("BufReadPost", {
 usercmd("Rwd", function()
   print(util.get_root())
 end, { desc = "Print root_dir of current buffer" })
+
+usercmd("DiffOrig", function()
+  vim.cmd([[
+    vert new | set buftype=nofile | read ++edit # | 0d_ | diffthis | wincmd p | diffthis
+  ]])
+end, { desc = "Print root_dir of current buffer" })
