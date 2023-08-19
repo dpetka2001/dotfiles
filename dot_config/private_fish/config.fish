@@ -21,5 +21,7 @@ set -gx LC_NUMERIC en_US.UTF-8
 # Change MANPAGER
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
+set -gx TZ ":Europe/Athens"
+
 # Start ssh-agent when starting fish shell
 fish_ssh_agent
