@@ -27,5 +27,37 @@ return {
   },
 
   -- `gh`-like behavior from inside Neovim
-  -- { "pwntester/octo.nvim", cmd = "Octo", opts = {} },
+  {
+    "pwntester/octo.nvim",
+    cmd = "Octo",
+    opts = {
+      always_select_remote = "true",
+      default_remote = { "upstream", "origin" },
+    },
+  },
+
+  -- `nvim-cmp` related for git
+  -- NOTE:
+  --  ╭─────────────────────────────────────────────────╮
+  --  │ Issues, PRs and mentions don't seem to work.    │
+  --  │ Only mentions for commits which trigger by `:`. │
+  --  ╰─────────────────────────────────────────────────╯
+  {
+    "nvim-cmp",
+    dependencies = {
+      {
+        "petertriho/cmp-git",
+        opts = {
+          -- remotes = { "upstream" },
+        },
+      },
+    },
+    opts = function(_, opts)
+      table.insert(opts.sources, #opts.sources + 1, {
+        name = "git",
+        priority = 500,
+        group_index = 1,
+      })
+    end,
+  },
 }
