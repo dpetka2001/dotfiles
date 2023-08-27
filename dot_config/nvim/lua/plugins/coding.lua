@@ -27,6 +27,7 @@ return {
         },
       },
       { "jcdickinson/codeium.nvim" },
+      { "hrsh7th/cmp-calc" },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
@@ -60,6 +61,8 @@ return {
           select = true,
         }),
       }))
+      table.insert(opts.sources, #opts.sources + 1, { name = "calc", priority = 650, group_index = 2 })
+
       opts.preselect = cmp.PreselectMode.None
       opts.completion = {
         completeopt = "menu,menuone,noinsert,noselect",
