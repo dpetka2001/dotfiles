@@ -64,6 +64,10 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### comment
 
+- [LudoPinelli/comment-box.nvim](https://dotfyle.com/plugins/LudoPinelli/comment-box.nvim)<a href="https://dotfyle.com/plugins/LudoPinelli/comment-box.nvim">
+  <img src="https://dotfyle.com/plugins/LudoPinelli/comment-box.nvim/shield" />
+  </a>
+
 - [numToStr/Comment.nvim](https://dotfyle.com/plugins/numToStr/Comment.nvim)<a href="https://dotfyle.com/plugins/numToStr/Comment.nvim">
   <img src="https://dotfyle.com/plugins/numToStr/Comment.nvim/shield" />
   </a>
@@ -129,6 +133,13 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
 
 ### git
 
+- [rhysd/committia.vim](https://github.com/rhysd/committia.vim) ![GitHub Repo stars](https://img.shields.io/github/stars/rhysd/committia.vim?labelColor=%232c4bae&color=%2330c266)
+
+- [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim) ![GitHub Repo stars](https://img.shields.io/github/stars/rhysd/git-messenger.vim?labelColor=%232c4bae&color=%2330c266)
+- [f-person/git-blame.nvim](https://dotfyle.com/plugins/f-person/git-blame.nvim)<a href="https://dotfyle.com/plugins/f-person/git-blame.nvim">
+  <img src="https://dotfyle.com/plugins/f-person/git-blame.nvim/shield" />
+  </a>
+
 - [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)<a href="https://dotfyle.com/plugins/lewis6991/gitsigns.nvim">
   <img src="https://dotfyle.com/plugins/lewis6991/gitsigns.nvim/shield" />
   </a>
@@ -137,6 +148,12 @@ NVIM_APPNAME=dpetka2001/dotfiles/dot_config/nvim nvim
   </a>
 - [kdheepak/lazygit.nvim](https://dotfyle.com/plugins/kdheepak/lazygit.nvim)<a href="https://dotfyle.com/plugins/kdheepak/lazygit.nvim">
   <img src="https://dotfyle.com/plugins/kdheepak/lazygit.nvim/shield" />
+  </a>
+
+### github
+
+- [pwntester/octo.nvim](https://dotfyle.com/plugins/pwntester/octo.nvim)<a href="https://dotfyle.com/plugins/pwntester/octo.nvim">
+  <img src="https://dotfyle.com/plugins/pwntester/octo.nvim/shield" />
   </a>
 
 ### indent
