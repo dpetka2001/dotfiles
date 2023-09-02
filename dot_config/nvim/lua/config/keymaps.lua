@@ -47,7 +47,7 @@ map("n", "<leader>bw", "<cmd>execute 'bdelete' | silent! close<cr>", { desc = "C
 -- Open current file in chrome
 -- map("n", "<leader>fx", '<cmd>!google-chrome "%"<cr>', { desc = "Open file in Chrome" })
 -- stylua: ignore
-map("n", "<leader>fx", '<cmd>!/home/jrn23/.local/opt/firefox/firefox "%"<cr>', { desc = "Open file in Firefox Developer" })
+map("n", "<leader>fx", '<cmd>silent !/home/jrn23/.local/opt/firefox/firefox "%"<cr>', { silent = true, desc = "Open file in Firefox Developer" })
 
 -- vim-tmux-navigator
 if os.getenv("TMUX") then
