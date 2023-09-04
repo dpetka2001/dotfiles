@@ -2,7 +2,6 @@ return {
   -- Add `codeium.nvim`
   {
     "jcdickinson/codeium.nvim",
-    -- commit = "b1ff0d6c993e3d87a4362d2ccd6c660f7444599f",
     lazy = true,
     dependencies = {
       { "jcdickinson/http.nvim", build = "cargo build --workspace --release" },
@@ -17,7 +16,6 @@ return {
   -- Modify nvim-cmp
   {
     "hrsh7th/nvim-cmp",
-    commit = "6c84bc75c64f778e9f1dcb798ed41c7fcb93b639", -- lock update (break codeium)
     dependencies = {
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
       {
