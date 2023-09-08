@@ -118,7 +118,9 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }
       vim.opt.relativenumber = true
     end
   end,
+  desc = "Toggle line numbers on when focus",
 })
+
 autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
   group = "ToggleLineNumbers",
   callback = function()
@@ -126,6 +128,7 @@ autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, 
       vim.opt.relativenumber = false
     end
   end,
+  desc = "Toggle line numbers off when not focus",
 })
 
 --[[ Open plugin repos with gx ]]
@@ -155,6 +158,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
       end, { desc = "Open filepath or URI under cursor" })
     end
   end,
+  desc = "Make `gx` open repos in default browser",
 })
 
 --[[ -------------
