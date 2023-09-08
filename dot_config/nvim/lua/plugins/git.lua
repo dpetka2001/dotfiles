@@ -1,10 +1,19 @@
 return {
   -- Alternative git-blame
+  --[[ 
+    WARN: 
+--  ╭──────────────────────────────────────────────────────────╮
+--  │ It has problems when scrolling rapidly, causes slowdown  │
+--  │ See https://github.com/f-person/git-blame.nvim/issues/83 │
+--  │     Disable it for now at start and call it manually     │
+--  ╰──────────────────────────────────────────────────────────╯
+--]]
   {
     "f-person/git-blame.nvim",
     event = "BufReadPre",
     init = function()
       vim.g.gitblame_display_virtual_text = 0
+      vim.g.gitblame_enabled = 0
     end,
   },
 
