@@ -109,6 +109,54 @@ autocmd("BufReadPost", {
   desc = "Restore folds on buffer enter",
 })
 
+--[[ Toggle relative line numbers ]]
+augroup("ToggleLineNumbers", { clear = true })
+autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
+  group = "ToggleLineNumbers",
+  callback = function()
+    if vim.o.nu and vim.api.nvim_get_mode().mode:sub(1, 1) ~= "i" then
+      vim.opt.relativenumber = true
+    end
+  end,
+})
+autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
+  group = "ToggleLineNumbers",
+  callback = function()
+    if vim.o.nu then
+      vim.opt.relativenumber = false
+    end
+  end,
+})
+
+--[[ Open plugin repos with gx ]]
+vim.api.nvim_create_autocmd("BufReadPost", {
+  group = vim.api.nvim_create_augroup("GxWithPlugins", { clear = true }),
+  callback = function()
+    if vim.fn.getcwd() == vim.fn.stdpath("config") then
+      vim.keymap.set("n", "gx", function()
+        local file = vim.fn.expand("<cfile>") --[[@as string]]
+
+        -- First try the default behaviour from https://github.com/neovim/neovim/blob/597355deae2ebddcb8b930da9a8b45a65d05d09b/runtime/lua/vim/_editor.lua#L1084.
+        local _, err = vim.ui.open(file)
+        if not err then
+          return
+        end
+
+        -- Consider anything that looks like string/string a GitHub link.
+        local link = file:match("%w[%w%-]+/[%w%-%._]+")
+        if link then
+          _, err = vim.ui.open("https://www.github.com/" .. link)
+        end
+
+        -- If that fails, just blame me.
+        if err then
+          vim.notify(err, vim.log.levels.ERROR)
+        end
+      end, { desc = "Open filepath or URI under cursor" })
+    end
+  end,
+})
+
 --[[ -------------
      USER COMMANDS
      ------------- ]]
