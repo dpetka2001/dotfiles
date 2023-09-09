@@ -83,4 +83,15 @@ return {
   {
     "tpope/vim-surround",
   },
+
+  -- Better qflist??
+  {
+    "kevinhwang91/nvim-bqf",
+    dependencies = {
+      "junegunn/fzf",
+      "junegunn/fzf.vim",
+    },
+    ft = { "qf" },
+    opts = {},
+  },
 }
