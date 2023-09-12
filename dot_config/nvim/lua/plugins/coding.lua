@@ -1,15 +1,24 @@
 return {
-  -- Add `codeium.nvim`
+  -- Codeium.vim
   {
-    "jcdickinson/codeium.nvim",
-    lazy = true,
-    dependencies = {
-      { "jcdickinson/http.nvim", build = "cargo build --workspace --release" },
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
+    "Exafunction/codeium.vim",
+    -- init = function()
+    --   vim.g.codeium_manual = true
+    -- end,
     config = function()
-      require("codeium").setup({})
+      -- Change '<C-g>' here to any keycode you like.
+      vim.keymap.set("i", "<C-g>", function()
+        return vim.fn["codeium#Accept"]()
+      end, { expr = true })
+      vim.keymap.set("i", "<c-;>", function()
+        return vim.fn["codeium#CycleCompletions"](1)
+      end, { expr = true })
+      vim.keymap.set("i", "<c-,>", function()
+        return vim.fn["codeium#CycleCompletions"](-1)
+      end, { expr = true })
+      vim.keymap.set("i", "<c-x>", function()
+        return vim.fn["codeium#Clear"]()
+      end, { expr = true })
     end,
   },
 
@@ -24,7 +33,6 @@ return {
           fast_wrap = {},
         },
       },
-      { "jcdickinson/codeium.nvim" },
       { "hrsh7th/cmp-calc" },
     },
     opts = function(_, opts)
@@ -45,45 +53,35 @@ return {
       -- Insert `deprioritize_snippet` first in the `comparators` table, so that it has priority
       -- over the other default comparators
       table.insert(opts.sorting.comparators, 1, deprioritize_snippet)
+
+      -- Insert parentheses after selecting method/function
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-      opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
-        { name = "codeium", priority = 50 },
-      }))
-      opts.mapping = cmp.mapping.preset.insert(vim.tbl_deep_extend("force", opts.mapping, {
-        ["<CR>"] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Insert,
-          select = true,
-        }),
-        ["<c-q>"] = cmp.mapping.confirm({
-          behavior = cmp.ConfirmBehavior.Replace,
-          select = true,
-        }),
-      }))
+
+      -- Make codeium suggestions appear only when `nvim-cmp` menu is closed
+      cmp.event:on("menu_opened", function()
+        vim.g.codeium_manual = true
+        vim.fn["codeium#Clear"]()
+      end)
+      cmp.event:on("menu_closed", function()
+        vim.g.codeium_manual = false
+        vim.fn["codeium#Complete"]()
+      end)
+
+      -- Take care of source ordering and group_index
+      table.remove(opts.sources, 3)
+      table.insert(opts.sources, #opts.sources + 1, { name = "buffer", group_index = 2 })
       table.insert(opts.sources, #opts.sources + 1, { name = "calc", priority = 650, group_index = 2 })
 
       opts.preselect = cmp.PreselectMode.None
       opts.completion = {
         completeopt = "menu,menuone,noinsert,noselect",
       }
+
+      -- original Lazyvim kind icon formatter
+      local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
-        local icons = require("lazyvim.config").icons.kinds
         local item = item
-        if entry.source.name == "codeium" then
-          item.kind = "   (Codeium)"
-          if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-            item.kind = "   (" .. entry.completion_item.data.detail .. ")"
-          end
-        end
-        if icons[item.kind] then
-          item.kind = icons[item.kind] .. item.kind
-        end
-        item.menu = ({
-          nvim_lsp = "[LSP]",
-          buffer = "[Buffer]",
-          luasnip = "[LuaSnip]",
-          path = "[Path]",
-          codeium = "[A.I.]",
-        })[entry.source.name]
+        format_kinds(entry, item) -- add icons
 
         --[[ Make completion width dynamic according to window width ]]
         -- See https://github.com/hrsh7th/nvim-cmp/discussions/609
