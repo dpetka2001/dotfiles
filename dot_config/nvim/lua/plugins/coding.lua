@@ -2,9 +2,13 @@ return {
   -- Codeium.vim
   {
     "Exafunction/codeium.vim",
-    -- init = function()
-    --   vim.g.codeium_manual = true
-    -- end,
+    init = function()
+      vim.g.codeium_filetypes = {
+        TelescopePrompt = false,
+        ["neo-tree-popup"] = false,
+        ["dap-repl"] = false,
+      }
+    end,
     config = function()
       -- Change '<C-g>' here to any keycode you like.
       vim.keymap.set("i", "<C-g>", function()
