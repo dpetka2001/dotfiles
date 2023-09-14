@@ -135,11 +135,23 @@ return {
     "ibhagwan/fzf-lua",
     cmd = "FzfLua",
     opts = {
-      keymap = {
-        builtin = {
-          ["<C-d>"] = "preview-page-down",
-          ["<C-u>"] = "preview-page-up",
-        },
+      -- INFO:
+      --  ╭──────────────────────────────────────────────────────────────────────────╮
+      --  │ Use this instead of `keymap.builtin` and `keymap.fzf`, because if you    │
+      --  │ declare the keybindings in those tables, they will override the defaults │
+      --  │ and you need to add the default missing ones.                            │
+      --  ╰──────────────────────────────────────────────────────────────────────────╯
+      winopts = {
+        window_on_create = function()
+          vim.keymap.set("t", "<C-d>", function()
+            require("fzf-lua.win").preview_scroll(1)
+          end, { buffer = 0, noremap = true })
+          vim.keymap.set("t", "<C-u>", function()
+            require("fzf-lua.win").preview_scroll(-1)
+          end, { buffer = 0, noremap = true })
+          vim.keymap.set("t", "<C-j>", "<down>", { buffer = 0, noremap = true })
+          vim.keymap.set("t", "<C-k>", "<up>", { buffer = 0, noremap = true })
+        end,
       },
     },
   },
