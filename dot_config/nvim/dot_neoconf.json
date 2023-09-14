@@ -2,7 +2,7 @@
   "neodev": {
     "library": {
       "enabled": true,
-      "plugins": true
+      "plugins": false
     }
   },
   "neoconf": {
