@@ -161,6 +161,15 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   desc = "Make `gx` open repos in default browser",
 })
 
+-- Disable `mini.indentscope` for specific filetypes
+autocmd("FileType", {
+  pattern = { "fzf" },
+  group = augroup("DisableIndentScope", { clear = true }),
+  callback = function()
+    vim.b.miniindentscope_disable = true
+  end,
+  desc = "Disable `mini.indentscope` for specific filetypes",
+})
 --[[ -------------
      USER COMMANDS
      ------------- ]]
