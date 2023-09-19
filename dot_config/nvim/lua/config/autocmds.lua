@@ -163,7 +163,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 -- Disable `mini.indentscope` for specific filetypes
 autocmd("FileType", {
-  pattern = { "fzf" },
+  pattern = { "fzf", "lspinfo" },
   group = augroup("DisableIndentScope", { clear = true }),
   callback = function()
     vim.b.miniindentscope_disable = true
