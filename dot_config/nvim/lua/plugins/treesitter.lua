@@ -7,7 +7,15 @@ return {
       { "windwp/nvim-ts-autotag" },
 
       -- Modify nvim-ts-context-commentstring
-      { "JoosepAlviste/nvim-ts-context-commentstring" },
+      {
+        "JoosepAlviste/nvim-ts-context-commentstring",
+        opts = {
+          config = {
+            c = { __default = "// %s", __multiline = "/* %s */" },
+            cpp = { __default = "// %s", __multiline = "/* %s */" },
+          },
+        },
+      },
     },
     -- event = { "BufReadPre" },
     opts = function(_, opts)
@@ -39,14 +47,6 @@ return {
         },
         matchup = {
           enable = true,
-        },
-        context_commentstring = {
-          enable = true,
-          enable_autocmd = false,
-          config = {
-            c = { __default = "// %s", __multiline = "/* %s */" },
-            cpp = { __default = "// %s", __multiline = "/* %s */" },
-          },
         },
       })
     end,
