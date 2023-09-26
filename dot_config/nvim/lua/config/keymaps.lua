@@ -57,6 +57,28 @@ if os.getenv("TMUX") then
   map("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
 end
 
+-- Open scratch
 map("n", "<leader>S", function()
   require("dpetka2001.scratch").launch_notepad()
 end, { silent = true, desc = "Open Scratch" })
+
+-- Testing key overloading for speeding up macros
+map("n", "@", function()
+  local count = vim.v.count1
+  local register = vim.fn.getcharstr()
+  vim.opt.lazyredraw = true
+  vim.api.nvim_command(string.format("noa norm! %d@%s", count, register))
+  vim.opt.lazyredraw = false
+  vim.api.nvim_command("silent update")
+end, { noremap = true })
+
+map("v", "@", function()
+  local register = vim.fn.getcharstr()
+  vim.opt.lazyredraw = true
+  vim.api.nvim_command(string.format("'<,'> noa norm! @%s", register))
+  vim.opt.lazyredraw = false
+  vim.api.nvim_command("silent update")
+end, { noremap = true })
+
+-- Test `root_dir`
+map("n", "<leader>N", "<cmd>luafile ~/.config/nvim/test_get_root.lua<cr>", { desc = "Test root_dir" })
