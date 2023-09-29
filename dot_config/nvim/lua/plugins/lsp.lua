@@ -136,7 +136,7 @@ return {
 
   -- Modify `null-ls`
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     init = function()
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
