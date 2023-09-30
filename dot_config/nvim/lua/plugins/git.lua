@@ -10,7 +10,10 @@ return {
 --]]
   {
     "f-person/git-blame.nvim",
-    event = "BufReadPre",
+    -- event = "BufReadPre",
+    cond = function()
+      return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
+    end,
     init = function()
       vim.g.gitblame_display_virtual_text = 0
       vim.g.gitblame_enabled = 0
@@ -20,6 +23,9 @@ return {
   -- Git messages(commits, history, etc)
   {
     "rhysd/git-messenger.vim",
+    cond = function()
+      return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
+    end,
     init = function()
       vim.g.git_messenger_no_default_mappings = true
     end,
@@ -29,7 +35,14 @@ return {
   -- Better `git commit`
   {
     "rhysd/committia.vim",
-    event = "BufRead",
+    -- event = "BufRead",
+    cond = function()
+      return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
+    end,
+    init = function()
+      vim.g.committia_min_window_width = 130
+      vim.g.committia_edit_window_width = 60
+    end,
     keys = {
       { "<leader>gC", "<cmd>call committia#open('git')<cr>", desc = "Open Committia" },
     },
@@ -39,6 +52,9 @@ return {
   {
     "pwntester/octo.nvim",
     cmd = "Octo",
+    cond = function()
+      return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
+    end,
     opts = {
       always_select_remote = "true",
       default_remote = { "upstream", "origin" },
