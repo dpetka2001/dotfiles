@@ -64,7 +64,13 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "BufReadPre",
-    opts = { mode = "cursor" },
+    opts = {
+      mode = "cursor",
+      -- Avoid the sticky context from growing a lot.
+      max_lines = 4,
+      -- Match the context lines to the source code.
+      multiline_threshold = 1,
+    },
     keys = {
       {
         "[C",
