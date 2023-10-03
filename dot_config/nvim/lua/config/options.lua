@@ -12,10 +12,10 @@ opt.smarttab = true -- When on, a <Tab> in front of a line inserts blanks accord
 opt.hidden = true
 
 -- Set fold level, so that folds are open when entering buffer
-opt.foldcolumn = "1"
-opt.foldlevel = 99
-opt.foldlevelstart = 99
-vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+-- opt.foldcolumn = "1"
+-- opt.foldlevel = 99
+-- opt.foldlevelstart = 99
+-- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
 
 -- Set eventignore so that tmux does not show `activity` every time we change from a window with Neovim
 opt.eventignore = "FocusLost"
