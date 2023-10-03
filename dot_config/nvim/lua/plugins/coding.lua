@@ -138,6 +138,19 @@ return {
         require("luasnip.loaders.from_lua").load({ paths = "lua/plugins/snippets" })
       end,
     },
+    opts = {
+      -- WARN:
+      --  ╭──────────────────────────────────────────────────────────╮
+      --  │ As snippets are not removed when their text is           │
+      --  │  deleted, they have to be removed manually               │
+      --  │ via LuasnipUnlinkCurrent if `delete_check_events`        │
+      --  │  is not enabled. This can cause false                    │
+      --  │ positives with `Tab` when in insert mode and jump        │
+      --  │  you around in strange positions in the                  │
+      --  │ buffer, thinking that it jumps inside a snippet.         │
+      --  ╰──────────────────────────────────────────────────────────╯
+      delete_check_events = { "TextChanged", "InsertLeave" },
+    },
   },
 
   -- Easily create annotations
