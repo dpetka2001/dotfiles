@@ -36,31 +36,31 @@ return {
   },
 
   -- Distinguish windows with colorful borders
-  {
-    "nvim-zh/colorful-winsep.nvim",
-    -- event = { "BufReadPost", "BufNewFile" },
-    event = "LazyFile",
-    opts = {
-      create_event = function()
-        local colorful_winsep = require("colorful-winsep")
-        local filetypes = { "neo-tree", "Trouble" }
-        local win_n = require("colorful-winsep.utils").calculate_number_windows()
-        if win_n == 2 then
-          local win_id
-          local cur_win_id = vim.fn.win_getid(vim.fn.winnr())
-          if vim.fn.win_getid(vim.fn.winnr("h")) == cur_win_id then
-            win_id = vim.fn.win_getid(vim.fn.winnr("j"))
-          else
-            win_id = vim.fn.win_getid(vim.fn.winnr("h"))
-          end
-          local filetype = vim.api.nvim_get_option_value("filetype", { buf = vim.api.nvim_win_get_buf(win_id) })
-          if vim.tbl_contains(filetypes, filetype) then
-            colorful_winsep.NvimSeparatorDel()
-          end
-        end
-      end,
-    },
-  },
+  -- {
+  --   "nvim-zh/colorful-winsep.nvim",
+  --   -- event = { "BufReadPost", "BufNewFile" },
+  --   event = "LazyFile",
+  --   opts = {
+  --     create_event = function()
+  --       local colorful_winsep = require("colorful-winsep")
+  --       local filetypes = { "neo-tree", "Trouble" }
+  --       local win_n = require("colorful-winsep.utils").calculate_number_windows()
+  --       if win_n == 2 then
+  --         local win_id
+  --         local cur_win_id = vim.fn.win_getid(vim.fn.winnr())
+  --         if vim.fn.win_getid(vim.fn.winnr("h")) == cur_win_id then
+  --           win_id = vim.fn.win_getid(vim.fn.winnr("j"))
+  --         else
+  --           win_id = vim.fn.win_getid(vim.fn.winnr("h"))
+  --         end
+  --         local filetype = vim.api.nvim_get_option_value("filetype", { buf = vim.api.nvim_win_get_buf(win_id) })
+  --         if vim.tbl_contains(filetypes, filetype) then
+  --           colorful_winsep.NvimSeparatorDel()
+  --         end
+  --       end
+  --     end,
+  --   },
+  -- },
 
   -- Dim inactive windows
   {
