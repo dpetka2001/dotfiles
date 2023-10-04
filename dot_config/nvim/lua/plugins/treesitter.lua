@@ -63,7 +63,8 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter-context",
-    event = "BufReadPre",
+    -- event = "BufReadPre",
+    event = "LazyFile",
     opts = {
       mode = "cursor",
       -- Avoid the sticky context from growing a lot.

@@ -1,7 +1,8 @@
 return {
   {
     "numToStr/Comment.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    -- event = { "BufReadPost", "BufNewFile" },
+    event = "LazyFile",
     opts = {
       ---Function to call before (un)comment
       -- FIX:
@@ -23,7 +24,8 @@ return {
   {
     {
       "LudoPinelli/comment-box.nvim",
-      event = "BufReadPre",
+      -- event = "BufReadPre",
+      event = "LazyFile",
     },
   },
 }

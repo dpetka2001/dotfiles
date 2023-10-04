@@ -20,4 +20,5 @@ opt.hidden = true
 -- Set eventignore so that tmux does not show `activity` every time we change from a window with Neovim
 opt.eventignore = "FocusLost"
 
-opt.viewoptions = "folds"
+-- Add `cursor` due to a problem in `last_loc` LazyVim's autocmd after recent update
+opt.viewoptions = "folds,cursor"

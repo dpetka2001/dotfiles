@@ -18,7 +18,8 @@ return {
   -- Better scope for buffers throughout tabs
   {
     "tiagovla/scope.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    -- event = { "BufReadPre", "BufNewFile" },
+    event = "LazyFile",
     opts = {
       restore_state = false,
     },
@@ -71,7 +72,8 @@ return {
   -- Glance at definitions, refs, etc a la VS Code
   {
     "DNLHC/glance.nvim",
-    event = "BufReadPre",
+    -- event = "BufReadPre",
+    event = "LazyFile",
     config = true,
     keys = {
       { "gD", "<cmd>Glance definitions<cr>", desc = "Goto Definitions (Glance)" },

@@ -3,7 +3,7 @@ return {
   -- just single characters
   {
     "andymass/vim-matchup",
-    event = "BufReadPost",
+    event = "LazyFile",
     init = function()
       vim.o.matchpairs = "(:),{:},[:],<:>"
     end,
@@ -38,7 +38,8 @@ return {
   -- Distinguish windows with colorful borders
   {
     "nvim-zh/colorful-winsep.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    -- event = { "BufReadPost", "BufNewFile" },
+    event = "LazyFile",
     opts = {
       create_event = function()
         local colorful_winsep = require("colorful-winsep")
@@ -64,7 +65,8 @@ return {
   -- Dim inactive windows
   {
     "levouh/tint.nvim",
-    event = { "BufReadPost", "BufNewFile" },
+    -- event = { "BufReadPost", "BufNewFile" },
+    event = "LazyFile",
     opts = {
       saturation = 0.4,
     },
@@ -129,7 +131,7 @@ return {
     "cshuaimin/ssr.nvim",
     keys = {
       {
-        "<leader>sR",
+        "<leader>sp",
         function()
           require("ssr").open()
         end,
