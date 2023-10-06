@@ -29,16 +29,16 @@ autocmd("Filetype", {
 })
 
 -- Disable Ufo for neo-tree
-autocmd("Filetype", {
-  pattern = "neo-tree",
-  callback = function()
-    if package.loaded["ufo"] then
-      vim.cmd("UfoDetach")
-    end
-  end,
-  group = "mygroup",
-  desc = "Disable Ufo for neo-tree",
-})
+-- autocmd("Filetype", {
+--   pattern = "neo-tree",
+--   callback = function()
+--     if package.loaded["ufo"] then
+--       vim.cmd("UfoDetach")
+--     end
+--   end,
+--   group = "mygroup",
+--   desc = "Disable Ufo for neo-tree",
+-- })
 
 -- Reload config on save
 autocmd("BufWritePost", {
