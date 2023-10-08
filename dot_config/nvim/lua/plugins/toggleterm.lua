@@ -4,6 +4,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     lazy = true,
+    cmd = { "ToggleTerm" },
     keys = {
       {
         "<leader>Tf",
@@ -11,23 +12,23 @@ return {
           local count = vim.v.count1
           require("toggleterm").toggle(count, 0, Util.get_root(), "float")
         end,
-        desc = "ToggleTerm (float)",
+        desc = "ToggleTerm (float root_dir)",
       },
       {
         "<leader>Th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 10, Util.get_root(), "horizontal")
+          require("toggleterm").toggle(count, 15, Util.get_root(), "horizontal")
         end,
-        desc = "ToggleTerm (horizontal)",
+        desc = "ToggleTerm (horizontal root_dir)",
       },
       {
         "<leader>Tv",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, Util.get_root(), "vertical")
+          require("toggleterm").toggle(count, vim.o.columns * 0.4, Util.get_root(), "vertical")
         end,
-        desc = "ToggleTerm (vertical)",
+        desc = "ToggleTerm (vertical root_dir)",
       },
       {
         "<leader>Tn",
@@ -44,19 +45,19 @@ return {
         function()
           require("toggleterm").toggle(1, 100, Util.get_root(), "tab")
         end,
-        desc = "ToggleTerm (root_dir)",
+        desc = "ToggleTerm (tab root_dir)",
       },
       {
         "<leader>TT",
         function()
           require("toggleterm").toggle(1, 100, vim.loop.cwd(), "tab")
         end,
-        desc = "ToggleTerm (cwd_dir)",
+        desc = "ToggleTerm (tab cwd_dir)",
       },
     },
     opts = {
       -- size can be a number or function which is passed the current terminal
-      size = 20 or function(term)
+      size = function(term)
         if term.direction == "horizontal" then
           return 15
         elseif term.direction == "vertical" then
