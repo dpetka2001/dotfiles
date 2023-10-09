@@ -8,6 +8,13 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
+    {
+      "abeldekat/lazyflex.nvim",
+      version = "*",
+      cond = true, -- enable/disable lazyflex.nvim
+      import = "lazyflex.hook",
+      -- opts = {},
+    },
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
@@ -57,5 +64,6 @@ require("lazy").setup({
   },
   dev = {
     path = "~/projects/plugins/",
+    patterns = { "lazyflex" },
   },
 })
