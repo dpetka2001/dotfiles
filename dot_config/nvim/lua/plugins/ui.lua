@@ -107,8 +107,7 @@ return {
   -- Style windows with different colorschemes
   {
     "folke/styler.nvim",
-    -- event = { "BufReadPre", "BufNewFile" },
-    event = "LazyFile",
+    event = { "BufReadPre", "BufNewFile" },
     opts = {
       themes = {
         markdown = { colorscheme = "catppuccin" },
