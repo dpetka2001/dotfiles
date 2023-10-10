@@ -10,10 +10,11 @@ return {
           { "<C-p>", "<cmd>lua require'telescope'.extensions.project.project{}<cr>", desc = "Telescope Project" },
         },
       },
-      -- {
-      --   "nvim-telescope/telescope-fzf-native.nvim",
-      --   build = "make",
-      -- },
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        enabled = false,
+        build = "make",
+      },
       { "natecraddock/telescope-zf-native.nvim" },
       { "debugloop/telescope-undo.nvim" },
     },
