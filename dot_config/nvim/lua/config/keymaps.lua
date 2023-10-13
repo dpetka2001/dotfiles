@@ -24,10 +24,10 @@ map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 
 -- Lazygit change size of window
 map("n", "<leader>gg", function()
-  Util.float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.get_root() })
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  Util.float_term({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
 end, { desc = "Lazygit (cwd dir)" })
 
 -- Move to tabs convienently
