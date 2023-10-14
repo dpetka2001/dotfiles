@@ -135,26 +135,26 @@ return {
   },
 
   -- Modify `null-ls`
-  {
-    "nvimtools/none-ls.nvim",
-    init = function()
-      vim.api.nvim_create_autocmd("LspAttach", {
-        callback = function(args)
-          local bufnr = args.buf
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-          if client.name == "null-ls" then
-            vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>cn", "<cmd>NullLsInfo<cr>", { desc = "NullLs Info" })
-          end
-        end,
-      })
-    end,
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      opts.sources = vim.list_extend(opts.sources, {
-        nls.builtins.code_actions.gitsigns,
-      })
-    end,
-  },
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   init = function()
+  --     vim.api.nvim_create_autocmd("LspAttach", {
+  --       callback = function(args)
+  --         local bufnr = args.buf
+  --         local client = vim.lsp.get_client_by_id(args.data.client_id)
+  --         if client.name == "null-ls" then
+  --           vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>cn", "<cmd>NullLsInfo<cr>", { desc = "NullLs Info" })
+  --         end
+  --       end,
+  --     })
+  --   end,
+  --   opts = function(_, opts)
+  --     local nls = require("null-ls")
+  --     opts.sources = vim.list_extend(opts.sources, {
+  --       nls.builtins.code_actions.gitsigns,
+  --     })
+  --   end,
+  -- },
 
   -- Import extra lsp languages configs
   { import = "plugins.extras.lang" },

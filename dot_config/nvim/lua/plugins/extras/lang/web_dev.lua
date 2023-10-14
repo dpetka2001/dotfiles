@@ -68,20 +68,38 @@ return {
     },
   },
 
-  -- Setup null-ls with `prettierd`
+  -- Setup up format with new `conform.nvim`
   {
-    "nvimtools/none-ls.nvim",
-    opts = function(_, opts)
-      local nls = require("null-ls")
-      opts.sources = vim.list_extend(opts.sources, {
-        nls.builtins.formatting.prettierd,
-        nls.builtins.code_actions.eslint,
-        -- nls.builtins.formatting.prettierd.with({
-        --   filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
-        -- }),
-      })
-    end,
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        ["markdown"] = { { "prettierd", "prettier" } },
+        ["markdown.mdx"] = { { "prettierd", "prettier" } },
+        ["javascript"] = { { "prettierd", "prettier" } },
+        ["javascriptreact"] = { { "prettierd", "prettier" } },
+        ["typescript"] = { { "prettierd", "prettier" } },
+        ["typescriptreact"] = { { "prettierd", "prettier" } },
+        ["html"] = { { "prettierd", "prettier" } },
+        ["css"] = { { "prettierd", "prettier" } },
+      },
+    },
   },
+
+  -- Setup null-ls with `prettierd`
+  -- {
+  --   "nvimtools/none-ls.nvim",
+  --   opts = function(_, opts)
+  --     local nls = require("null-ls")
+  --     opts.sources = vim.list_extend(opts.sources, {
+  --       nls.builtins.formatting.prettierd,
+  --       nls.builtins.code_actions.eslint,
+  --       -- nls.builtins.formatting.prettierd.with({
+  --       --   filetypes = { "html", "css", "json", "jsonc", "yaml", "markdown" },
+  --       -- }),
+  --     })
+  --   end,
+  -- },
 
   -- Native TSServer client
   {
