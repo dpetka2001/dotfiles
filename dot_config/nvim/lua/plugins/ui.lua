@@ -69,6 +69,7 @@ return {
     opts = {
       sections = {
         lualine_c = {
+          Util.lualine.root_dir(),
           {
             "diagnostics",
             symbols = {
@@ -79,7 +80,8 @@ return {
             },
           },
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
+          { Util.lualine.pretty_path() },
+          -- { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
           {
             function() return require("nvim-navic").get_location() end,
