@@ -69,17 +69,17 @@ return {
   -- },
 
   -- Dim inactive windows
-  {
-    "levouh/tint.nvim",
-    -- event = { "BufReadPost", "BufNewFile" },
-    event = "LazyFile",
-    opts = {
-      saturation = 0.4,
-    },
-    keys = {
-      { "<leader>uT", "<cmd>lua require('tint').toggle()<cr>", desc = "Toggle tint" },
-    },
-  },
+  -- {
+  --   "levouh/tint.nvim",
+  --   -- event = { "BufReadPost", "BufNewFile" },
+  --   event = "LazyFile",
+  --   opts = {
+  --     saturation = 0.4,
+  --   },
+  --   keys = {
+  --     { "<leader>uT", "<cmd>lua require('tint').toggle()<cr>", desc = "Toggle tint" },
+  --   },
+  -- },
 
   -- Disable certain features if file is big
   {
