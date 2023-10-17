@@ -100,30 +100,30 @@ return {
       },
     },
     dependencies = {
-      {
-        "SmiteshP/nvim-navbuddy",
-        lazy = true,
-        dependencies = {
-          "SmiteshP/nvim-navic",
-          "MunifTanjim/nui.nvim",
-        },
-        opts = { lsp = { auto_attach = true } },
-        keys = {
-          { "<leader>cln", "<cmd>Navbuddy<cr>", desc = "Lsp Navigation" },
-        },
-      },
+      -- {
+      --   "SmiteshP/nvim-navbuddy",
+      --   lazy = true,
+      --   dependencies = {
+      --     "SmiteshP/nvim-navic",
+      --     "MunifTanjim/nui.nvim",
+      --   },
+      --   opts = { lsp = { auto_attach = true } },
+      --   keys = {
+      --     { "<leader>cln", "<cmd>Navbuddy<cr>", desc = "Lsp Navigation" },
+      --   },
+      -- },
 
-      {
-        "simrat39/symbols-outline.nvim",
-        lazy = true,
-        keys = {
-          { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
-        },
-        opts = {
-          width = 35,
-          autofold_depth = 2,
-        },
-      },
+      -- {
+      --   "simrat39/symbols-outline.nvim",
+      --   lazy = true,
+      --   keys = {
+      --     { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
+      --   },
+      --   opts = {
+      --     width = 35,
+      --     autofold_depth = 2,
+      --   },
+      -- },
 
       -- Pretty hover
       {

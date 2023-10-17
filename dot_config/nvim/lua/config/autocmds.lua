@@ -16,6 +16,17 @@ local usercmd = vim.api.nvim_create_user_command
 --[[ Mygroup Group ]]
 augroup("mygroup", { clear = true })
 
+vim.api.nvim_create_autocmd("FileType", {
+  group = "lazyvim_close_with_q",
+  pattern = {
+    "aerial-nav",
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+  end,
+})
+
 autocmd("Filetype", {
   pattern = { "*" },
   callback = function()
