@@ -1,7 +1,7 @@
 os:
   editcommand: "nvim"
   opencommand: "nvim {{filename}} > /dev/null"
-  editCommandTemplate: "{{editor}} --server $NVIM --remote-tab {{filename}}"
+  edit: "{{editor}} --server $NVIM --remote-tab {{filename}}"
 
 keybinding:
   universal:
