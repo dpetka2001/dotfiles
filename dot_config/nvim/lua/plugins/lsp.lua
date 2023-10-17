@@ -26,13 +26,13 @@ return {
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
         desc = "List workspace",
       }
-      keys[#keys + 1] = {
-        "K",
-        function()
-          require("pretty_hover").hover()
-        end,
-        desc = "Hover",
-      }
+      -- keys[#keys + 1] = {
+      --   "K",
+      --   function()
+      --     require("pretty_hover").hover()
+      --   end,
+      --   desc = "Hover",
+      -- }
 
       require("which-key").register({
         ["<leader>cl"] = { name = "+lsp" },
@@ -126,11 +126,11 @@ return {
       -- },
 
       -- Pretty hover
-      {
-        "Fildo7525/pretty_hover",
-        event = "LspAttach",
-        opts = {},
-      },
+      -- {
+      --   "Fildo7525/pretty_hover",
+      --   event = "LspAttach",
+      --   opts = {},
+      -- },
     },
   },
 
