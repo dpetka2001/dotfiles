@@ -2,6 +2,7 @@ return {
   -- Codeium.vim
   {
     "Exafunction/codeium.vim",
+    lazy = true,
     init = function()
       vim.g.codeium_filetypes = {
         TelescopePrompt = false,
@@ -30,6 +31,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
+      { "Exafunction/codeium.vim" },
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
       {
         "windwp/nvim-autopairs",

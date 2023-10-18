@@ -3,13 +3,12 @@ return {
   -- just single characters
   {
     "andymass/vim-matchup",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
     -- WARN:
     --  ╭──────────────────────────────────────────────────────────────────────╮
     --  │ Don't use `LazyFile`, because it doesn't work with `nvim-treesitter` │
     --  ╰──────────────────────────────────────────────────────────────────────╯
 
-    -- event = "LazyFile",
+    event = "BufReadPost",
     init = function()
       vim.o.matchpairs = "(:),{:},[:],<:>"
     end,

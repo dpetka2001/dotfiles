@@ -84,6 +84,7 @@ return {
   -- Better surround for vim-visual-multi
   {
     "tpope/vim-surround",
+    event = "LazyFile",
   },
 
   -- Better qflist??
