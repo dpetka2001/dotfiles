@@ -154,15 +154,4 @@ return {
       },
     },
   },
-
-  -- Remove `[]` from keys
-  {
-    "nvimdev/dashboard-nvim",
-    opts = function(_, opts)
-      for _, button in pairs(opts.config.center) do
-        button.key_format = " %s"
-      end
-      return opts
-    end,
-  },
 }
