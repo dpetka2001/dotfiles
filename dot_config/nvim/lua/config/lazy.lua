@@ -10,9 +10,9 @@ require("lazy").setup({
   spec = {
     {
       "abeldekat/lazyflex.nvim",
-      -- version = "*",
+      version = "*",
       cond = true, -- enable/disable lazyflex.nvim
-      import = "lazyflex.entry.lazyvim",
+      import = "lazyflex.hook",
       -- opts = {},
     },
     -- add LazyVim and import its plugins
