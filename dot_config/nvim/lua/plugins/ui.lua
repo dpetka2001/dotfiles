@@ -135,16 +135,16 @@ return {
   },
 
   -- Style windows with different colorschemes
-  {
-    "folke/styler.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    opts = {
-      themes = {
-        markdown = { colorscheme = "catppuccin" },
-        help = { colorscheme = "catppuccin", background = "dark" },
-      },
-    },
-  },
+  -- {
+  --   "folke/styler.nvim",
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   opts = {
+  --     themes = {
+  --       markdown = { colorscheme = "catppuccin" },
+  --       help = { colorscheme = "catppuccin", background = "dark" },
+  --     },
+  --   },
+  -- },
 
   {
     "folke/noice.nvim",
