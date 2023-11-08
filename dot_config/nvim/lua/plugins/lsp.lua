@@ -43,7 +43,8 @@ return {
         virtual_text = {
           prefix = "icons",
           spacing = 4,
-          source = "if_many",
+          source = true,
+          -- source = "if_many",
         },
         -- virtual_text = false,
       },

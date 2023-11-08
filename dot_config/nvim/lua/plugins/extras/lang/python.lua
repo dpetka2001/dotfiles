@@ -71,7 +71,11 @@ return {
     opts = {
       servers = {
         -- pyright = {},
-        ruff_lsp = {},
+        ruff_lsp = {
+          -- handlers = {
+          --   ["textDocument/publishDiagnostics"] = function() end,
+          -- },
+        },
         jedi_language_server = {},
       },
       setup = {
