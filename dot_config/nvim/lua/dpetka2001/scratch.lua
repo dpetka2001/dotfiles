@@ -34,8 +34,7 @@ function M.launch_notepad()
       row = 1, --> Top of the window
       col = math.ceil(vim.o.columns * 0.5), --> Far right; should add up to 1 with win_width
     })
-    -- local winid = vim.api.nvim_win_get_number
-    vim.api.nvim_set_option_value("winblend", 10, { win = M.notepad_win })
+    -- vim.api.nvim_set_option_value("winblend", 10, { win = M.notepad_win })
     -- vim.api.nvim_win_set_option(M.notepad_win, "winblend", 20) --> Semi transparent buffer
 
     -- Keymaps
