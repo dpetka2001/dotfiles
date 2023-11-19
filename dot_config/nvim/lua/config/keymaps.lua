@@ -79,6 +79,3 @@ map("v", "@", function()
   vim.opt.lazyredraw = false
   vim.api.nvim_command("silent update")
 end, { noremap = true })
-
--- Test `root_dir`
-map("n", "<leader>N", "<cmd>luafile ~/.config/nvim/test_get_root.lua<cr>", { desc = "Test root_dir" })
