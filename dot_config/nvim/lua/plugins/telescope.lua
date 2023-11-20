@@ -6,6 +6,7 @@ return {
     dependencies = {
       {
         "nvim-telescope/telescope-project.nvim",
+        dev = true,
         keys = {
           { "<C-p>", "<cmd>lua require'telescope'.extensions.project.project{}<cr>", desc = "Telescope Project" },
         },
