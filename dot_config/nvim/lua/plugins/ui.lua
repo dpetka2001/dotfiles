@@ -83,12 +83,12 @@ return {
           { Util.lualine.pretty_path() },
           -- { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
-          {
-            function() return require("nvim-navic").get_location() end,
-            cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-            -- For other colorschemes that have a weird space at the end
-            padding = { left =1, right = 0 },
-          },
+          -- {
+          --   function() return require("nvim-navic").get_location() end,
+          --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
+          --   -- For other colorschemes that have a weird space at the end
+          --   padding = { left =1, right = 0 },
+          -- },
         },
         lualine_z = {},
       },
