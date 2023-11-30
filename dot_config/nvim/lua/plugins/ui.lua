@@ -44,7 +44,7 @@ return {
     -- end,
     opts = {
       options = {
-        -- always_show_bufferline = true,
+        always_show_bufferline = true,
         -- custom_filter = function(buf, _)
         --   -- get the current tab page number
         --   local current_tab = vim.api.nvim_get_current_tabpage()
