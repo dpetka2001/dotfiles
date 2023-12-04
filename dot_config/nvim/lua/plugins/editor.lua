@@ -70,7 +70,7 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     opts = {
-      current_line_blame = true,
+      current_line_blame = false,
       on_attach = function(buffer)
         local gs = package.loaded.gitsigns
 

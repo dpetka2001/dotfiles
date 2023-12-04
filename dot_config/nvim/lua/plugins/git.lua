@@ -15,7 +15,7 @@ return {
       return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
     end,
     init = function()
-      vim.g.gitblame_display_virtual_text = 0
+      -- vim.g.gitblame_display_virtual_text = 0
       vim.g.gitblame_enabled = 0
     end,
   },
