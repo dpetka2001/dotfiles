@@ -23,6 +23,9 @@ return {
   -- Git messages(commits, history, etc)
   {
     "rhysd/git-messenger.vim",
+    keys = {
+      { "<leader>gm", "<cmd>GitMessenger<cr>", desc = "GitMessenger" },
+    },
     cond = function()
       return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
     end,
