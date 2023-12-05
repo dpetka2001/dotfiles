@@ -53,11 +53,11 @@ return {
             if
               file_info
               and file_info.type == "file"
-              and vim.fn.fnamemodify(destination, ":h") == "/home/jrn23/.config/nvim/lua/plugins/extras/lang"
+              and vim.fn.fnamemodify(destination, ":h") == vim.fn.expand("~/.config/nvim/lua/plugins/extras/lang")
             then
               vim.cmd.edit(destination)
               vim.schedule(function()
-                vim.api.nvim_input("<cmd>0r /home/jrn23/.config/nvim/lua/plugins/extras/lang/lang.skel<CR>")
+                vim.api.nvim_input("<cmd>0r ~/.config/nvim/lua/plugins/extras/lang/lang.skel<CR>")
               end)
             end
           end,
