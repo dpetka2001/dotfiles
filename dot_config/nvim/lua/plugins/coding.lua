@@ -74,8 +74,6 @@ return {
       end)
 
       -- Take care of source ordering and group_index
-      table.remove(opts.sources, 3)
-      table.insert(opts.sources, #opts.sources + 1, { name = "buffer", group_index = 2 })
       table.insert(opts.sources, #opts.sources + 1, { name = "calc", priority = 650, group_index = 2 })
 
       opts.preselect = cmp.PreselectMode.None
