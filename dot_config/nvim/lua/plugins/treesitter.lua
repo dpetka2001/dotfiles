@@ -2,6 +2,9 @@ return {
   -- Modify Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
+    event = function()
+      return { "LazyFile", "BufReadPost", "BufNewFile" }
+    end,
     dependencies = {
       -- Add nvim-ts-autotag
       { "windwp/nvim-ts-autotag" },
