@@ -24,7 +24,18 @@ return {
   {
     "rhysd/git-messenger.vim",
     keys = {
-      { "<leader>gm", "<cmd>GitMessenger<cr>", desc = "GitMessenger" },
+      {
+        "<leader>gm",
+        function()
+          vim.cmd("GitMessenger")
+          -- call 2nd time with `defer_fn`, so that pop-up window opens and then
+          -- are able to go into the window
+          vim.defer_fn(function()
+            vim.cmd("GitMessenger")
+          end, 100)
+        end,
+        desc = "GitMessenger",
+      },
     },
     cond = function()
       return vim.loop.fs_stat(vim.loop.cwd() .. "/.git") or vim.fn.finddir(".git", ";") ~= ""
