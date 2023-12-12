@@ -176,7 +176,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   desc = "Make `gx` open repos in default browser",
 })
 
--- Disable `mini.indentscope` for specific filetypes
+--[[ Disable `mini.indentscope` for specific filetypes ]]
 autocmd("FileType", {
   pattern = { "fzf", "lspinfo" },
   group = augroup("DisableIndentScope", { clear = true }),
@@ -185,6 +185,7 @@ autocmd("FileType", {
   end,
   desc = "Disable `mini.indentscope` for specific filetypes",
 })
+
 --[[ -------------
      USER COMMANDS
      ------------- ]]
@@ -193,7 +194,7 @@ usercmd("Rwd", function()
   print(util.get_root())
 end, { desc = "Print root_dir of current buffer" })
 
--- User command for diffing current buffer when not in .git repo
+--[[ User command for diffing current buffer when not in .git repo ]]
 usercmd("DiffOrig", function()
   local scratch_buffer = vim.api.nvim_create_buf(false, true)
   local current_ft = vim.bo.filetype
@@ -205,4 +206,4 @@ usercmd("DiffOrig", function()
   vim.cmd.wincmd("p")
   vim.cmd.diffthis() -- current buffer
   vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = scratch_buffer, silent = true })
-end, { desc = "Print root_dir of current buffer" })
+end, { desc = "Diff current buffer not .git" })
