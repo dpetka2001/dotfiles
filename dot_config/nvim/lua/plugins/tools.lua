@@ -139,9 +139,16 @@ return {
   },
 
   -- Better surround for vim-visual-multi
+  -- {
+  --   "tpope/vim-surround",
+  --   event = "LazyFile",
+  -- },
+
+  -- Observe how it behaves with vim-visual-multi instead of vim-surround
   {
-    "tpope/vim-surround",
+    "kylechui/nvim-surround",
     event = "LazyFile",
+    opts = {},
   },
 
   -- Better qflist??
