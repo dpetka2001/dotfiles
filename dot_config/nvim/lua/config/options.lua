@@ -22,3 +22,6 @@ opt.eventignore = "FocusLost"
 
 -- Add `cursor` due to a problem in `last_loc` LazyVim's autocmd after recent update
 opt.viewoptions = "folds,cursor"
+
+-- Make `<Tab>` automatically complete first match in cmdline
+opt.wildmode = "full"
