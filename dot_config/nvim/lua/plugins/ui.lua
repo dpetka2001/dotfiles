@@ -144,21 +144,21 @@ return {
   },
 
   -- Modify `dashboard.nvim`
-  {
-    "nvimdev/dashboard-nvim",
-    opts = {
-      theme = "hyper",
-      config = {
-        shortcut = {
-          { desc = "Quit", key = "q", action = "qa" },
-          { desc = "Find file", key = "f", action = "Telescope find_files" },
-          { desc = "Restore Session", key = "s", action = 'lua require("persistence").load()' },
-          { desc = "Config", key = "c", action = [[lua require("lazyvim.util").telescope.config_files()()]] },
-        },
-        packages = {
-          enable = false,
-        },
-      },
-    },
-  },
+  -- {
+  --   "nvimdev/dashboard-nvim",
+  --   opts = {
+  --     theme = "hyper",
+  --     config = {
+  --       shortcut = {
+  --         { desc = "Quit", key = "q", action = "qa" },
+  --         { desc = "Find file", key = "f", action = "Telescope find_files" },
+  --         { desc = "Restore Session", key = "s", action = 'lua require("persistence").load()' },
+  --         { desc = "Config", key = "c", action = [[lua require("lazyvim.util").telescope.config_files()()]] },
+  --       },
+  --       packages = {
+  --         enable = false,
+  --       },
+  --     },
+  --   },
+  -- },
 }
