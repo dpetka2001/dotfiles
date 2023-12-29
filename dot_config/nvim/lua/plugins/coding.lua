@@ -135,7 +135,7 @@ return {
       config = function()
         require("luasnip").filetype_extend("c", { "cdoc" })
         require("luasnip.loaders.from_vscode").lazy_load()
-        require("luasnip.loaders.from_lua").lazy_load({ paths = "lua/plugins/snippets" })
+        require("luasnip.loaders.from_lua").lazy_load({ paths = "./lua/snippets" })
       end,
     },
     opts = {
