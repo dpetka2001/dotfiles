@@ -23,5 +23,8 @@ set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 set -gx TZ ":Europe/Athens"
 
+# Set notification duration for `done`
+set -U __done_notification_duration 60000 # 5 seconds
+
 # Start ssh-agent when starting fish shell
 fish_ssh_agent
