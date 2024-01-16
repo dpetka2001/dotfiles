@@ -1,4 +1,24 @@
 Util = require("lazyvim.util")
+-- stylua: ignore
+local builtins = { "zellner", "torte", "slate", "shine", "ron", "quiet", "peachpuff",
+  "pablo", "murphy", "lunaperche", "koehler", "industry", "evening", "elflord",
+  "desert", "delek", "default", "darkblue", "blue", "morning", "retrobox", "sorbet",
+  "zaibatsu", "wildcharm", "vim", "habamax"
+}
+local get_colorsheme = function()
+  local target = vim.fn.getcompletion
+
+  ---@diagnostic disable-next-line: duplicate-set-field
+  vim.fn.getcompletion = function()
+    return vim.tbl_filter(function(color)
+      return not vim.tbl_contains(builtins, color)
+      ---@diagnostic disable-next-line: param-type-mismatch
+    end, target("", "color"))
+  end
+
+  Util.telescope("colorscheme", { enable_preview = true })()
+  vim.fn.getcompletion = target
+end
 
 return {
   -- { "LazyVim/LazyVim", opts = {
@@ -45,20 +65,20 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     keys = {
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>uC", get_colorsheme, desc = "Colorscheme with preview" },
     },
   },
   {
     "rebelot/kanagawa.nvim",
     keys = {
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>uC", get_colorsheme, desc = "Colorscheme with preview" },
     },
   },
   {
     "rose-pine/neovim",
     name = "rose-pine",
     keys = {
-      { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+      { "<leader>uC", get_colorsheme, desc = "Colorscheme with preview" },
     },
   },
 }
