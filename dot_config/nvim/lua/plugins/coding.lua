@@ -81,6 +81,19 @@ return {
         completeopt = "menu,menuone,noinsert,noselect",
       }
 
+      -- Set highlight group and window options for nvim-cmp
+      vim.api.nvim_set_hl(0, "PopMenu", { bg = "#1F2335", blend = 0 })
+      local win_opt = {
+        col_offset = 0,
+        side_padding = 1,
+        winhighlight = "Normal:PopMenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None",
+      }
+      -- Add border to completion and docs
+      opts.window = {
+        completion = cmp.config.window.bordered(win_opt),
+        documentation = cmp.config.window.bordered(win_opt),
+      }
+
       -- original Lazyvim kind icon formatter
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
