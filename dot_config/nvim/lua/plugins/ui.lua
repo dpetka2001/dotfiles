@@ -42,6 +42,9 @@ return {
     -- event = function()
     --   return { "BufReadPost", "BufNewFile" }
     -- end,
+    keys = {
+      { "<leader>bb", "<cmd>BufferLinePick<cr>", desc = "Pick buffer" },
+    },
     opts = {
       options = {
         always_show_bufferline = true,
