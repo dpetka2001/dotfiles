@@ -136,20 +136,14 @@ return {
 
   {
     "folke/noice.nvim",
-    opts = {
-      lsp = {
-        signature = {
-          opts = {
-            size = {
-              max_height = 15,
-            },
-          },
-        },
-      },
-      presets = {
+    opts = function(_, opts)
+      opts.lsp.signature = {
+        opts = { size = { max_height = 15 } },
+      }
+      opts.presets = {
         lsp_doc_border = true,
-      },
-    },
+      }
+    end,
   },
 
   -- Modify `dashboard.nvim`
