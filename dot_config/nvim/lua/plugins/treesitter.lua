@@ -12,6 +12,9 @@ return {
       -- Modify nvim-ts-context-commentstring
       {
         "JoosepAlviste/nvim-ts-context-commentstring",
+        init = function()
+          vim.g.skip_ts_context_commentstring_module = true
+        end,
         opts = {
           config = {
             c = { __default = "// %s", __multiline = "/* %s */" },
