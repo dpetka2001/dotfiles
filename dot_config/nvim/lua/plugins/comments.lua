@@ -24,8 +24,10 @@ return {
   {
     {
       "LudoPinelli/comment-box.nvim",
-      -- event = "BufReadPre",
       event = "LazyFile",
+      opts = {
+        box_width = 70,
+      },
     },
   },
 }
