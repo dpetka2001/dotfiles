@@ -56,15 +56,18 @@ return {
   -- Colorizer for showing colors from RBG values
   {
     "NvChad/nvim-colorizer.lua",
+    dev = true,
     ft = { "css", "html" },
     cmd = { "ColorizerToggle" },
     opts = {
       filetypes = {
-        -- "css",
-        -- "html",
+        "css",
+        "html",
       },
       user_default_options = {
         tailwind = true,
+        mode = "inline",
+        virtualtext = " ■",
       },
     },
   },
