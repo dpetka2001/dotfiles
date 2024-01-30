@@ -1,7 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.util.dot"
+    "lazyvim.plugins.extras.util.dot",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
     "NEWS.md": "2123"
