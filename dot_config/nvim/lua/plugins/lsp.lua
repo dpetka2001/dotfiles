@@ -26,13 +26,6 @@ return {
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
         desc = "List workspace",
       }
-      -- keys[#keys + 1] = {
-      --   "K",
-      --   function()
-      --     require("pretty_hover").hover()
-      --   end,
-      --   desc = "Hover",
-      -- }
 
       require("which-key").register({
         ["<leader>cl"] = { name = "+lsp" },
@@ -100,62 +93,7 @@ return {
         },
       },
     },
-    dependencies = {
-      -- {
-      --   "SmiteshP/nvim-navbuddy",
-      --   lazy = true,
-      --   dependencies = {
-      --     "SmiteshP/nvim-navic",
-      --     "MunifTanjim/nui.nvim",
-      --   },
-      --   opts = { lsp = { auto_attach = true } },
-      --   keys = {
-      --     { "<leader>cln", "<cmd>Navbuddy<cr>", desc = "Lsp Navigation" },
-      --   },
-      -- },
-
-      -- {
-      --   "simrat39/symbols-outline.nvim",
-      --   lazy = true,
-      --   keys = {
-      --     { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" },
-      --   },
-      --   opts = {
-      --     width = 35,
-      --     autofold_depth = 2,
-      --   },
-      -- },
-
-      -- Pretty hover
-      -- {
-      --   "Fildo7525/pretty_hover",
-      --   event = "LspAttach",
-      --   opts = {},
-      -- },
-    },
   },
-
-  -- Modify `null-ls`
-  -- {
-  --   "nvimtools/none-ls.nvim",
-  --   init = function()
-  --     vim.api.nvim_create_autocmd("LspAttach", {
-  --       callback = function(args)
-  --         local bufnr = args.buf
-  --         local client = vim.lsp.get_client_by_id(args.data.client_id)
-  --         if client.name == "null-ls" then
-  --           vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>cn", "<cmd>NullLsInfo<cr>", { desc = "NullLs Info" })
-  --         end
-  --       end,
-  --     })
-  --   end,
-  --   opts = function(_, opts)
-  --     local nls = require("null-ls")
-  --     opts.sources = vim.list_extend(opts.sources, {
-  --       nls.builtins.code_actions.gitsigns,
-  --     })
-  --   end,
-  -- },
 
   -- Import extra lsp languages configs
   { import = "plugins.extras.lang" },
