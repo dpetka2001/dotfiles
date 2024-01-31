@@ -94,3 +94,6 @@ if vim.bo["filetype"] ~= "rnvimr" then
   map("n", "<M-9>", function() require("harpoon.ui").nav_file(9) end, { desc = "Harpoon 9" })
   map("n", "<M-0>", function() require("harpoon.ui").nav_file(0) end, { desc = "Harpoon 0" })
 end
+
+--[[ Visual Selection Formatting ]]
+map("v", "<leader>ct", "<cmd>lua vim.lsp.buf.format({async=true})<cr>", { desc = "Visual Formatting" })
