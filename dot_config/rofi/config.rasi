@@ -1,7 +1,14 @@
 configuration {
- modi: "window,drun,ssh,combi";
- font: "hack 10";
- combi-modi: "window,drun,ssh";
- }
+  modi: "window,drun,ssh,combi";
+  font: "hack 10";
+  combi-modi: "window,drun,ssh";
+  show-icons: true;
+  display-drun: " ";
+  display-run: " ";
+  display-window: " ";
+  terminal: "kitty";
+}
 
-@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/tokyonight.rasi"
