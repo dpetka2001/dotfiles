@@ -27,5 +27,8 @@ set -gx TZ ":Europe/Athens"
 set -U __done_notification_duration 60000 # 5 seconds
 set -U __done_notification_command "notify-send --hint=int:transient:1 --urgency=\$urgency --icon=utilities-terminal --app-name=fish --expire-time=\$__done_notification_duration \$title \$message"
 
+# Extend $MANPATH
+set -gx MANPATH $MANPATH ~/share/man
+
 # Start ssh-agent when starting fish shell
 fish_ssh_agent
