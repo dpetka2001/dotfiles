@@ -79,6 +79,7 @@ return {
       opts.preselect = cmp.PreselectMode.None
       opts.completion = {
         completeopt = "menu,menuone,noinsert,noselect",
+        autocomplete = false,
       }
 
       -- Set highlight group and window options for nvim-cmp
