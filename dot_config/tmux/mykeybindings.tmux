@@ -57,9 +57,10 @@ unbind i
 bind i run-shell 'ide'
 
 bind C-j split-window -v "tmux ls | sed -E 's/:.*$//' | fzf --reverse | xargs tmux switch-client -t"
+bind C-k split-window -v "tmux ls | sed -E 's/:.*$//' | fzf --reverse | xargs tmux kill-session -t"
 
 # Kill server
-bind C-k run "tmux kill-server > /dev/null"
+# bind C-k run "tmux kill-server > /dev/null"
 
 # Enable select/yank in `copy-mode`
 unbind-key -T copy-mode-vi v
