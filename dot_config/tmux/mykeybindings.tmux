@@ -58,6 +58,7 @@ bind i run-shell 'ide'
 
 bind C-j split-window -v "tmux ls | sed -E 's/:.*$//' | fzf --reverse | xargs tmux switch-client -t"
 bind C-k split-window -v "tmux ls | sed -E 's/:.*$//' | fzf --reverse | xargs tmux kill-session -t"
+bind C-t run-shell "tmux neww ~/.config/tmux/bin/tmux-template"
 
 # Kill server
 # bind C-k run "tmux kill-server > /dev/null"
