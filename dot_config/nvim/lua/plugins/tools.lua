@@ -55,8 +55,12 @@ vim.o.qftf = "{info -> v:lua._G.qftf(info)}"
 return {
   -- Colorizer for showing colors from RBG values
   {
-    "NvChad/nvim-colorizer.lua",
-    dev = true,
+    -- TODO: check if https://github.com/NvChad/nvim-colorizer.lua/pull/63 will get merged
+
+    -- "NvChad/nvim-colorizer.lua",
+    -- dev = true,
+    "dpetka2001/nvim-colorizer.lua",
+    branch = "mehalter/master",
     ft = { "css", "html" },
     cmd = { "ColorizerToggle" },
     opts = {
