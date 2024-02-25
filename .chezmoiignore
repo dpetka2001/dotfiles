@@ -16,3 +16,4 @@ Documents/Obsidian Vault/jrn23/.obsidian/workspace
 .config/nvim/lua/plugins/extras/lang/pylance.lua
 .config/nvim/test_dev/**
 .config/wezterm/images/**
+.config/tmux/plugins/**
