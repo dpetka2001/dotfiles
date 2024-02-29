@@ -70,7 +70,7 @@ return {
     dependencies = {},
     opts = {
       servers = {
-        -- pyright = {},
+        pyright = {},
         ruff_lsp = {
           -- handlers = {
           --   ["textDocument/publishDiagnostics"] = function() end,
