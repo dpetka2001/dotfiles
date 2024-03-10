@@ -70,13 +70,25 @@ return {
     dependencies = {},
     opts = {
       servers = {
-        pyright = {},
+        -- pyright = {},
+        pylsp = {
+          mason = false,
+          settings = {
+            pylsp = {
+              plugins = {
+                rope_autoimport = {
+                  enabled = true,
+                },
+              },
+            },
+          },
+        },
         ruff_lsp = {
           -- handlers = {
           --   ["textDocument/publishDiagnostics"] = function() end,
           -- },
         },
-        jedi_language_server = {},
+        -- jedi_language_server = {},
       },
       setup = {
         ruff_lsp = function()
