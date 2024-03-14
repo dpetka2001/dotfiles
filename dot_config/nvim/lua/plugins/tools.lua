@@ -174,4 +174,10 @@ return {
       },
     },
   },
+
+  -- Mini-align
+  {
+    "echasnovski/mini.align",
+    opts = {},
+  },
 }
