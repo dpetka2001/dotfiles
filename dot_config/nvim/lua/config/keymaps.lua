@@ -22,13 +22,24 @@ map("n", "<A-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window wi
 map("c", "<C-j>", "<Down>", { desc = "Next command" })
 map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 
---[[ Lazygit change size of window ]]
+-- ╭─────────────────────────────────╮
+-- │ Lazygit change size and options │
+-- ╰─────────────────────────────────╯
+-- WARN:
+-- ╭────────────────────────────────────────────────────────────────────────────╮
+-- │ Don't use `esc_esc = false` to not conflict with Lazygit <Esc> and be able │
+-- │ to escape terminal mode and change tabs                                    │
+-- ╰────────────────────────────────────────────────────────────────────────────╯
 map("n", "<leader>gg", function()
-  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, cwd = Util.root.get() })
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false, cwd = Util.root.get() })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 } })
+  Util.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false })
 end, { desc = "Lazygit (cwd dir)" })
+map("n", "<leader>gf", function()
+  local git_path = vim.fn.system("git ls-files --full-name " .. vim.api.nvim_buf_get_name(0))
+  Util.terminal({ "lazygit", "-f", vim.trim(git_path) }, { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false })
+end, { desc = "Lazygit current file history" })
 
 --[[ Move to tabs convienently ]]
 map("n", "<leader>1", "1gt", { desc = "Move to tab 1" })
