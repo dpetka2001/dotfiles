@@ -33,6 +33,9 @@ return {
     end,
     opts = {
       diagnostics = {
+        float = {
+          source = true,
+        },
         virtual_text = {
           prefix = "icons",
           spacing = 4,
