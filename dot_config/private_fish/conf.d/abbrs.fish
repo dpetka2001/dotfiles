@@ -1,3 +1,6 @@
+#     ╭────────────────────────────────────────────────────────────────────╮
+#     │                            Git related                             │
+#     ╰────────────────────────────────────────────────────────────────────╯
 # abbr -a gc --set-cursor git commit -m \"%\"
 abbr -a gc git commit
 abbr -a gl "git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
@@ -10,6 +13,13 @@ abbr -a gp git push
 abbr -a gd git diff
 abbr -a gsw git switch
 abbr -a gb git branch
+abbr -a gpo "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
+abbr -a gpu git pull
+abbr -a gsq gitsquash
+
+#     ╭────────────────────────────────────────────────────────────────────╮
+#     │                            Other extras                            │
+#     ╰────────────────────────────────────────────────────────────────────╯
 abbr -a nv nvim
 abbr -a cl chezmoi git -- log --color --graph --date=format:\'\%Y-\%m-\%d \%H:\%M:\%S\' --pretty=format:\'\%Cred\%h\%Creset -\%C\(yellow\)\%d\%Creset \%s \%Cgreen\(\%ad\) \%C\(bold blue\)\<\%an\>\%Creset\'
 abbr -a nv_build make CMAKE_BUILD_TYPE=RelWithDebInfo

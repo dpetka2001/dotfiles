@@ -12,7 +12,7 @@ Documents/Obsidian Vault/jrn23/.obsidian/workspace
 .config/fish/fish_variables
 !.config/fish/functions
 .config/fish/functions/**
-!.config/fish/functions/{fish_ssh_agent,fish_title,fish_user_key_bindings,hg,ll,nvims,removepath,tt,tw,z,rm_nvim}.fish
+!.config/fish/functions/{gitsquash,fish_ssh_agent,fish_title,fish_user_key_bindings,hg,ll,nvims,removepath,tt,tw,z,rm_nvim}.fish
 .config/nvim/lua/plugins/extras/lang/pylance.lua
 .config/nvim/test_dev/**
 .config/wezterm/images/**
