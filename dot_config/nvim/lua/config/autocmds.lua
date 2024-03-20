@@ -89,6 +89,29 @@ autocmd("TermOpen", {
   desc = "Set terminal mappings for ToggleTerm",
 })
 
+autocmd("BufEnter", {
+  pattern = "term://*toggleterm#*",
+  callback = function()
+    -- INFO:
+    -- vim.schedule function is needed to make sure the buffer terminal is entered
+    -- and `pattern` recognized
+    vim.schedule(function()
+      vim.cmd.startinsert()
+    end)
+  end,
+  group = "mygroup",
+  desc = "Insert mode on TermEnter (toggleterm)",
+})
+
+autocmd("BufLeave", {
+  pattern = "term://*toggleterm#*",
+  callback = function()
+    vim.o.cursorline = false
+  end,
+  group = "mygroup",
+  desc = "Don't show cursor line on BufLeave (toggleterm)",
+})
+
 -- I don't believe this is necessary any more, since installed `LunarVim/bigfile.nvim`
 -- Disable tree-sitter for files over 1MB in size
 -- autocmd("BufRead", {
