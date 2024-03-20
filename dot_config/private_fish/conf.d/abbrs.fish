@@ -14,6 +14,7 @@ abbr -a gd git diff
 abbr -a gsw git switch
 abbr -a gb git branch
 abbr -a gpo "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
+abbr -a gpd --set-cursor "git push origin  :%"
 abbr -a gpu git pull
 abbr -a gsq gitsquash
 
