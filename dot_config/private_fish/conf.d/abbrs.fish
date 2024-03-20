@@ -18,6 +18,12 @@ abbr -a gpu git pull
 abbr -a gsq gitsquash
 
 #     ╭────────────────────────────────────────────────────────────────────╮
+#     │                             PiP stuff                              │
+#     ╰────────────────────────────────────────────────────────────────────╯
+abbr -a pipu "python3 -m pip list -o | cut -f1 -d' ' | tr " " "\n" | awk '{if(NR>=3)print}' | cut -d' ' -f1 | xargs -n1 python3 -m pip install -U"
+abbr -a pipl "python3 -m pip list -o"
+
+#     ╭────────────────────────────────────────────────────────────────────╮
 #     │                            Other extras                            │
 #     ╰────────────────────────────────────────────────────────────────────╯
 abbr -a nv nvim
@@ -25,6 +31,10 @@ abbr -a cl chezmoi git -- log --color --graph --date=format:\'\%Y-\%m-\%d \%H:\%
 abbr -a nv_build make CMAKE_BUILD_TYPE=RelWithDebInfo
 abbr -a nv_install "cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb"
 abbr -a kitty_install "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
+
+#     ╭────────────────────────────────────────────────────────────────────╮
+#     │                            Tmux related                            │
+#     ╰────────────────────────────────────────────────────────────────────╯
 abbr -a tn "tmux new -s"
 abbr -a tl "tmux ls"
 abbr -a ta "tmux attach -t"
