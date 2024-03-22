@@ -2,8 +2,6 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
-local util = require("lazyvim.util")
-
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local usercmd = vim.api.nvim_create_user_command
@@ -214,7 +212,7 @@ autocmd("FileType", {
      ------------- ]]
 
 usercmd("Rwd", function()
-  print(util.get_root())
+  print(LazyVim.root.get())
 end, { desc = "Print root_dir of current buffer" })
 
 --[[ User command for diffing current buffer when not in .git repo ]]

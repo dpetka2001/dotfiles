@@ -1,5 +1,4 @@
 local icons = require("lazyvim.config").icons
-local Util = require("lazyvim.util")
 
 return {
   -- Modify nvim-notify for Telescope
@@ -16,13 +15,13 @@ return {
       {
         "<leader>unt",
         function()
-          if Util.has("telescope.nvim") then
+          if LazyVim.has("telescope.nvim") then
             require("telescope").extensions.notify.notify({
               initial_mode = "normal",
               -- layout_strategy = "vertical",
             })
           else
-            Util.on_load("which-key.nvim", function()
+            LazyVim.on_load("which-key.nvim", function()
               require("which-key").register({
                 ["<leader>unt"] = "which_key_ignore",
               })
@@ -72,7 +71,7 @@ return {
     opts = {
       sections = {
         lualine_c = {
-          Util.lualine.root_dir(),
+          LazyVim.lualine.root_dir(),
           {
             "diagnostics",
             symbols = {
@@ -83,7 +82,7 @@ return {
             },
           },
           { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { Util.lualine.pretty_path() },
+          { LazyVim.lualine.pretty_path() },
           -- { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
           -- stylua: ignore
           -- {

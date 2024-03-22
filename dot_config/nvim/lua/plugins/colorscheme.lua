@@ -1,5 +1,3 @@
-Util = require("lazyvim.util")
-
 local get_colorsheme = function()
   local builtins = {}
 
@@ -21,7 +19,7 @@ local get_colorsheme = function()
     end, target("", "color"))
   end
 
-  Util.telescope("colorscheme", { enable_preview = true })()
+  LazyVim.telescope("colorscheme", { enable_preview = true })()
   vim.fn.getcompletion = target
 end
 

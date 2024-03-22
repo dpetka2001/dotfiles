@@ -1,5 +1,3 @@
-local Util = require("lazyvim.util")
-
 return {
   {
     "akinsho/toggleterm.nvim",
@@ -10,7 +8,7 @@ return {
         "<leader>Tf",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 0, Util.root.get(), "float")
+          require("toggleterm").toggle(count, 0, LazyVim.root.get(), "float")
         end,
         desc = "ToggleTerm (float root_dir)",
       },
@@ -18,7 +16,7 @@ return {
         "<leader>Th",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, 15, Util.root.get(), "horizontal")
+          require("toggleterm").toggle(count, 15, LazyVim.root.get(), "horizontal")
         end,
         desc = "ToggleTerm (horizontal root_dir)",
       },
@@ -26,7 +24,7 @@ return {
         "<leader>Tv",
         function()
           local count = vim.v.count1
-          require("toggleterm").toggle(count, vim.o.columns * 0.4, Util.root.get(), "vertical")
+          require("toggleterm").toggle(count, vim.o.columns * 0.4, LazyVim.root.get(), "vertical")
         end,
         desc = "ToggleTerm (vertical root_dir)",
       },
@@ -43,7 +41,7 @@ return {
       {
         "<leader>Tt",
         function()
-          require("toggleterm").toggle(1, 100, Util.root.get(), "tab")
+          require("toggleterm").toggle(1, 100, LazyVim.root.get(), "tab")
         end,
         desc = "ToggleTerm (tab root_dir)",
       },
