@@ -47,6 +47,19 @@ require("lazy").setup({
     enabled = false,
     frequency = 14400,
   },
+  ui = {
+    custom_keys = {
+      ["<localleader>l"] = {
+        function(plugin)
+          require("lazy.util").float_term({ "lazygit", "log" }, {
+            cwd = plugin.dir,
+            size = { width = 1.0, height = 1.0 },
+          })
+        end,
+        desc = "Open lazygit log",
+      },
+    },
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
