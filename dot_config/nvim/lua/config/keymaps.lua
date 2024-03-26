@@ -30,17 +30,14 @@ map("c", "<C-k>", "<Up>", { desc = "Previous command" })
 -- │ to escape terminal mode and change tabs                                    │
 -- ╰────────────────────────────────────────────────────────────────────────────╯
 map("n", "<leader>gg", function()
-  LazyVim.terminal.open(
-    { "lazygit" },
-    { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false, cwd = LazyVim.root.get() }
-  )
+  LazyVim.lazygit({ size = { width = 1.0, height = 1.0 }, esc_esc = true, cwd = LazyVim.root.get() })
 end, { desc = "Lazygit (root dir)" })
 map("n", "<leader>gG", function()
-  LazyVim.terminal.open({ "lazygit" }, { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false })
+  LazyVim.lazygit({ size = { width = 1.0, height = 1.0 }, esc_esc = true })
 end, { desc = "Lazygit (cwd dir)" })
 map("n", "<leader>gf", function()
   local git_path = vim.api.nvim_buf_get_name(0)
-  LazyVim.terminal({ "lazygit", "-f", vim.trim(git_path) }, { size = { width = 1.0, height = 1.0 }, ctrl_hjkl = false })
+  LazyVim.lazygit({ args = { "-f", vim.trim(git_path) }, size = { width = 1.0, height = 1.0 }, esc_esc = true })
 end, { desc = "Lazygit current file history" })
 
 --[[ Move to tabs convienently ]]
