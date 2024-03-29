@@ -1,5 +1,3 @@
-local icons = require("lazyvim.config").icons
-
 return {
   -- Modify nvim-notify for Telescope
   {
@@ -37,29 +35,12 @@ return {
   -- Modify `bufferline`
   {
     "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    -- event = function()
-    --   return { "BufReadPost", "BufNewFile" }
-    -- end,
     keys = {
       { "<leader>bb", "<cmd>BufferLinePick<cr>", desc = "Pick buffer" },
     },
     opts = {
       options = {
         always_show_bufferline = true,
-        -- custom_filter = function(buf, _)
-        --   -- get the current tab page number
-        --   local current_tab = vim.api.nvim_get_current_tabpage()
-        --   -- get a list of buffers for a specific tab
-        --   local tab_buffers = vim.fn.tabpagebuflist(current_tab)
-        --   -- check if the current buffer is being viewed in the current tab
-        --   return vim.tbl_contains(tab_buffers, buf)
-        -- end,
-        -- custom_filter = function(buf_number)
-        --   if not not vim.api.nvim_buf_get_name(buf_number):find(vim.fn.getcwd(), 0, true) then
-        --     return true
-        --   end
-        -- end,
       },
     },
   },
@@ -67,73 +48,47 @@ return {
   -- Modify `lualine`
   {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    opts = {
-      sections = {
-        lualine_c = {
-          LazyVim.lualine.root_dir(),
-          {
-            "diagnostics",
-            symbols = {
-              error = icons.diagnostics.Error,
-              warn = icons.diagnostics.Warn,
-              info = icons.diagnostics.Info,
-              hint = icons.diagnostics.Hint,
-            },
-          },
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { LazyVim.lualine.pretty_path() },
-          -- { "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
-          -- stylua: ignore
-          -- {
-          --   function() return require("nvim-navic").get_location() end,
-          --   cond = function() return package.loaded["nvim-navic"] and require("nvim-navic").is_available() end,
-          --   -- For other colorschemes that have a weird space at the end
-          --   padding = { left =1, right = 0 },
-          -- },
-        },
-        lualine_z = {},
-      },
-    },
-  },
-
-  {
-    "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local timer = function()
         return require("nomodoro").status()
       end
+
+      local trouble = require("trouble")
+      local symbols = trouble.statusline({
+        mode = "lsp_document_symbols",
+        max_items = 5,
+        groups = {},
+        title = false,
+        filter = { range = true },
+        format = "{kind_icon}{symbol.name:Normal}",
+      })
+
+      -- ╭───────────────────────────────────────────────────────────────────╮
+      -- │                             lualine_c                             │
+      -- ╰───────────────────────────────────────────────────────────────────╯
+      opts.sections.lualine_c[#opts.sections.lualine_c] = {
+        symbols.get,
+        cond = symbols.has,
+      }
+
+      -- ╭───────────────────────────────────────────────────────────────────╮
+      -- │                             lualine_x                             │
+      -- ╰───────────────────────────────────────────────────────────────────╯
       table.insert(opts.sections.lualine_x, { "encoding" })
       table.insert(opts.sections.lualine_x, { timer })
+
+      -- ╭───────────────────────────────────────────────────────────────────╮
+      -- │                             lualine_z                             │
+      -- ╰───────────────────────────────────────────────────────────────────╯
+      opts.sections.lualine_z = {}
     end,
   },
 
-  -- Lualine for aerial
   {
-    "nvim-lualine/lualine.nvim",
-    opts = function(_, opts)
-      table.insert(opts.sections.lualine_c, {
-        "aerial",
-        sep = " ", -- separator between symbols
-        sep_icon = "", -- separator between icon and symbol
-
-        -- The number of symbols to render top-down. In order to render only 'N' last
-        -- symbols, negative numbers may be supplied. For instance, 'depth = -1' can
-        -- be used in order to render only current symbol.
-        depth = 5,
-
-        -- When 'dense' mode is on, icons are not rendered near their symbols. Only
-        -- a single icon that represents the kind of current symbol is rendered at
-        -- the beginning of status line.
-        dense = false,
-
-        -- The separator to be used to separate symbols in dense mode.
-        dense_sep = ".",
-
-        -- Color the symbol icons.
-        colored = true,
-      })
-    end,
+    "trouble.nvim",
+    opts = {
+      preview = { type = "float", border = "rounded" },
+    },
   },
 
   {
@@ -153,23 +108,4 @@ return {
       },
     },
   },
-
-  -- Modify `dashboard.nvim`
-  -- {
-  --   "nvimdev/dashboard-nvim",
-  --   opts = {
-  --     theme = "hyper",
-  --     config = {
-  --       shortcut = {
-  --         { desc = "Quit", key = "q", action = "qa" },
-  --         { desc = "Find file", key = "f", action = "Telescope find_files" },
-  --         { desc = "Restore Session", key = "s", action = 'lua require("persistence").load()' },
-  --         { desc = "Config", key = "c", action = [[lua require("lazyvim.util").telescope.config_files()()]] },
-  --       },
-  --       packages = {
-  --         enable = false,
-  --       },
-  --     },
-  --   },
-  -- },
 }
