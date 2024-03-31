@@ -12,11 +12,12 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 
 #     ╭────────────────────────────────────────────────────────────────────╮
-#     │                           Configure fzf                            │
+#     │                     Configure fzf and related                      │
 #     ╰────────────────────────────────────────────────────────────────────╯
 set -gx FZF_DEFAULT_COMMAND "rg --files"
 set -gx FZF_DEFAULT_OPTS "--layout=reverse --bind='ctrl-r:reload(rg --hidden --files)' --header='"Press CTRL-R to reload\n\n"' --border -m \
---bind 'ctrl-v:execute(nvim {+})' --bind 'ctrl-d:reload(find . -type d)'"
+--bind 'ctrl-v:execute(nvim {+})','ctrl-d:reload(find . -type d)'"
+set -gx FORGIT_FZF_DEFAULT_OPTS "--bind 'alt-j:preview-page-down','alt-k:preview-page-up'"
 # set -gx FZF_CTRL_T_COMMAND "rg --files"
 set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
 
