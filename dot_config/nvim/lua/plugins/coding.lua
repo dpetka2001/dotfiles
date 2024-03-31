@@ -95,6 +95,13 @@ return {
         documentation = cmp.config.window.bordered(win_opt),
       }
 
+      -- Set view to follow cursor while typing
+      opts.view = {
+        entries = {
+          follow_cursor = true,
+        },
+      }
+
       -- original Lazyvim kind icon formatter
       local format_kinds = opts.formatting.format
       opts.formatting.format = function(entry, item)
