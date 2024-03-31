@@ -10,6 +10,7 @@ return {
         ["<leader>un"] = {
           name = "+Notifications",
         },
+        ["<leader>gh"] = { name = "+hunks", ["🚫"] = "which_key_ignore" },
         ["zd"] = { "Delete fold under cursor" },
         ["zD"] = { "Delete folds recursively under cursor" },
         ["zE"] = { "Eliminate all folds in window" },
