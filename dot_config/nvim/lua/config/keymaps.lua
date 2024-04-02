@@ -50,7 +50,7 @@ end, { desc = "Lazygit current file history" })
 -- │ Using `[[]]` instead of single/double quotes allows to not        │
 -- │ escape special characters                                         │
 -- ╰───────────────────────────────────────────────────────────────────╯
-map("t", "<Esc>", [[<C-\><C-n>0]])
+map("t", "<Esc><Esc>", [[<C-\><C-n>0]])
 
 --     ╭───────────────────────────────────────────────────────────────────╮
 --     │                     Move to tabs convienently                     │

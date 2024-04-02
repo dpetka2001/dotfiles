@@ -1,29 +1,53 @@
 return {
   -- Codeium.vim
+  -- {
+  --   "Exafunction/codeium.vim",
+  --   lazy = true,
+  --   init = function()
+  --     vim.g.codeium_filetypes = {
+  --       TelescopePrompt = false,
+  --       ["neo-tree-popup"] = false,
+  --       ["dap-repl"] = false,
+  --     }
+  --   end,
+  --   config = function()
+  --     -- Change '<C-g>' here to any keycode you like.
+  --     vim.keymap.set("i", "<C-g>", function()
+  --       return vim.fn["codeium#Accept"]()
+  --     end, { expr = true, silent = true })
+  --     vim.keymap.set("i", "<c-;>", function()
+  --       return vim.fn["codeium#CycleCompletions"](1)
+  --     end, { expr = true, silent = true })
+  --     vim.keymap.set("i", "<c-,>", function()
+  --       return vim.fn["codeium#CycleCompletions"](-1)
+  --     end, { expr = true, silent = true })
+  --     vim.keymap.set("i", "<c-z>", function()
+  --       return vim.fn["codeium#Clear"]()
+  --     end, { expr = true, silent = true })
+  --   end,
+  -- },
+
+  -- Test out `neocodeium`
   {
-    "Exafunction/codeium.vim",
+    "monkoose/neocodeium",
     lazy = true,
-    init = function()
-      vim.g.codeium_filetypes = {
-        TelescopePrompt = false,
-        ["neo-tree-popup"] = false,
-        ["dap-repl"] = false,
-      }
-    end,
     config = function()
-      -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set("i", "<C-g>", function()
-        return vim.fn["codeium#Accept"]()
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-;>", function()
-        return vim.fn["codeium#CycleCompletions"](1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-,>", function()
-        return vim.fn["codeium#CycleCompletions"](-1)
-      end, { expr = true, silent = true })
-      vim.keymap.set("i", "<c-z>", function()
-        return vim.fn["codeium#Clear"]()
-      end, { expr = true, silent = true })
+      local neocodeium = require("neocodeium")
+      neocodeium.setup({
+        filetypes = {
+          TelescopePrompt = false,
+          ["neo-tree-popup"] = false,
+          ["dap-repl"] = false,
+        },
+      })
+      -- stylua: ignore start
+      vim.keymap.set("i", "<C-g>", function() neocodeium.accept() end)
+      vim.keymap.set("i", "<C-j>", function() neocodeium.accept_word() end)
+      vim.keymap.set("i", "<C-l>", function() neocodeium.accept_line() end)
+      vim.keymap.set("i", "<C-;>", function() neocodeium.cycle_or_complete() end)
+      vim.keymap.set("i", "<C-,>", function() neocodeium.cycle_or_complete(-1) end)
+      vim.keymap.set("i", "<C-z>", function() neocodeium.clear() end)
+      -- stylua: ignore end
     end,
   },
 
@@ -31,7 +55,8 @@ return {
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      { "Exafunction/codeium.vim" },
+      -- { "Exafunction/codeium.vim" },
+      { "monkoose/neocodeium" },
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
       {
         "windwp/nvim-autopairs",
@@ -64,13 +89,18 @@ return {
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
       -- Make codeium suggestions appear only when `nvim-cmp` menu is closed
+      local neocodeium = require("neocodeium")
       cmp.event:on("menu_opened", function()
-        vim.g.codeium_manual = true
-        vim.fn["codeium#Clear"]()
+        vim.cmd("NeoCodeium disable")
+        neocodeium.clear()
+        -- vim.g.codeium_manual = true
+        -- vim.fn["codeium#Clear"]()
       end)
       cmp.event:on("menu_closed", function()
-        vim.g.codeium_manual = false
-        vim.fn["codeium#Complete"]()
+        vim.cmd("NeoCodeium enable")
+        neocodeium.cycle_or_complete()
+        -- vim.g.codeium_manual = false
+        -- vim.fn["codeium#Complete"]()
       end)
 
       -- Take care of source ordering and group_index
