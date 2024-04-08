@@ -67,6 +67,6 @@ require("lazy").setup({
   },
   dev = {
     path = "~/projects/plugins/",
-    -- patterns = { "lazyflex" },
+    -- patterns = { "LazyVim" },
   },
 })

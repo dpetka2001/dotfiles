@@ -12,4 +12,12 @@ return {
       { "<F12>", function() require("dap").step_out() end, desc = "Step Out" },
     },
   },
+
+  {
+    "jbyuki/one-small-step-for-vimkind",
+    keys = {
+    -- stylua: ignore
+      { "<leader>dL", function() require("osv").launch { port = 8086 } end, desc = "Launch Lua adapter" },
+    },
+  },
 }
