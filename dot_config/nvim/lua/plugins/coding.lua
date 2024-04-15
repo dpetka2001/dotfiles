@@ -90,14 +90,15 @@ return {
 
       -- Make codeium suggestions appear only when `nvim-cmp` menu is closed
       local neocodeium = require("neocodeium")
+      local commands = require("neocodeium.commands")
       cmp.event:on("menu_opened", function()
-        vim.cmd("NeoCodeium disable")
+        commands.disable()
         neocodeium.clear()
         -- vim.g.codeium_manual = true
         -- vim.fn["codeium#Clear"]()
       end)
       cmp.event:on("menu_closed", function()
-        vim.cmd("NeoCodeium enable")
+        commands.enable()
         neocodeium.cycle_or_complete()
         -- vim.g.codeium_manual = false
         -- vim.fn["codeium#Complete"]()
