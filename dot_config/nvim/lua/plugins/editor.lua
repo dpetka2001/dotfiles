@@ -170,14 +170,20 @@ return {
   {
     "ibhagwan/fzf-lua",
     cmd = "FzfLua",
-    opts = {
+    opts = function(_, opts)
       -- INFO:
       --  ╭──────────────────────────────────────────────────────────────────────────╮
       --  │ Use this instead of `keymap.builtin` and `keymap.fzf`, because if you    │
       --  │ declare the keybindings in those tables, they will override the defaults │
       --  │ and you need to add the default missing ones.                            │
       --  ╰──────────────────────────────────────────────────────────────────────────╯
-      winopts = {
+
+      -- opts.keymap = vim.tbl_deep_extend("force", require("fzf-lua").defaults.keymap, {
+      --   fzf = {
+      --     ["ctrl-q"] = "select-all+accept",
+      --   },
+      -- })
+      opts.winopts = {
         window_on_create = function()
           vim.keymap.set("t", "<C-d>", function()
             require("fzf-lua.win").preview_scroll(1)
@@ -188,7 +194,7 @@ return {
           vim.keymap.set("t", "<C-j>", "<down>", { buffer = 0, noremap = true })
           vim.keymap.set("t", "<C-k>", "<up>", { buffer = 0, noremap = true })
         end,
-      },
-    },
+      }
+    end,
   },
 }
