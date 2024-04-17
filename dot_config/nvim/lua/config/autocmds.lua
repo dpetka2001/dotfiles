@@ -175,8 +175,18 @@ vim.api.nvim_create_autocmd("BufReadPost", {
       vim.keymap.set("n", "gx", function()
         local file = vim.fn.expand("<cfile>") --[[@as string]]
 
-        -- First try the default behaviour from https://github.com/neovim/neovim/blob/597355deae2ebddcb8b930da9a8b45a65d05d09b/runtime/lua/vim/_editor.lua#L1084.
-        local _, err = vim.ui.open(file)
+        -- First try the default behavior
+        -- see https://github.com/neovim/neovim/blob/b0f9228179bf781eec76d1aaf346b56a7e64cd5d/runtime/lua/vim/_defaults.lua#L101
+        -- for recent changes in `vim.ui.open`
+        local cmd, err = vim.ui.open(file)
+        local rv = cmd and cmd:wait(1000) or nil
+        if cmd and rv and rv.code ~= 0 then
+          err = ("vim.ui.open: command %s (%d): %s"):format(
+            (rv.code == 124 and "timeout" or "failed"),
+            rv.code,
+            vim.inspect(cmd.cmd)
+          )
+        end
         if not err then
           return
         end
@@ -184,10 +194,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         -- Consider anything that looks like string/string a GitHub link.
         local link = file:match("%w[%w%-]+/[%w%-%._]+")
         if link then
-          _, err = vim.ui.open("https://www.github.com/" .. link)
+          vim.ui.open("https://www.github.com/" .. link)
+          err = nil
         end
 
-        -- If that fails, just blame me.
+        -- Else show the error
         if err then
           vim.notify(err, vim.log.levels.ERROR)
         end
