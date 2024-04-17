@@ -13,7 +13,8 @@ return {
         enabled = false,
         build = "make",
       },
-      { "natecraddock/telescope-zf-native.nvim" },
+      -- { "natecraddock/telescope-zf-native.nvim" },
+      { "altermo/telescope-nucleo-sorter.nvim", build = "cargo build --release" },
       { "debugloop/telescope-undo.nvim" },
     },
     opts = function(_, opts)
@@ -126,7 +127,8 @@ return {
       local telescope = require("telescope")
       telescope.setup(opts)
       telescope.load_extension("project")
-      telescope.load_extension("zf-native")
+      -- telescope.load_extension("zf-native")
+      telescope.load_extension("nucleo")
       telescope.load_extension("undo")
       -- telescope.load_extension("fzf")
     end,
