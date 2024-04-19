@@ -218,6 +218,22 @@ autocmd("FileType", {
   desc = "Disable `mini.indentscope` for specific filetypes",
 })
 
+--[[ vim-visual-multi with Lualine ]]
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = "visual_multi_start",
+  callback = function()
+    require("lualine").hide()
+    vim.g.VM_cmdheight = 1
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = "visual_multi_exit",
+  callback = function()
+    require("lualine").hide({ unhide = true })
+  end,
+})
+
 --[[ -------------
      USER COMMANDS
      ------------- ]]
