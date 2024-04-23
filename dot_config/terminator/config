@@ -1,18 +1,35 @@
 [global_config]
+  window_state = maximise
   borderless = True
-  extra_styling = False
+  inactive_color_offset = 1.0
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   title_use_system_font = False
-  title_font = SauceCodePro Nerd Font Mono 11
+  title_font = SauceCodePro Nerd Font Mono 13
 [keybindings]
 [profiles]
   [[default]]
     icon_bell = False
+    background_color = "#282828"
     cursor_blink = False
     cursor_shape = underline
     cursor_color = "#aaaaaa"
-    font = SauceCodePro Nerd Font Mono 11
+    font = SauceCodePro Nerd Font 13
+    foreground_color = "#ebdbb2"
     show_titlebar = False
     scrollbar_position = hidden
+    use_system_font = False
+  [[tokyonight-storm]]
+    icon_bell = False
+    background_color = "#24283b"
+    cursor_blink = False
+    cursor_shape = underline
+    cursor_color = "#c0caf5"
+    cursor_color_fg = False
+    font = SauceCodePro Nerd Font 13.2998046875
+    foreground_color = "#c0caf5"
+    show_titlebar = False
+    scrollbar_position = hidden
+    palette = "#1d202f:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5"
     use_system_font = False
 [layouts]
   [[default]]
@@ -22,5 +39,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = default
+      profile = tokyonight-storm
 [plugins]
