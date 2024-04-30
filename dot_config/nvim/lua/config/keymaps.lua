@@ -103,16 +103,22 @@ map("n", "@", function()
   vim.opt.lazyredraw = true
   vim.api.nvim_command(string.format("noa norm! %d@%s", count, register))
   vim.opt.lazyredraw = false
-  vim.api.nvim_command("silent update")
+  -- vim.api.nvim_command("silent update")
 end, { noremap = true })
 
-map("v", "@", function()
-  local register = vim.fn.getcharstr()
-  vim.opt.lazyredraw = true
-  vim.api.nvim_command(string.format("'<,'> noa norm! @%s", register))
-  vim.opt.lazyredraw = false
-  vim.api.nvim_command("silent update")
-end, { noremap = true })
+map(
+  "x",
+  "@",
+  [[:<C-u>set lazyredraw <bar> execute "noautocmd '<,'>norm! " . v:count1 . "@" . getcharstr() <bar> set nolazyredraw<cr>]],
+  { noremap = true, silent = true }
+)
+
+map(
+  "x",
+  "Q",
+  [[:<C-u>set lazyredraw <bar> execute "noautocmd '<,'>norm! Q" <bar> set nolazyredraw<cr>]],
+  { noremap = true, silent = true }
+)
 
 --     ╭───────────────────────────────────────────────────────────────────╮
 --     │                         Harpoon mappings                          │
