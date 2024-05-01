@@ -17,14 +17,14 @@ abbr -a gpo "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"
 abbr -a gpd --set-cursor "git push origin  :%"
 abbr -a gpu git pull
 abbr -a gsq gitsquash
+
 # WARN: 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │ set environment variables that are used by files in `conf.d` in    │
 #     │ files that are sourced before the files in question (i.e put       │
 #     │ `forgit` variables here, so they are sourced before                │
-#     │ `forgit.plugin.fish`                                               │
-#     │ and not in `config.fish` because that is loaded last after all     │
-#     │ files in `conf.d` are sourced)                                     │
+#     │ `forgit.plugin.fish` and not in `config.fish` because that is      │
+#     │ loaded last after all  files in `conf.d` are sourced)              │
 #     ╰────────────────────────────────────────────────────────────────────╯
 set -gx forgit_diff gdd
 
