@@ -30,7 +30,7 @@ return {
   -- Test out `neocodeium`
   {
     "monkoose/neocodeium",
-    lazy = true,
+    event = "VeryLazy",
     config = function()
       local neocodeium = require("neocodeium")
       neocodeium.setup({
@@ -56,7 +56,6 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       -- { "Exafunction/codeium.vim" },
-      { "monkoose/neocodeium" },
       { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
       {
         "windwp/nvim-autopairs",
