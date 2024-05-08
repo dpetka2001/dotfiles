@@ -146,33 +146,33 @@ map("v", "<leader>ct", "<cmd>lua vim.lsp.buf.format({async=true})<cr>", { desc =
 --     │                 Word/Line Completion with Codeium                 │
 --     ╰───────────────────────────────────────────────────────────────────╯
 -- See https://github.com/Exafunction/codeium.vim/issues/27#issuecomment-1948401179 for info
-local expr_opts = {
-  noremap = true,
-  silent = true,
-  expr = true,
-  -- With expr = true, replace_keycodes is set to true. See https://github.com/orgs/community/discussions/29817
-  -- We need to set it to false to avoid extraneous caracters when accepting a suggestion.
-  replace_keycodes = false,
-}
+-- local expr_opts = {
+--   noremap = true,
+--   silent = true,
+--   expr = true,
+--   -- With expr = true, replace_keycodes is set to true. See https://github.com/orgs/community/discussions/29817
+--   -- We need to set it to false to avoid extraneous caracters when accepting a suggestion.
+--   replace_keycodes = false,
+-- }
 
-local function getCodeiumCompletions()
-  local status, completion = pcall(function()
-    return vim.api.nvim_eval("b:_codeium_completions.items[b:_codeium_completions.index].completionParts[0].text")
-  end)
-  if status then
-    return completion
-  else
-    return ""
-  end
-end
-local function accept_one_line()
-  local text = getCodeiumCompletions()
-  return vim.fn.split(text, [[[\n]\zs]])[1] .. "\n"
-end
-local function accept_one_word()
-  local text = getCodeiumCompletions()
-  return vim.fn.split(text, [[\(\w\+\|\W\+\)\zs]])[1]
-end
-
-vim.keymap.set("i", "<C-j>", accept_one_line, expr_opts)
-vim.keymap.set("i", "<C-l>", accept_one_word, expr_opts)
+-- local function getCodeiumCompletions()
+--   local status, completion = pcall(function()
+--     return vim.api.nvim_eval("b:_codeium_completions.items[b:_codeium_completions.index].completionParts[0].text")
+--   end)
+--   if status then
+--     return completion
+--   else
+--     return ""
+--   end
+-- end
+-- local function accept_one_line()
+--   local text = getCodeiumCompletions()
+--   return vim.fn.split(text, [[[\n]\zs]])[1] .. "\n"
+-- end
+-- local function accept_one_word()
+--   local text = getCodeiumCompletions()
+--   return vim.fn.split(text, [[\(\w\+\|\W\+\)\zs]])[1]
+-- end
+--
+-- vim.keymap.set("i", "<C-j>", accept_one_line, expr_opts)
+-- vim.keymap.set("i", "<C-l>", accept_one_word, expr_opts)
