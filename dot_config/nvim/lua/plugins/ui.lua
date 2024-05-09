@@ -93,8 +93,6 @@ return {
 
   {
     "folke/noice.nvim",
-    -- TODO: remove `dev` when https://github.com/folke/noice.nvim/pull/785 gets merged
-    dev = true,
     opts = {
       lsp = {
         hover = {
