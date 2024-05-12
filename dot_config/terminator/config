@@ -9,12 +9,12 @@
 [profiles]
   [[default]]
     icon_bell = False
-    background_color = "#282828"
+    background_color = "#0000ee"
     cursor_blink = False
     cursor_shape = underline
     cursor_color = "#aaaaaa"
     font = SauceCodePro Nerd Font 13
-    foreground_color = "#ebdbb2"
+    foreground_color = "#ffee00"
     show_titlebar = False
     scrollbar_position = hidden
     use_system_font = False
@@ -25,7 +25,7 @@
     cursor_shape = underline
     cursor_color = "#c0caf5"
     cursor_color_fg = False
-    font = SauceCodePro Nerd Font 13.2998046875
+    font = SauceCodePro Nerd Font 13
     foreground_color = "#c0caf5"
     show_titlebar = False
     scrollbar_position = hidden
@@ -39,5 +39,5 @@
     [[[child1]]]
       type = Terminal
       parent = window0
-      profile = tokyonight-storm
+      profile = default
 [plugins]
