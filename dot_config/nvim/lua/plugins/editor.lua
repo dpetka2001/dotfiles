@@ -154,10 +154,6 @@ return {
     -- },
     opts = {
       modes = {
-        -- Disable labels for regular search with `/`
-        search = {
-          enabled = false,
-        },
         -- Modify options used by `flash` when doing `f`, `F`, `t`, `T` motions
         char = {
           jump_labels = true,
