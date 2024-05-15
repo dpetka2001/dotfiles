@@ -54,6 +54,7 @@ return {
         }
       end
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
+        path_display = { "filename_first" },
         mappings = {
           i = {
             ["<C-b>"] = function(...)
