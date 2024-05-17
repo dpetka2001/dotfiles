@@ -179,62 +179,28 @@ return {
   },
 
   -- Modify Luasnip
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-      config = function()
-        require("luasnip").filetype_extend("c", { "cdoc" })
-        require("luasnip.loaders.from_vscode").lazy_load()
-        require("luasnip.loaders.from_lua").lazy_load({ paths = "./lua/snippets" })
-      end,
-    },
-    opts = {
-      -- WARN:
-      --  ╭──────────────────────────────────────────────────────────╮
-      --  │ As snippets are not removed when their text is           │
-      --  │  deleted, they have to be removed manually               │
-      --  │ via LuasnipUnlinkCurrent if `delete_check_events`        │
-      --  │  is not enabled. This can cause false                    │
-      --  │ positives with `Tab` when in insert mode and jump        │
-      --  │  you around in strange positions in the                  │
-      --  │ buffer, thinking that it jumps inside a snippet.         │
-      --  ╰──────────────────────────────────────────────────────────╯
-      delete_check_events = { "TextChanged", "InsertLeave" },
-    },
-  },
-
-  -- Easily create annotations
-  {
-    "danymat/neogen",
-    keys = {
-      {
-        "<leader>cc",
-        function()
-          require("neogen").generate({})
-        end,
-        desc = "Neogen Comment",
-      },
-    },
-    opts = { snippet_engine = "luasnip" },
-  },
-
-  -- Refactoring
-  {
-    "ThePrimeagen/refactoring.nvim",
-    keys = {
-      {
-        "<leader>r",
-        function()
-          require("refactoring").select_refactor()
-        end,
-        mode = "v",
-        noremap = true,
-        silent = true,
-        expr = false,
-        desc = "Refactor",
-      },
-    },
-    opts = {},
-  },
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   dependencies = {
+  --     "rafamadriz/friendly-snippets",
+  --     config = function()
+  --       require("luasnip").filetype_extend("c", { "cdoc" })
+  --       require("luasnip.loaders.from_vscode").lazy_load()
+  --       require("luasnip.loaders.from_lua").lazy_load({ paths = "./lua/snippets" })
+  --     end,
+  --   },
+  --   opts = {
+  --     -- WARN:
+  --     --  ╭──────────────────────────────────────────────────────────╮
+  --     --  │ As snippets are not removed when their text is           │
+  --     --  │  deleted, they have to be removed manually               │
+  --     --  │ via LuasnipUnlinkCurrent if `delete_check_events`        │
+  --     --  │  is not enabled. This can cause false                    │
+  --     --  │ positives with `Tab` when in insert mode and jump        │
+  --     --  │  you around in strange positions in the                  │
+  --     --  │ buffer, thinking that it jumps inside a snippet.         │
+  --     --  ╰──────────────────────────────────────────────────────────╯
+  --     delete_check_events = { "TextChanged", "InsertLeave" },
+  --   },
+  -- },
 }
