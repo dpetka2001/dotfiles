@@ -64,6 +64,7 @@ return {
         },
       },
       { "hrsh7th/cmp-calc" },
+      { "garymjr/nvim-snippets", opts = { search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" } } },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
