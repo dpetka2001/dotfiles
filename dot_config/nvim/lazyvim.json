@@ -1,12 +1,13 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.editor.trouble-v3",
-    "lazyvim.plugins.extras.lang.python-semshi",
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.util.dot",
-    "lazyvim.plugins.extras.util.mini-hipatterns"
+    "lazyvim.plugins.extras.util.mini-hipatterns",
+    "lazyvim.plugins.extras.editor.trouble-v3"
   ],
   "news": {
-    "NEWS.md": "3314"
+    "NEWS.md": "4944"
   },
-  "version": 3
+  "version": 4
 }
