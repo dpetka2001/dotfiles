@@ -1,11 +1,4 @@
 {
-  "trig": {
-    "prefix": "trig",
-    "description": "trig snippet",
-    "body": [
-      "trigger loaded"
-    ]
-  },
   "export_module": {
     "body": [
       "local M = {}",

@@ -8,10 +8,9 @@
     "snippets": [
       {
         "language": [
-          "global",
           "all"
         ],
-        "path": "./global.json"
+        "path": "./all.json"
       },
       {
         "language": [
