@@ -1,4 +1,8 @@
 return {
+  -- Disable `ts-comments.nvim`, since it doesn't support multiline comments
+  -- due to Neovim native comments
+  { "folke/ts-comments.nvim", enabled = false },
+
   -- Modify Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
