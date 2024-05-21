@@ -64,26 +64,33 @@ return {
         },
       },
       { "hrsh7th/cmp-calc" },
-      { "garymjr/nvim-snippets", opts = { search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" } } },
+      {
+        "garymjr/nvim-snippets",
+        dependencies = {
+          "rafamadriz/friendly-snippets",
+        },
+        -- dev = true,
+        opts = { search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" } },
+      },
     },
     opts = function(_, opts)
       local cmp = require("cmp")
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-      local types = require("cmp.types")
+      -- local types = require("cmp.types")
 
       -- Function to sort LSP snippets, so that they appear at the end of LSP suggestions
-      local function deprioritize_snippet(entry1, entry2)
-        if entry1:get_kind() == types.lsp.CompletionItemKind.Snippet then
-          return false
-        end
-        if entry2:get_kind() == types.lsp.CompletionItemKind.Snippet then
-          return true
-        end
-      end
+      -- local function deprioritize_snippet(entry1, entry2)
+      --   if entry1:get_kind() == types.lsp.CompletionItemKind.Snippet then
+      --     return false
+      --   end
+      --   if entry2:get_kind() == types.lsp.CompletionItemKind.Snippet then
+      --     return true
+      --   end
+      -- end
 
       -- Insert `deprioritize_snippet` first in the `comparators` table, so that it has priority
       -- over the other default comparators
-      table.insert(opts.sorting.comparators, 1, deprioritize_snippet)
+      -- table.insert(opts.sorting.comparators, 1, deprioritize_snippet)
 
       -- Insert parentheses after selecting method/function
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
