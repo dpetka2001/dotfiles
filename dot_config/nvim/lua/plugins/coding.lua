@@ -70,7 +70,10 @@ return {
           "rafamadriz/friendly-snippets",
         },
         -- dev = true,
-        opts = { search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" } },
+        opts = {
+          global_snippets = { "all", "global" },
+          search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" },
+        },
       },
     },
     opts = function(_, opts)

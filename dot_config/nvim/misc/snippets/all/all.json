@@ -1,0 +1,16 @@
+{
+  "trig": {
+    "prefix": "trig",
+    "description": "trig snippet",
+    "body": [
+      "trigger loaded"
+    ]
+  },
+  "Just a test": {
+    "prefix": "mytest",
+    "description": "Just a test",
+    "body": [
+      "This is just a test"
+    ]
+  }
+}

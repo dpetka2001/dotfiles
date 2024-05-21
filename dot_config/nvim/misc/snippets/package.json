@@ -10,13 +10,16 @@
         "language": [
           "all"
         ],
-        "path": "./all.json"
+        "path": "./all/all.json"
       },
       {
         "language": [
           "lua"
         ],
-        "path": "./lua.json"
+        "path": [
+          "./lua/init.json",
+          "./lua/beta.json"
+        ]
       }
     ]
   }

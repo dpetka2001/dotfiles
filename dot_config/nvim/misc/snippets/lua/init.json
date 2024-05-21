@@ -9,7 +9,7 @@
     ],
     "prefix": "export module"
   },
-  "pcall": {
+  "mpcall": {
     "body": [
       "local success = pcall(${1:func})",
       "if not success then",
@@ -17,10 +17,7 @@
       "\treturn",
       "end"
     ],
-    "prefix": [
-      "try",
-      "pcall"
-    ]
+    "prefix": "pcall"
   },
   "safe_require": {
     "body": [
