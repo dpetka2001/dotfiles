@@ -66,12 +66,7 @@ return {
       { "hrsh7th/cmp-calc" },
       {
         "garymjr/nvim-snippets",
-        dependencies = {
-          "rafamadriz/friendly-snippets",
-        },
-        -- dev = true,
         opts = {
-          global_snippets = { "all", "global" },
           search_paths = { vim.fn.stdpath("config") .. "/misc/snippets" },
         },
       },
