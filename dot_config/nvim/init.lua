@@ -5,4 +5,3 @@
 
 vim.loader.enable()
 require("config.lazy")
-require("globals")
