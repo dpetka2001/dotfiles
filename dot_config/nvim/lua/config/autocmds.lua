@@ -234,20 +234,6 @@ vim.api.nvim_create_autocmd({ "User" }, {
   end,
 })
 
--- WARN:
--- `FileType` autocmds seem to be triggered twice, so the last 2 components
--- are removed instead of only the last
-autocmd("FileType", {
-  group = augroup("No_vim_lualine", { clear = true }),
-  desc = "Disable lualine symbols component for vim files",
-  pattern = "vim",
-  callback = function()
-    local opts = LazyVim.opts("lualine.nvim")
-    table.remove(opts.sections.lualine_c)
-    require("lualine").setup(opts)
-  end,
-})
-
 --[[ -------------
      USER COMMANDS
      ------------- ]]
