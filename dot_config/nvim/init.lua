@@ -5,3 +5,4 @@
 
 vim.loader.enable()
 require("config.lazy")
+_G.Plugins = require("lazy.core.config").plugins
