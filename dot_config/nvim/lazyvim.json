@@ -3,11 +3,10 @@
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.util.dot",
-    "lazyvim.plugins.extras.util.mini-hipatterns",
-    "lazyvim.plugins.extras.editor.trouble-v3"
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
     "NEWS.md": "4964"
   },
-  "version": 5
+  "version": 6
 }
