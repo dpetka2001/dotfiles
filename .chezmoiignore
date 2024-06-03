@@ -6,3 +6,20 @@ Documents/Obsidian Vault/jrn23/.obsidian/workspace
 .config/nvim/lua/plugins/extras/lang/pylance.lua
 .config/wezterm/images/**
 .config/tmux/plugins/**
+
+# Fish related
+.config/fish/fish_variables
+.config/fish/completions
+.config/fish/completions/**
+!.config/fish/conf.d
+.config/fish/conf.d/**
+!.config/fish/conf.d/{abbrs,mise,z,keychain}.fish
+!.config/fish/functions
+.config/fish/functions/**
+!.config/fish/functions/{printpath,gitsquash,fish_ssh_agent,fish_title,fish_user_key_bindings,hg,ll,nvims,removepath,tt,tw,z,rm_nvim}.fish
+
+# Ranger related
+.config/ranger/__pycache__/
+.config/ranger/__pycache__/**
+.config/ranger/plugins
+.config/ranger/plugins/**
