@@ -16,6 +16,7 @@ return {
         ["zE"] = { "Eliminate all folds in window" },
         ["]c"] = { "Jump to next diff change" },
         ["[c"] = { "Jump to previous diff change" },
+        ["<leader>cl"] = { name = "+LSP", ["🚫"] = "which_key_ignore" },
         ["<leader>T"] = {
           name = "+Terminal",
         },
