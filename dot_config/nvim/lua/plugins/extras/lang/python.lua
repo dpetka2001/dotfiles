@@ -149,6 +149,7 @@ return {
   -- For selecting virtual envs
   {
     "linux-cultist/venv-selector.nvim",
+    branch = "regexp",
     dependencies = {
       "mfussenegger/nvim-dap-python",
     },
