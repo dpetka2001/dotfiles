@@ -18,7 +18,7 @@ set -gx VISUAL nvim
 source ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_moon.sh
 
 set -gx FZF_DEFAULT_COMMAND "rg --files"
-set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS --layout=reverse --cycle --bind='ctrl-r:reload(rg --hidden --files)' --header='"Press CTRL-R to reload\n\n"' --border -m \
+set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS --layout=reverse --cycle --bind='ctrl-r:reload(rg --hidden --files)' --border -m \
 --bind 'ctrl-v:execute(nvim {+})','ctrl-d:reload(find . -type d)'"
 set -gx FORGIT_FZF_DEFAULT_OPTS "--cycle --bind 'alt-d:preview-page-down','alt-u:preview-page-up',\
 'alt-j:preview-down','alt-k:preview-up'"
