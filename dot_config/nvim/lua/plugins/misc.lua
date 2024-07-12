@@ -47,7 +47,7 @@ return {
       {
         "folke/which-key.nvim",
         opts = {
-          defaults = {
+          spec = {
             ["<leader>n"] = { name = "+nomodoro" },
           },
         },

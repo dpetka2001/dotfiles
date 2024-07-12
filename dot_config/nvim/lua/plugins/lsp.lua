@@ -26,12 +26,11 @@ return {
         "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
         desc = "List workspace",
       }
-
-      require("which-key").register({
-        ["<leader>cl"] = { name = "+lsp" },
-      })
     end,
     opts = {
+      inlay_hints = {
+        enabled = false,
+      },
       diagnostics = {
         float = {
           source = true,

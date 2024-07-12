@@ -20,7 +20,7 @@ return {
             })
           else
             LazyVim.on_load("which-key.nvim", function()
-              require("which-key").register({
+              require("which-key").add({
                 ["<leader>unt"] = "which_key_ignore",
               })
               vim.keymap.del("n", "<leader>unt")

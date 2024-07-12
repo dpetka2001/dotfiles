@@ -128,7 +128,7 @@ return {
   {
     "folke/which-key.nvim",
     opts = {
-      defaults = {
+      spec = {
         ["<leader>p"] = { name = "+peek" },
       },
     },
