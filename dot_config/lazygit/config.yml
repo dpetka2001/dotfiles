@@ -1,6 +1,6 @@
 os:
-  editcommand: "nvim"
-  opencommand: "nvim {{filename}} > /dev/null"
+  # editcommand: "nvim"
+  # opencommand: "nvim {{filename}} > /dev/null"
   # edit: "{{editor}} --server $NVIM --remote-tab {{filename}}"
   edit: "nvim --server $NVIM --remote-tab {{filename}}"
 
@@ -8,3 +8,4 @@ keybinding:
   universal:
     scrollUpMain-alt1: "<c-u>"
     scrollDownMain-alt1: "<c-d>"
+    return: "<c-c>"
