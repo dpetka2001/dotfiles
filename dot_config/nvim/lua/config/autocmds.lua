@@ -41,32 +41,6 @@ autocmd("Filetype", {
   desc = "Don't continue comments with o and O",
 })
 
--- Disable Ufo for neo-tree
--- autocmd("Filetype", {
---   pattern = "neo-tree",
---   callback = function()
---     if package.loaded["ufo"] then
---       vim.cmd("UfoDetach")
---     end
---   end,
---   group = "mygroup",
---   desc = "Disable Ufo for neo-tree",
--- })
-
--- Reload config on save
-autocmd("BufWritePost", {
-  -- Match all `lua` files in `lua/config` except `lazy.lua` which is the
-  -- setup file for `lazy.nvim` and should only be reloaded when updated.
-  pattern = "**/lua/config/*[^lazy].lua",
-  callback = function()
-    local filepath = vim.fn.expand("%")
-    dofile(filepath)
-    vim.notify("Configuration reloaded \n" .. filepath, nil)
-  end,
-  group = "mygroup",
-  desc = "Reload config on save",
-})
-
 -- ToggleTerm
 function _G.set_terminal_keymaps()
   local opts = { noremap = true }
@@ -108,41 +82,6 @@ autocmd("BufLeave", {
   end,
   group = "mygroup",
   desc = "Don't show cursor line on BufLeave (toggleterm)",
-})
-
--- I don't believe this is necessary any more, since installed `LunarVim/bigfile.nvim`
--- Disable tree-sitter for files over 1MB in size
--- autocmd("BufRead", {
---   pattern = "*",
---   callback = function()
---     local size = vim.fn.getfsize(vim.fn.expand("%:p"))
---     if size > 500000 then
---       vim.treesitter.stop()
---     end
---   end,
---   group = "mygroup",
---   desc = "Disable Treesitter for files larger than 1MB",
--- })
-
---[[ Remember Folds Group ]]
-augroup("remember_folds", { clear = true })
-
-autocmd({ "BufLeave", "BufWinLeave" }, {
-  pattern = "*",
-  callback = function()
-    vim.cmd("silent! mkview")
-  end,
-  group = "remember_folds",
-  desc = "Remember folds on buffer exit",
-})
-
-autocmd("BufReadPost", {
-  pattern = "*",
-  callback = function()
-    vim.cmd("silent! loadview")
-  end,
-  group = "remember_folds",
-  desc = "Restore folds on buffer enter",
 })
 
 --[[ Toggle relative line numbers ]]
@@ -237,10 +176,6 @@ vim.api.nvim_create_autocmd({ "User" }, {
 --[[ -------------
      USER COMMANDS
      ------------- ]]
-
-usercmd("Rwd", function()
-  print(LazyVim.root.get())
-end, { desc = "Print root_dir of current buffer" })
 
 --[[ User command for diffing current buffer when not in .git repo ]]
 usercmd("DiffOrig", function()
