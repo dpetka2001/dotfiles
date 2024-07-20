@@ -5,4 +5,6 @@ cargo-update
 eza
 mdbook
 menyoki
+mprocs
 onefetch
+tree-sitter-cli
