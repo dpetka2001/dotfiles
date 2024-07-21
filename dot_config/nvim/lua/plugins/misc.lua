@@ -40,37 +40,6 @@ return {
     keys = { { "<leader>zz", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 
-  -- Pomodoro timer
-  {
-    "dbinagi/nomodoro",
-    dependencies = {
-      {
-        "folke/which-key.nvim",
-        opts = {
-          spec = {
-            ["<leader>n"] = { name = "+nomodoro" },
-          },
-        },
-      },
-    },
-    opts = {
-      work_time = 25,
-      break_time = 5,
-      menu_available = true,
-      texts = {
-        on_break_complete = "BREAK IS UP!",
-        on_work_complete = "TIME IS UP!",
-        -- status_icon = "󰔟 ",
-        timer_format = "!%0M:%0S", -- To include hours: '!%0H:%0M:%0S'
-      },
-    },
-    keys = {
-      { "<leader>nw", "<cmd>NomoWork<cr>", noremap = true, silent = true },
-      { "<leader>nb", "<cmd>NomoBreak<cr>", noremap = true, silent = true },
-      { "<leader>ns", "<cmd>NomoStop<cr>", noremap = true, silent = true },
-    },
-  },
-
   -- vim-tmux-navigator
   {
     "christoomey/vim-tmux-navigator",

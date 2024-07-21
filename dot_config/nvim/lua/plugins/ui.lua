@@ -49,10 +49,6 @@ return {
   {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
-      local timer = function()
-        return require("nomodoro").status()
-      end
-
       local trouble = require("trouble")
       local symbols = trouble.statusline({
         mode = "lsp_document_symbols",
@@ -75,7 +71,6 @@ return {
       -- │                             lualine_x                             │
       -- ╰───────────────────────────────────────────────────────────────────╯
       table.insert(opts.sections.lualine_x, { "encoding" })
-      table.insert(opts.sections.lualine_x, { timer })
 
       -- ╭───────────────────────────────────────────────────────────────────╮
       -- │                             lualine_z                             │
