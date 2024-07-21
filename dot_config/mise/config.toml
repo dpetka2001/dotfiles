@@ -1,0 +1,11 @@
+[tools]
+node = "lts"
+zoxide = "latest"
+fzf = "HEAD"
+go = "latest"
+lazygit = "latest"
+fd = "latest"
+ripgrep = "latest"
+
+[settings]
+experimental = true
