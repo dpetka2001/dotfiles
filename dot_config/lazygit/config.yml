@@ -1,8 +1,6 @@
 os:
-  # editcommand: "nvim"
-  # opencommand: "nvim {{filename}} > /dev/null"
-  # edit: "{{editor}} --server $NVIM --remote-tab {{filename}}"
-  edit: "nvim --server $NVIM --remote-tab {{filename}}"
+  # edit: "nvim --server $NVIM --remote-tab {{filename}}"
+  edit: "nvr --remote-send '<C-\\><C-N><cmd>q<CR><cmd>lua vim.cmd(\"e \" .. {{filename}})<CR>'"
 
 keybinding:
   universal:
