@@ -6,6 +6,7 @@ go = "latest"
 lazygit = "latest"
 fd = "latest"
 ripgrep = "latest"
+deno = "latest"
 
 [settings]
 experimental = true
