@@ -6,6 +6,7 @@ function nvims
     set config (printf "%s\n" $items | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
     if test -z $config
         echo "Nothing selected"
+        commandline -f clear-screen # see `help bind` for special input functions
         return 0
     end
     NVIM_APPNAME="$config" nvim -- $argv
