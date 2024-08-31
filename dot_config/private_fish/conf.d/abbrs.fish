@@ -11,6 +11,7 @@ abbr -a gsh git show
 abbr -a gs git status
 abbr -a gp git push
 abbr -a gd git diff
+abbr -a gds git diff --staged
 abbr -a gsw git switch
 abbr -a gb git branch
 abbr -a gpo "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)"

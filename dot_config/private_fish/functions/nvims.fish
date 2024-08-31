@@ -10,4 +10,5 @@ function nvims
         return 0
     end
     NVIM_APPNAME="$config" nvim -- $argv
+    commandline -f repaint
 end
