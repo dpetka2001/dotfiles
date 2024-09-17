@@ -1,7 +1,10 @@
 .config/nvim.bak/plugged
 .config/nvim.bak/plugged/**
 .config/gh/hosts.yml
-Documents/Obsidian Vault/jrn23/.obsidian/workspace
+!Documents/Obsidian Vault/jrn23/.obsidian
+Documents/Obsidian Vault/jrn23/.obsidian/**
+!Documents/Obsidian Vault/jrn23/.obsidian/snippets
+!Documents/Obsidian Vault/jrn23/.obsidian/snippets/obsidian.css
 .config/lazygit/state.yml
 .config/nvim/lua/plugins/extras/lang/pylance.lua
 .config/wezterm/images/**
