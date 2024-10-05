@@ -11,7 +11,7 @@
     templateDir = ~/Templates/git.git
 
 [core]
-    editor = nvim
+    editor = "NVIM_APPNAME=LazyVimDev nvim"
     pager = delta
 
 [delta]
