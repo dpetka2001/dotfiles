@@ -31,7 +31,7 @@ return {
     opts = {
       servers = {
         html = {},
-        -- tsserver = {
+        -- ts_ls = {
         --   root_dir = function(...)
         --     return require("lspconfig.util").root_pattern(".git")(...)
         --   end,
@@ -89,11 +89,13 @@ return {
   -- Native TSServer client
   {
     "pmizio/typescript-tools.nvim",
-    event = { "BufReadPost *.ts,*.tsx,*.js,*.jsx", "BufNewFile *.ts,*.tsx,*.js,*.jsx" },
+    -- event = { "BufReadPost *.ts,*.tsx,*.js,*.jsx", "BufNewFile *.ts,*.tsx,*.js,*.jsx" },
+    ft = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
     dependencies = { "nvim-lua/plenary.nvim", "nvim-lspconfig" },
     opts = {
       -- capabilities = require("lsp").client_capabilities(),
       -- on_attach = require("lsp").on_attach,
+      single_file_support = false,
       settings = {
         tsserver_file_preferences = {
           includeInlayParameterNameHints = "literals",

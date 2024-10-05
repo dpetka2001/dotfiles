@@ -45,7 +45,7 @@ return {
       },
       servers = {
         yamlls = {},
-        -- tsserver = {
+        -- ts_ls = {
         --   -- Need to disable this cuz `Inline Edit` won't work otherwise
         --   single_file_support = false,
         --   settings = {
