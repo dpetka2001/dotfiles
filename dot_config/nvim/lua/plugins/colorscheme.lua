@@ -19,7 +19,7 @@ local get_colorsheme = function()
     end, target("", "color"))
   end
 
-  LazyVim.pick("colorscheme", { enable_preview = true })()
+  LazyVim.pick(LazyVim.pick.want() == "fzf" and "colorschemes" or "colorscheme", { enable_preview = true })()
   vim.fn.getcompletion = target
 end
 
