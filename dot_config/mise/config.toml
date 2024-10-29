@@ -9,6 +9,7 @@ ripgrep = "latest"
 deno = "latest"
 bun = "latest"
 jq = "latest"
+stylua = "latest"
 
 [settings]
 experimental = true
