@@ -1,48 +1,15 @@
 return {
-  -- Modify nvim-notify for Telescope
-  {
-    "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<leader>und",
-        function()
-          require("notify").dismiss({ silent = true, pending = true })
-        end,
-        desc = "Delete all Notifications",
-      },
-      {
-        "<leader>unt",
-        function()
-          if LazyVim.has("telescope.nvim") then
-            require("telescope").extensions.notify.notify({
-              initial_mode = "normal",
-              -- layout_strategy = "vertical",
-            })
-          else
-            LazyVim.on_load("which-key.nvim", function()
-              require("which-key").add({
-                ["<leader>unt"] = "which_key_ignore",
-              })
-              vim.keymap.del("n", "<leader>unt")
-            end)
-          end
-        end,
-        desc = "Open Notifications (Telescope)",
-      },
-    },
-  },
-
   -- Modify `bufferline`
   {
     "akinsho/bufferline.nvim",
     keys = {
       { "<leader>bb", "<cmd>BufferLinePick<cr>", desc = "Pick buffer" },
     },
-    opts = {
-      options = {
-        always_show_bufferline = true,
-      },
-    },
+    -- opts = {
+    --   options = {
+    --     always_show_bufferline = true,
+    --   },
+    -- },
   },
 
   -- Modify `lualine`

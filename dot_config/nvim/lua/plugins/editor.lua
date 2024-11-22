@@ -179,7 +179,9 @@ return {
       --     ["ctrl-q"] = "select-all+accept",
       --   },
       -- })
-      opts.winopts = {
+      opts.winopts = vim.tbl_deep_extend("force", opts.winopts, {
+        width = 0.9,
+        height = 0.9,
         on_create = function()
           vim.keymap.set("t", "<C-d>", function()
             require("fzf-lua.win").preview_scroll("line-down")
@@ -196,7 +198,7 @@ return {
           vim.keymap.set("t", "<C-j>", "<down>", { buffer = 0, noremap = true })
           vim.keymap.set("t", "<C-k>", "<up>", { buffer = 0, noremap = true })
         end,
-      }
+      })
     end,
   },
 }
