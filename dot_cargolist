@@ -1,3 +1,4 @@
+ast-grep
 bob-nvim
 cargo-binstall
 cargo-cache
@@ -7,4 +8,5 @@ mdbook
 menyoki
 mprocs
 onefetch
+procs
 tree-sitter-cli
