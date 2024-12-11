@@ -76,6 +76,9 @@ return {
         lua_ls = {
           settings = {
             Lua = {
+              completion = {
+                callSnippet = "Disable",
+              },
               diagnostics = {
                 -- disable = { "missing-parameter" },
               },

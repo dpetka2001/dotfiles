@@ -28,28 +28,28 @@ return {
   -- },
 
   -- Test out `neocodeium`
-  {
-    "monkoose/neocodeium",
-    event = "VeryLazy",
-    config = function()
-      local neocodeium = require("neocodeium")
-      neocodeium.setup({
-        filetypes = {
-          TelescopePrompt = false,
-          ["neo-tree-popup"] = false,
-          ["dap-repl"] = false,
-        },
-      })
-      -- stylua: ignore start
-      vim.keymap.set("i", "<C-g>", function() neocodeium.accept() end)
-      vim.keymap.set("i", "<C-j>", function() neocodeium.accept_word() end)
-      vim.keymap.set("i", "<C-l>", function() neocodeium.accept_line() end)
-      vim.keymap.set("i", "<C-;>", function() neocodeium.cycle_or_complete() end)
-      vim.keymap.set("i", "<C-,>", function() neocodeium.cycle_or_complete(-1) end)
-      vim.keymap.set("i", "<C-z>", function() neocodeium.clear() end)
-      -- stylua: ignore end
-    end,
-  },
+  -- {
+  --   "monkoose/neocodeium",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     local neocodeium = require("neocodeium")
+  --     neocodeium.setup({
+  --       filetypes = {
+  --         TelescopePrompt = false,
+  --         ["neo-tree-popup"] = false,
+  --         ["dap-repl"] = false,
+  --       },
+  --     })
+  --     -- stylua: ignore start
+  --     vim.keymap.set("i", "<C-g>", function() neocodeium.accept() end)
+  --     vim.keymap.set("i", "<C-j>", function() neocodeium.accept_word() end)
+  --     vim.keymap.set("i", "<C-l>", function() neocodeium.accept_line() end)
+  --     vim.keymap.set("i", "<C-;>", function() neocodeium.cycle_or_complete() end)
+  --     vim.keymap.set("i", "<C-,>", function() neocodeium.cycle_or_complete(-1) end)
+  --     vim.keymap.set("i", "<C-z>", function() neocodeium.clear() end)
+  --     -- stylua: ignore end
+  --   end,
+  -- },
 
   -- Modify nvim-cmp
   {
@@ -94,20 +94,20 @@ return {
       cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
       -- Make codeium suggestions appear only when `nvim-cmp` menu is closed
-      local neocodeium = require("neocodeium")
-      local commands = require("neocodeium.commands")
-      cmp.event:on("menu_opened", function()
-        commands.disable()
-        neocodeium.clear()
-        -- vim.g.codeium_manual = true
-        -- vim.fn["codeium#Clear"]()
-      end)
-      cmp.event:on("menu_closed", function()
-        commands.enable()
-        neocodeium.cycle_or_complete()
-        -- vim.g.codeium_manual = false
-        -- vim.fn["codeium#Complete"]()
-      end)
+      -- local neocodeium = require("neocodeium")
+      -- local commands = require("neocodeium.commands")
+      -- cmp.event:on("menu_opened", function()
+      --   commands.disable()
+      --   neocodeium.clear()
+      --   -- vim.g.codeium_manual = true
+      --   -- vim.fn["codeium#Clear"]()
+      -- end)
+      -- cmp.event:on("menu_closed", function()
+      --   commands.enable()
+      --   neocodeium.cycle_or_complete()
+      --   -- vim.g.codeium_manual = false
+      --   -- vim.fn["codeium#Complete"]()
+      -- end)
 
       -- Take care of source ordering and group_index
       table.insert(opts.sources, #opts.sources + 1, { name = "calc", priority = 650, group_index = 2 })
