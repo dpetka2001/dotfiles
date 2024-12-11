@@ -9,6 +9,6 @@ function nvims
         commandline -f clear-screen # see `help bind` for special input functions
         return 0
     end
-    NVIM_APPNAME="$config" nvim -- $argv
+    NVIM_APPNAME="$config" nvim $argv
     commandline -f repaint
 end
