@@ -1,7 +1,7 @@
 [tools]
 node = "lts"
 zoxide = "latest"
-fzf = "HEAD"
+fzf = "latest"
 go = "latest"
 lazygit = "latest"
 fd = "latest"
