@@ -1,5 +1,3 @@
-.config/nvim.bak/plugged
-.config/nvim.bak/plugged/**
 .config/gh/hosts.yml
 !Documents/Obsidian Vault/jrn23/.obsidian
 Documents/Obsidian Vault/jrn23/.obsidian/**
