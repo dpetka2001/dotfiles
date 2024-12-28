@@ -1,17 +1,24 @@
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                               Fonts                                │
 #     ╰────────────────────────────────────────────────────────────────────╯
+font-family = Symbols Nerd Font
 font-family = Fira Code
 font-family-bold = Fira Code
 font-family-italic = Maple Mono
 font-family-bold-italic = Maple Mono
-font-size = 13
+font-size = 13.0
+adjust-cell-height = 2%
 # font-codepoint-map = U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0C8,U+E0CA,U+E0CC-U+E0D2,U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E634,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF=Symbols Nerd Font
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                         Window Decorations                         │
 #     ╰────────────────────────────────────────────────────────────────────╯
 window-decoration = false
+window-theme = ghostty
+# window-padding-color = extend-always
+gtk-wide-tabs = false
+gtk-tabs-location = bottom
+window-new-tab-position = end
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                               Theme                                │
@@ -21,8 +28,9 @@ theme = tokyonight-storm
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                           Window Options                           │
 #     ╰────────────────────────────────────────────────────────────────────╯
+window-padding-x = 0
 window-padding-y = 0
-gtk-wide-tabs = false
+window-inherit-working-directory = false
 
 #     ╭─────────────────────────────────────────────────────────────────────╮
 #     │                            Keybindings                              │
@@ -37,3 +45,14 @@ keybind = ctrl+two=goto_tab:2
 keybind = ctrl+three=goto_tab:3
 keybind = ctrl+four=goto_tab:4
 keybind = ctrl+five=goto_tab:5
+keybind = ctrl+|=new_split:right
+keybind = ctrl+-=new_split:down
+keybind = ctrl+shift+n=new_tab
+
+#     ╭────────────────────────────────────────────────────────────────────╮
+#     │                               Cursor                               │
+#     ╰────────────────────────────────────────────────────────────────────╯
+shell-integration-features = no-cursor,no-sudo,title
+cursor-style = underline
+cursor-style-blink = false
+# adjust-underline-thickness = 2

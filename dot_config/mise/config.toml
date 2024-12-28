@@ -10,6 +10,7 @@ deno = "latest"
 bun = "latest"
 jq = "latest"
 stylua = "latest"
+zig = "0.13"
 
 [settings]
 experimental = true
