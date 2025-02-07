@@ -8,8 +8,9 @@
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                       Set EDITOR and VISUAL                        │
 #     ╰────────────────────────────────────────────────────────────────────╯
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+# For `ranger` to launch `LazyVimDev`
+set -gx EDITOR lvim
+set -gx VISUAL lvim
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                     Configure fzf and related                      │
@@ -19,7 +20,7 @@ source ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_moon.sh
 
 set -gx FZF_DEFAULT_COMMAND "rg --files"
 set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS --layout=reverse --cycle --bind='ctrl-r:reload(rg --hidden --files)' --border -m \
---bind 'ctrl-v:execute(nvim {+})','ctrl-d:reload(find . -type d)'"
+--bind 'ctrl-v:execute(NVIM_APPNAME=LazyVimDev nvim {+})','ctrl-d:reload(find . -type d)'"
 set -gx FORGIT_FZF_DEFAULT_OPTS "--cycle --bind 'alt-d:preview-page-down','alt-u:preview-page-up',\
 'alt-j:preview-down','alt-k:preview-up'"
 # set -gx FZF_CTRL_T_COMMAND "rg --files"

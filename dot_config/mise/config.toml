@@ -1,5 +1,5 @@
 [tools]
-node = "lts"
+node = "22.13.1"
 zoxide = "latest"
 fzf = "latest"
 go = "latest"
@@ -11,6 +11,8 @@ bun = "latest"
 jq = "latest"
 stylua = "latest"
 zig = "0.13"
+tmux = "latest"
+java = "21.0.2"
 
 [settings]
 experimental = true
