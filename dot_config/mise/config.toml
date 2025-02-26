@@ -13,6 +13,7 @@ stylua = "latest"
 zig = "0.13"
 tmux = "latest"
 java = "21.0.2"
+imagemagick = "7.1.1-44"
 
 [settings]
 experimental = true
