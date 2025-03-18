@@ -16,7 +16,7 @@ set -gx VISUAL lvim
 #     │                     Configure fzf and related                      │
 #     ╰────────────────────────────────────────────────────────────────────╯
 # source tokyonight theme for fzf
-source ~/.local/share/nvim/lazy/tokyonight.nvim/extras/fzf/tokyonight_moon.sh
+source ~/.local/share/LazyVimDev/lazy/tokyonight.nvim/extras/fzf/tokyonight_moon.sh
 
 set -gx FZF_DEFAULT_COMMAND "rg --files"
 set -gx FZF_DEFAULT_OPTS "$FZF_DEFAULT_OPTS --layout=reverse --cycle --bind='ctrl-r:reload(rg --hidden --files)' --border -m \
@@ -25,6 +25,8 @@ set -gx FORGIT_FZF_DEFAULT_OPTS "--cycle --bind 'alt-d:preview-page-down','alt-u
 'alt-j:preview-down','alt-k:preview-up'"
 # set -gx FZF_CTRL_T_COMMAND "rg --files"
 set -g FZF_CTRL_T_COMMAND "command find -L \$dir -type f 2> /dev/null | sed '1d; s#^\./##'"
+# use this instead of `fzf_key_bindings` in `fish_user_key_bindings.fish`
+fzf --fish | source
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │         Avoid loading ranger default config more than once         │
