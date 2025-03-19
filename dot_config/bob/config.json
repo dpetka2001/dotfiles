@@ -3,5 +3,5 @@
   "enable_release_build": false,
   "downloads_location": "$HOME/.local/share/bob",
   "installation_location": "$HOME/.local/share/bob/nvim-bin",
-  "rollback_limit": 3
+  "rollback_limit": 1
 }

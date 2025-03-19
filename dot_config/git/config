@@ -8,7 +8,7 @@
 
 [init]
     defaultBranch = main
-    templateDir = ~/Templates/git.git
+    ; templateDir = ~/Templates/git.git
 
 [core]
     editor = "NVIM_APPNAME=LazyVimDev nvim"
