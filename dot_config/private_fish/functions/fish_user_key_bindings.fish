@@ -7,3 +7,4 @@ function fish_user_key_bindings
     bind \co nvims
     bind \e\cR 'ranger ; commandline -f repaint'
 end
+
