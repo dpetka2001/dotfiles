@@ -1,6 +1,7 @@
 os:
   # edit: "nvim --server $NVIM --remote-tab {{filename}}"
   # edit: "nvr --remote-send '<C-\\><C-N><cmd>q<CR><cmd>lua vim.cmd(\"e \" .. {{filename}})<CR>'"
+  edit: "nvr {{filename}}"
 
 keybinding:
   universal:

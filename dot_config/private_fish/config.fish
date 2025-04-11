@@ -11,6 +11,7 @@
 # For `ranger` to launch `LazyVimDev`
 set -gx EDITOR lvim
 set -gx VISUAL lvim
+set -gx NVR_CMD lvim
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                     Configure fzf and related                      │
