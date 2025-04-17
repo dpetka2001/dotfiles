@@ -43,7 +43,8 @@ set -gx LC_NUMERIC en_US.UTF-8
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                          Change MANPAGER                           │
 #     ╰────────────────────────────────────────────────────────────────────╯
-set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -gx MANPAGER 'env NVIM_APPNAME=LazyVimDev nvim "+Man!"'
 
 set -gx TZ ":Europe/Athens"
 
