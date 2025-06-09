@@ -57,7 +57,11 @@ set -U __done_notification_command "notify-send --hint=int:transient:1 --urgency
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                          Extend $MANPATH                           │
 #     ╰────────────────────────────────────────────────────────────────────╯
-set -gx MANPATH $MANPATH ~/share/man
+# WARN: 
+# ╭─────────────────────────────────────────────────╮
+# │ Remove this as it causes problems in Arch Linux │
+# ╰─────────────────────────────────────────────────╯
+# set -gx MANPATH $MANPATH ~/share/man
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │              Start ssh-agent when starting fish shell              │
