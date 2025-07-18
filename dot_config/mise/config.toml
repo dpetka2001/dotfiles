@@ -10,7 +10,7 @@ bun = "latest"
 jq = "latest"
 stylua = "latest"
 tmux = "latest"
-imagemagick = "7.1.1-44"
+imagemagick = "7.1.2-0"
 bat = "latest"
 delta = "latest"
 chezmoi = "latest"
@@ -18,3 +18,5 @@ usage = "latest"
 
 [settings]
 experimental = true
+# needed for compatibility with `uv`
+idiomatic_version_file_enable_tools = ["python"]
