@@ -102,7 +102,7 @@ class fzf_select(Command):
 
         env = os.environ.copy()
         env['FZF_DEFAULT_COMMAND'] = fzf_default_command
-        env['FZF_DEFAULT_OPTS'] = '--height=40% --layout=reverse --ansi --preview="{}"'.format('''
+        env['FZF_DEFAULT_OPTS'] = '--height=40% --layout=reverse --ansi --border --border-label="fzf-select" --border-label-pos=5 --preview="{}"'.format('''
                 bat --color=always {} 2>/dev/null ||
                 cat {} 2>/dev/null | head -n 100
         ''')
@@ -168,6 +168,7 @@ class fzf_mark(Command):
         --multi \
         --ansi \
         --reverse \
+        --border-label="fzf-mark" --border-label-pos=5 \
         --bind ctrl-a:select-all,ctrl-e:deselect-all,alt-n:down,alt-p:up,alt-o:backward-delete-char,alt-h:beginning-of-line,alt-l:end-of-line,alt-j:backward-char,alt-k:forward-char,alt-b:backward-word,alt-f:forward-word \
         --height 95% \
         --layout reverse \
