@@ -10,11 +10,11 @@ bun = "latest"
 jq = "latest"
 stylua = "latest"
 tmux = "latest"
-imagemagick = "7.1.2-0"
 bat = "latest"
 delta = "latest"
 chezmoi = "latest"
 usage = "latest"
+yarn = "latest"
 
 [settings]
 experimental = true
