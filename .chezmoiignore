@@ -14,10 +14,11 @@ Documents/Obsidian Vault/jrn23/.obsidian/**
 .config/fish/completions/**
 !.config/fish/conf.d
 .config/fish/conf.d/**
-!.config/fish/conf.d/{abbrs,mise,z,keychain}.fish
+!.config/fish/conf.d/{abbrs,mise,z,keychain,tokyonight_moon}.fish
 !.config/fish/functions
 .config/fish/functions/**
 !.config/fish/functions/{ranger-cd,printpath,gitsquash,fish_ssh_agent,fish_greeting,fish_title,fish_user_key_bindings,hg,ll,nvims,removepath,tt,tw,z,rm_nvim}.fish
+!.config/fish/themes/**
 
 # Ranger related
 .config/ranger/__pycache__/
