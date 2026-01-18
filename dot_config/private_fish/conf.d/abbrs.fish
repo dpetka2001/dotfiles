@@ -29,6 +29,7 @@ abbr -a gcd "z (git rev-parse --show-toplevel)"
 #     │ loaded last after all  files in `conf.d` are sourced)              │
 #     ╰────────────────────────────────────────────────────────────────────╯
 set -gx forgit_diff gdd
+set -gx forgit_switch_branch gssw
 
 #     ╭────────────────────────────────────────────────────────────────────╮
 #     │                             PiP stuff                              │
