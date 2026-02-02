@@ -14,6 +14,13 @@ set -gx VISUAL lvim
 set -gx NVR_CMD lvim
 
 #     ╭────────────────────────────────────────────────────────────────────╮
+#     │                            Source files                            │
+#     ╰────────────────────────────────────────────────────────────────────╯
+# source `nvims.fish` here to have all functions available, otherwise only
+# `nvims` function would be available based on fish function autoloading rules
+source ~/.config/fish/functions/nvims.fish
+
+#     ╭────────────────────────────────────────────────────────────────────╮
 #     │                     Configure fzf and related                      │
 #     ╰────────────────────────────────────────────────────────────────────╯
 # source tokyonight theme for fzf
