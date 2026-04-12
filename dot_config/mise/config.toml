@@ -1,5 +1,5 @@
 [tools]
-node = "22.13.1"
+node = "latest"
 zoxide = "latest"
 fzf = "latest"
 lazygit = "latest"
